@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50D1B29F184C685800D4BF1F /* ウユニ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50D1B29A184C685800D4BF1F /* ウユニ.jpg */; };
+		50D1B2A0184C685800D4BF1F /* ガンジス.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50D1B29B184C685800D4BF1F /* ガンジス.jpg */; };
+		50D1B2A1184C685800D4BF1F /* チベット.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50D1B29C184C685800D4BF1F /* チベット.jpg */; };
+		50D1B2A2184C685800D4BF1F /* フィッツロイ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50D1B29D184C685800D4BF1F /* フィッツロイ.jpg */; };
+		50D1B2A3184C685800D4BF1F /* ペリトモレノ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50D1B29E184C685800D4BF1F /* ペリトモレノ.jpg */; };
+		50D1B2A5184C6C0C00D4BF1F /* WorldMap.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50D1B2A4184C6C0C00D4BF1F /* WorldMap.gif */; };
+		50D1B2A7184DC44600D4BF1F /* ウユニ塩湖弾丸ツアー.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50D1B2A6184DC44600D4BF1F /* ウユニ塩湖弾丸ツアー.jpg */; };
+		50F627C618472AA300F6F888 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F627C518472AA300F6F888 /* UIKit.framework */; };
+		50F627C818472AA300F6F888 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F627C718472AA300F6F888 /* Foundation.framework */; };
+		50F627CA18472AA300F6F888 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F627C918472AA300F6F888 /* CoreGraphics.framework */; };
+		50F627D018472AA300F6F888 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50F627CE18472AA300F6F888 /* InfoPlist.strings */; };
+		50F627D218472AA300F6F888 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F627D118472AA300F6F888 /* main.m */; };
+		50F627D618472AA300F6F888 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F627D518472AA300F6F888 /* AppDelegate.m */; };
+		50F627D818472AA300F6F888 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F627D718472AA300F6F888 /* Default.png */; };
+		50F627DA18472AA300F6F888 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F627D918472AA300F6F888 /* Default@2x.png */; };
+		50F627DC18472AA300F6F888 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F627DB18472AA300F6F888 /* Default-568h@2x.png */; };
+		50F627DF18472AA300F6F888 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F627DD18472AA300F6F888 /* MainStoryboard.storyboard */; };
+		50F627E218472AA300F6F888 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F627E118472AA300F6F888 /* ViewController.m */; };
+		50F627EA18482B1400F6F888 /* secondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F627E918482B1400F6F888 /* secondViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		50D1B29A184C685800D4BF1F /* ウユニ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ウユニ.jpg"; path = "../../風景写真/ウユニ.jpg"; sourceTree = "<group>"; };
+		50D1B29B184C685800D4BF1F /* ガンジス.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ガンジス.jpg"; path = "../../風景写真/ガンジス.jpg"; sourceTree = "<group>"; };
+		50D1B29C184C685800D4BF1F /* チベット.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "チベット.jpg"; path = "../../風景写真/チベット.jpg"; sourceTree = "<group>"; };
+		50D1B29D184C685800D4BF1F /* フィッツロイ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "フィッツロイ.jpg"; path = "../../風景写真/フィッツロイ.jpg"; sourceTree = "<group>"; };
+		50D1B29E184C685800D4BF1F /* ペリトモレノ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ペリトモレノ.jpg"; path = "../../風景写真/ペリトモレノ.jpg"; sourceTree = "<group>"; };
+		50D1B2A4184C6C0C00D4BF1F /* WorldMap.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = WorldMap.gif; path = "../../風景写真/WorldMap.gif"; sourceTree = "<group>"; };
+		50D1B2A6184DC44600D4BF1F /* ウユニ塩湖弾丸ツアー.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ウユニ塩湖弾丸ツアー.jpg"; path = "../../本写真/ウユニ塩湖弾丸ツアー.jpg"; sourceTree = "<group>"; };
+		50F627C218472AA300F6F888 /* WVB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WVB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F627C518472AA300F6F888 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		50F627C718472AA300F6F888 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		50F627C918472AA300F6F888 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		50F627CD18472AA300F6F888 /* WVB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WVB-Info.plist"; sourceTree = "<group>"; };
+		50F627CF18472AA300F6F888 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		50F627D118472AA300F6F888 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50F627D318472AA300F6F888 /* WVB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WVB-Prefix.pch"; sourceTree = "<group>"; };
+		50F627D418472AA300F6F888 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50F627D518472AA300F6F888 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		50F627D718472AA300F6F888 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		50F627D918472AA300F6F888 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		50F627DB18472AA300F6F888 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		50F627DE18472AA300F6F888 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		50F627E018472AA300F6F888 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		50F627E118472AA300F6F888 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		50F627E818482B1400F6F888 /* secondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondViewController.h; sourceTree = "<group>"; };
+		50F627E918482B1400F6F888 /* secondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50F627BF18472AA300F6F888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F627C618472AA300F6F888 /* UIKit.framework in Frameworks */,
+				50F627C818472AA300F6F888 /* Foundation.framework in Frameworks */,
+				50F627CA18472AA300F6F888 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50F627B918472AA300F6F888 = {
+			isa = PBXGroup;
+			children = (
+				50F627CB18472AA300F6F888 /* WVB */,
+				50F627C418472AA300F6F888 /* Frameworks */,
+				50F627C318472AA300F6F888 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50F627C318472AA300F6F888 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50F627C218472AA300F6F888 /* WVB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50F627C418472AA300F6F888 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50F627C518472AA300F6F888 /* UIKit.framework */,
+				50F627C718472AA300F6F888 /* Foundation.framework */,
+				50F627C918472AA300F6F888 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50F627CB18472AA300F6F888 /* WVB */ = {
+			isa = PBXGroup;
+			children = (
+				50F627D418472AA300F6F888 /* AppDelegate.h */,
+				50F627D518472AA300F6F888 /* AppDelegate.m */,
+				50F627DD18472AA300F6F888 /* MainStoryboard.storyboard */,
+				50F627E018472AA300F6F888 /* ViewController.h */,
+				50F627E118472AA300F6F888 /* ViewController.m */,
+				50F627E818482B1400F6F888 /* secondViewController.h */,
+				50F627E918482B1400F6F888 /* secondViewController.m */,
+				50F627CC18472AA300F6F888 /* Supporting Files */,
+			);
+			path = WVB;
+			sourceTree = "<group>";
+		};
+		50F627CC18472AA300F6F888 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50D1B2A6184DC44600D4BF1F /* ウユニ塩湖弾丸ツアー.jpg */,
+				50D1B2A4184C6C0C00D4BF1F /* WorldMap.gif */,
+				50D1B29A184C685800D4BF1F /* ウユニ.jpg */,
+				50D1B29B184C685800D4BF1F /* ガンジス.jpg */,
+				50D1B29C184C685800D4BF1F /* チベット.jpg */,
+				50D1B29D184C685800D4BF1F /* フィッツロイ.jpg */,
+				50D1B29E184C685800D4BF1F /* ペリトモレノ.jpg */,
+				50F627CD18472AA300F6F888 /* WVB-Info.plist */,
+				50F627CE18472AA300F6F888 /* InfoPlist.strings */,
+				50F627D118472AA300F6F888 /* main.m */,
+				50F627D318472AA300F6F888 /* WVB-Prefix.pch */,
+				50F627D718472AA300F6F888 /* Default.png */,
+				50F627D918472AA300F6F888 /* Default@2x.png */,
+				50F627DB18472AA300F6F888 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50F627C118472AA300F6F888 /* WVB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50F627E518472AA300F6F888 /* Build configuration list for PBXNativeTarget "WVB" */;
+			buildPhases = (
+				50F627BE18472AA300F6F888 /* Sources */,
+				50F627BF18472AA300F6F888 /* Frameworks */,
+				50F627C018472AA300F6F888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WVB;
+			productName = WVB;
+			productReference = 50F627C218472AA300F6F888 /* WVB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50F627BA18472AA300F6F888 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = NexSeed;
+			};
+			buildConfigurationList = 50F627BD18472AA300F6F888 /* Build configuration list for PBXProject "WVB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 50F627B918472AA300F6F888;
+			productRefGroup = 50F627C318472AA300F6F888 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50F627C118472AA300F6F888 /* WVB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50F627C018472AA300F6F888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F627D018472AA300F6F888 /* InfoPlist.strings in Resources */,
+				50F627D818472AA300F6F888 /* Default.png in Resources */,
+				50F627DA18472AA300F6F888 /* Default@2x.png in Resources */,
+				50F627DC18472AA300F6F888 /* Default-568h@2x.png in Resources */,
+				50F627DF18472AA300F6F888 /* MainStoryboard.storyboard in Resources */,
+				50D1B29F184C685800D4BF1F /* ウユニ.jpg in Resources */,
+				50D1B2A0184C685800D4BF1F /* ガンジス.jpg in Resources */,
+				50D1B2A1184C685800D4BF1F /* チベット.jpg in Resources */,
+				50D1B2A2184C685800D4BF1F /* フィッツロイ.jpg in Resources */,
+				50D1B2A3184C685800D4BF1F /* ペリトモレノ.jpg in Resources */,
+				50D1B2A5184C6C0C00D4BF1F /* WorldMap.gif in Resources */,
+				50D1B2A7184DC44600D4BF1F /* ウユニ塩湖弾丸ツアー.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50F627BE18472AA300F6F888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F627D218472AA300F6F888 /* main.m in Sources */,
+				50F627D618472AA300F6F888 /* AppDelegate.m in Sources */,
+				50F627E218472AA300F6F888 /* ViewController.m in Sources */,
+				50F627EA18482B1400F6F888 /* secondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50F627CE18472AA300F6F888 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50F627CF18472AA300F6F888 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		50F627DD18472AA300F6F888 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50F627DE18472AA300F6F888 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50F627E318472AA300F6F888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		50F627E418472AA300F6F888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50F627E618472AA300F6F888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WVB/WVB-Prefix.pch";
+				INFOPLIST_FILE = "WVB/WVB-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		50F627E718472AA300F6F888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WVB/WVB-Prefix.pch";
+				INFOPLIST_FILE = "WVB/WVB-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50F627BD18472AA300F6F888 /* Build configuration list for PBXProject "WVB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50F627E318472AA300F6F888 /* Debug */,
+				50F627E418472AA300F6F888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50F627E518472AA300F6F888 /* Build configuration list for PBXNativeTarget "WVB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50F627E618472AA300F6F888 /* Debug */,
+				50F627E718472AA300F6F888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50F627BA18472AA300F6F888 /* Project object */;
+}
