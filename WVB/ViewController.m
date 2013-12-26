@@ -10,6 +10,8 @@
 #import "AppDelegate.h"
 #import "secondViewController.h" //これ必要？
 
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]//色のための定義
+
 @interface ViewController ()
 
 @end
@@ -19,56 +21,69 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.tintColor =RGBA(139, 115, 85, 1.0);
+
+    
+// //ナビゲーションバーの色とか変更用？
+//    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+//        //viewControllerで制御することを伝える。iOS7 からできたメソッド
+//        [self setNeedsStatusBarAppearanceUpdate];
+//    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
+    
+    
     self.TV.dataSource=self;
     self.TV.delegate=self;
     NSLog(@"デリゲートとデータソース終了");
     
-    AreaName = @[@"1.アジア",@"2.北米",@"3.南米",@"4.ヨーロッパ",@"5.アフリカ",@"6.オセアニア",@"7.世界一周"];
+    //背景の設定
+    
+  
+    
+    AreaName = @[@"1.アジア",@"2.北米",@"3.南米",@"4.ヨーロッパ",@"5.アフリカ",@"6.オセアニア",@"7.その他広域"];
     NSLog(@"AreaName終了");    
     
     //1つ目のセクション:アジア のセル名
-    Asia1_NameData = [@[@"ボリビア/ウユニ", @"アルゼンチン/フィッツロイ"]mutableCopy];
+    Asia1_NameData = [@[@"チベット/中国", @"ラダック/インド", @"バラナシ/インド",@"ジョードプル/インド",@"プノンペン/カンボジア"]mutableCopy];
     NSLog(@"Asia1_NameData を配列に格納");
-    //1つ目のセクションの各画像
-    Asia1_ImageData = [@[[UIImage imageNamed:@"ウユニ.jpg"],[UIImage imageNamed:@"フィッツロイ.jpg"]] mutableCopy];
+    Asia1_ImageData = [@[[UIImage imageNamed:@"チベット.jpg"],[UIImage imageNamed:@"ラダック.jpeg"],[UIImage imageNamed:@"ガンジス.jpg"],[UIImage imageNamed:@"ジョードプル.jpeg"],[UIImage imageNamed:@"プノンペン.jpeg"]] mutableCopy];
     NSLog(@"Asia1_NameとImageのデータを配列に格納");
     
     //２つ目のセクション:北米 のセル名
-    NorthAmerica2_NameData = [@[@"アルゼンチン/ペリトモレノ",@"中国/チベット", @"インド/ガンジス"]mutableCopy];
-    NorthAmerica2_ImageData = [@[[UIImage imageNamed:@"ペリトモレノ.jpg"],[UIImage imageNamed:@"チベット.jpg"],[UIImage imageNamed:@"ガンジス.jpg"]] mutableCopy];
+    NorthAmerica2_NameData = [@[@"イエローストーン/アメリカ",@"モニュメントバレー/アメリカ"]mutableCopy];
+    NorthAmerica2_ImageData = [@[[UIImage imageNamed:@"イエローストーン.png"],[UIImage imageNamed:@"アンテロープキャニオン.jpeg"]] mutableCopy];
     NSLog(@"NorthAmerica_NameとImageのデータを配列に格納");
     
     //３つ目のセクション:南米 のセル名
-    SouthAmerica3_NameData = [@[@"アルゼンチン/ペリトモレノ",@"中国/チベット", @"インド/ガンジス"]mutableCopy];
-    SouthAmerica3_ImageData = [@[[UIImage imageNamed:@"ペリトモレノ.jpg"],[UIImage imageNamed:@"チベット.jpg"],[UIImage imageNamed:@"ガンジス.jpg"]] mutableCopy];
+    SouthAmerica3_NameData = [@[@"ウユニ/ボリビア",@"マチュピチュ/ペルー",@"ペリト・モレノ/アルゼンチン", @"アタカマ砂漠/チリ", @"ロライマ山/ベネズエラ"]mutableCopy];
+    SouthAmerica3_ImageData = [@[[UIImage imageNamed:@"ウユニ.jpg"],[UIImage imageNamed:@"マチュピチュ.jpeg"],[UIImage imageNamed:@"ペリトモレノ.jpg"],[UIImage imageNamed:@"アタカマ砂漠.jpg"],[UIImage imageNamed:@"ロライマ山.jpeg"]] mutableCopy];
     NSLog(@"SouthAmerica_NameとImageのデータを配列に格納");
  
     //４つ目のセクション:ヨーロッパ のセル名
-    Eourope4_NameData = [@[@"中国/チベット",@"アルゼンチン/ペリトモレノ", @"インド/ガンジス"]mutableCopy];
-    Eourope4_ImageData = [@[[UIImage imageNamed:@"ペリトモレノ.jpg"],[UIImage imageNamed:@"チベット.jpg"],[UIImage imageNamed:@"ガンジス.jpg"]] mutableCopy];
+    Eourope4_NameData = [@[@"アルプス/スイス",@"ナバイオビーチ/ギリシャ", @"ドブロブニク/クロアチア"]mutableCopy];
+    Eourope4_ImageData = [@[[UIImage imageNamed:@"アルプス.jpeg"],[UIImage imageNamed:@"ナバイオビーチ.png"],[UIImage imageNamed:@"ドブロブニク.png"]] mutableCopy];
     NSLog(@"Eourope_NameとImageのデータを配列に格納");
     
     //５つ目のセクション:アフリカ のセル名
-    Africa5_NameData = [@[@"インド/ガンジス",@"中国/チベット", @"アルゼンチン/ペリトモレノ"]mutableCopy];
-    Africa5_ImageData = [@[[UIImage imageNamed:@"チベット.jpg"],[UIImage imageNamed:@"ペリトモレノ.jpg"],[UIImage imageNamed:@"ガンジス.jpg"]] mutableCopy];
+    Africa5_NameData = [@[@"サハラ砂漠/モロッコ,モーリタニア,アルジェリア",@"バオバブ並木/マダガスカル"]mutableCopy];
+    Africa5_ImageData = [@[[UIImage imageNamed:@"サハラ砂漠.jpeg"],[UIImage imageNamed:@"マダガスカル.jpeg"]] mutableCopy];
     NSLog(@"Africa_NameとImageのデータを配列に格納");
     
     //６つ目のセクション:オセアニア のセル名
-    Oceania6_NameData = [@[@"インド/ガンジス", @"中国/チベット"]mutableCopy];
-    Oceania6_ImageData = [@[[UIImage imageNamed:@"ガンジス.jpg"],[UIImage imageNamed:@"チベット.jpg"]] mutableCopy];
+    Oceania6_NameData = [@[@"エアーズロック/オーストラリア",@"グレートオーシャンロード/オーストラリア"]mutableCopy];
+    Oceania6_ImageData = [@[[UIImage imageNamed:@"エアーズロック.jpg"],[UIImage imageNamed:@"グレートオーシャンロード.jpeg"]] mutableCopy];
     NSLog(@"Oceania_NameとImageのデータを配列に格納");
     
-    //７つ目のセクション:世界一周 のセル名
-    AroundTheWorld7_NameData = [@[@"アルゼンチン/ペリトモレノ",@"中国/チベット", @"インド/ガンジス"]mutableCopy];
-    AroundTheWorld7_ImageData = [@[[UIImage imageNamed:@"ペリトモレノ.jpg"],[UIImage imageNamed:@"チベット.jpg"],[UIImage imageNamed:@"ガンジス.jpg"]] mutableCopy];
+    //７つ目のセクション:その他広域 のセル名
+    AroundTheWorld7_NameData = [@[@"世界一周",@"アジア"]mutableCopy];
+    AroundTheWorld7_ImageData = [@[[UIImage imageNamed:@"地球.jpg"],[UIImage imageNamed:@"アジア.jpg"]] mutableCopy];
     NSLog(@"AroundTheWorld_NameとImageのデータを配列に格納");
     
     
     
     //各データ配列の配列を作成
-    NameData = @[Asia1_NameData, NorthAmerica2_NameData, SouthAmerica3_NameData, Eourope4_NameData, Africa5_NameData, Oceania6_ImageData, AroundTheWorld7_NameData];
+    NameData = @[Asia1_NameData, NorthAmerica2_NameData, SouthAmerica3_NameData, Eourope4_NameData, Africa5_NameData, Oceania6_NameData, AroundTheWorld7_NameData];
     NSLog(@"NameData");
-    ImageData = @[Asia1_ImageData, NorthAmerica2_ImageData, SouthAmerica3_ImageData, Eourope4_ImageData, Africa5_ImageData, Oceania6_ImageData, AroundTheWorld7_ImageData];
+    ImageData = @[Asia1_ImageData, NorthAmerica2_ImageData, SouthAmerica3_ImageData, Eourope4_ImageData, Africa5_ImageData,Oceania6_ImageData, AroundTheWorld7_ImageData];
     NSLog(@"ImageData");
 
 
@@ -79,13 +94,13 @@
     
     
 
-
+#pragma mark transparent button 
 
     //透明ボタン（1.アジア）青
     /* ビューを作成 */
-    CGRect Rect_Asia = CGRectMake(100, 50, 100, 50);
+    CGRect Rect_Asia = CGRectMake(205, 45, 70, 50);
     UIView *View_Asia = [[UIView alloc]initWithFrame:Rect_Asia];
-    View_Asia.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:1.0];
+    View_Asia.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.0];
     [self.view addSubview:View_Asia];
     [self.view bringSubviewToFront:View_Asia];//ビューを最前面に
     /* シングルタップ */
@@ -101,9 +116,9 @@
     
     //透明ボタン（2.北米）赤
     /* ビューを作成 */
-    CGRect Rect_NorthAmerica = CGRectMake(10, 20, 100, 50);
+    CGRect Rect_NorthAmerica = CGRectMake(10, 5, 135, 69);
     UIView *View_NorthAmerica = [[UIView alloc]initWithFrame:Rect_NorthAmerica];
-    View_NorthAmerica.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
+    View_NorthAmerica.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.0];
     [self.view addSubview:View_NorthAmerica];
     
     /* シングルタップ */
@@ -118,9 +133,9 @@
     
     //透明ボタン（3.南米）緑
     /* ビューを作成 */
-    CGRect Rect_SouthAmerica = CGRectMake(150, 70, 100, 50);
+    CGRect Rect_SouthAmerica = CGRectMake(80, 75, 60, 70);
     UIView *View_SouthAmerica = [[UIView alloc]initWithFrame:Rect_SouthAmerica];
-    View_SouthAmerica.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:1.0];
+    View_SouthAmerica.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.0];
     [self.view addSubview:View_SouthAmerica];
     [self.view bringSubviewToFront:View_SouthAmerica];//ビューを最前面に
     /* シングルタップ */
@@ -134,9 +149,9 @@
     
     //透明ボタン（4.ヨーロッパ）黒
     /* ビューを作成 */
-    CGRect Rect_Eourope = CGRectMake(160, 20, 100, 50);
+    CGRect Rect_Eourope = CGRectMake(150, 15, 65, 45);
     UIView *View_Eourope = [[UIView alloc]initWithFrame:Rect_Eourope];
-    View_Eourope.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
+    View_Eourope.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
     [self.view addSubview:View_Eourope];
     [self.view bringSubviewToFront:View_Eourope];//ビューを最前面に
     /* シングルタップ */
@@ -149,9 +164,9 @@
     
     //透明ボタン（5.アフリカ）白
     /* ビューを作成 */
-    CGRect Rect_Africa = CGRectMake(200, 20, 100, 50);
+    CGRect Rect_Africa = CGRectMake(145, 60, 55, 60);
     UIView *View_Africa = [[UIView alloc]initWithFrame:Rect_Africa];
-    View_Africa.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+    View_Africa.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.0];
     [self.view addSubview:View_Africa];
     [self.view bringSubviewToFront:View_Africa];//ビューを最前面に
     /* シングルタップ */
@@ -164,9 +179,9 @@
     
     //透明ボタン（6.オセアニア）黄色
     /* ビューを作成 */
-    CGRect Rect_Oceania = CGRectMake(100, 120, 100, 50);
+    CGRect Rect_Oceania = CGRectMake(240, 95, 70, 40);
     UIView *View_Oceania = [[UIView alloc]initWithFrame:Rect_Oceania];
-    View_Oceania.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:1.0];
+    View_Oceania.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:0.0];
     [self.view addSubview:View_Oceania];
     [self.view bringSubviewToFront:View_Oceania];//ビューを最前面に
     /* シングルタップ */
@@ -179,11 +194,16 @@
     
     //透明ボタン（7.世界一周）ピンク
     /* ビューを作成 */
-    CGRect Rect_AroundTheWorld = CGRectMake(10, 100, 100, 50);
+    UIScreen *sc = [UIScreen mainScreen];
+    CGRect rect = sc.bounds;
+    
+    CGRect Rect_AroundTheWorld = CGRectMake(0, 0, rect.size.width, 200);
     UIView *View_AroundTheWorld = [[UIView alloc]initWithFrame:Rect_AroundTheWorld];
-    View_AroundTheWorld.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:1.0 alpha:1.0];
+    View_AroundTheWorld.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:1.0 alpha:0.0];
     [self.view addSubview:View_AroundTheWorld];
-    [self.view bringSubviewToFront:View_AroundTheWorld];//ビューを最前面に
+    [self.view sendSubviewToBack:View_AroundTheWorld];//ビューを再背面に
+    [self.view sendSubviewToBack:self.Map];//ビューを再背面に
+//    self.Map.image = [UIImage imageNamed:@"WorldMap.gif"];
     /* シングルタップ */
     UITapGestureRecognizer *tapGesture_AroundTheWorld =
     [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(AroundTheWorld_Tapped:)];
@@ -191,17 +211,20 @@
     // ビューにジェスチャーを追加
     [View_AroundTheWorld addGestureRecognizer:tapGesture_AroundTheWorld];
     NSLog(@"世界一周の透明ボタン設置" );
-
+#pragma mark -
     
 }
 
 
-
+#pragma mark number of section
 //セクションの数を指定
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
      NSLog(@"セクション数=%d",AreaName.count );
     return AreaName.count;
 }
+#pragma mark -
+
+
 
 //セルの数を指定
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -246,6 +269,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    
+    
     // セルにテキストとイメージを設定
      NSLog(@"%d番目のセクションの%d番目のセルに文字とイメージを入れる", indexPath.section,indexPath.row);
 
@@ -256,6 +283,35 @@
     
     return cell;//これ、セルの表示に必要！
 }
+
+
+
+//TableViewのセルの色を交互に変更
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // For even
+    if (indexPath.row % 2 == 0) {
+        cell.backgroundColor = RGBA(245, 245, 220, 0.5);//Beige
+    }
+    // For odd
+    else {
+        cell.backgroundColor = RGBA(245, 222, 179, 0.5);//Wheat
+    }
+}
+
+//TableViewの高さを変更
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
+}
+
+
+
+
+
+
+
 
 
 //cell置かないver. セルが選択されたときのイベント取得（遷移）
@@ -308,6 +364,33 @@
 //        SecondViewController.myStrImage = ImageData[self.TV.indexPathForSelectedRow.row];
 //    }
 //}
+
+
+
+////デザイン変更
+////色の変更
+////ステータスバーの文字色変更
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    //文字を白くする
+//    return UIStatusBarStyleLightContent;
+//}
+
+//TableViewの色、フォント等変更
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *View_SectionTitle = [[UIView alloc] init];
+//    [View_SectionTitle setBackgroundColor:RGBA(0, 0, 0, 1.0)];
+    View_SectionTitle.backgroundColor = RGBA(139, 115, 85, 1.0);
+    
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 0.0f, 320.0f, 22.0f)];
+    lbl.backgroundColor = RGBA(139, 115, 85, 1.0);
+    lbl.textColor = RGBA(256, 256, 256, 1.0);
+    lbl.text =AreaName[section];
+//    [NSString stringWithFormat:AreaName[section]];
+    [View_SectionTitle addSubview:lbl];
+    return View_SectionTitle;
+}
+
 
 
 
