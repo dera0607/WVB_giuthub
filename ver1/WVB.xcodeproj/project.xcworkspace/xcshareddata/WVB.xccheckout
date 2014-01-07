@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F81B5737-07EE-4A0E-A743-E7C1018A0CE7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WVB</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3249DFFE-3BAC-4630-A6CB-21408E2A71D0</key>
+		<string>https://github.com/dera0607/WVB_giuthub.git</string>
+		<key>DE1B6B64-B29C-4892-8A75-39A3EF0D5ABE</key>
+		<string>git://github.com/davbeck/TUSafariActivity.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WVB.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3249DFFE-3BAC-4630-A6CB-21408E2A71D0</key>
+		<string>../..</string>
+		<key>DE1B6B64-B29C-4892-8A75-39A3EF0D5ABE</key>
+		<string>../../../UIActivityCollection/Safari</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dera0607/WVB_giuthub.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3249DFFE-3BAC-4630-A6CB-21408E2A71D0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE1B6B64-B29C-4892-8A75-39A3EF0D5ABE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Safari</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3249DFFE-3BAC-4630-A6CB-21408E2A71D0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WVB_giuthub</string>
+		</dict>
+	</array>
+</dict>
+</plist>
