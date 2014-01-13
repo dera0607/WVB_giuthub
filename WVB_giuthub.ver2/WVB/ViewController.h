@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import <iAd/iAd.h>
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,ADBannerViewDelegate>{
 //    NSArray *SectionName;
 //    NSArray *PlaceName;
 //    NSArray *PlacePic;
@@ -47,7 +48,9 @@
     
     NSDictionary *dataSource;
     
-    
+    //広告
+    ADBannerView *adView;
+    BOOL bannerIsVisible;
     
     
 

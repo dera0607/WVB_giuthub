@@ -52,7 +52,7 @@
     
 //    UIImage* MapImage =[UIImage imageNamed:@"WorldMap.gif"];
     UIImageView* sImageView =[[UIImageView alloc]initWithImage:appDelegate.Pass_NameImage];
-    CGRect rect_secondImageView = CGRectMake(0, 100, 320, 180);
+    CGRect rect_secondImageView = CGRectMake(10, 100, 300, 180);
     sImageView.frame = rect_secondImageView ;
     [self.view addSubview:sImageView];
 //    [self.view sendSubviewToBack:map_imageview];//ビューを再背面に

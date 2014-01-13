@@ -21,7 +21,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.tintColor =RGBA(139, 115, 85, 1.0);
+//    self.navigationController.navigationBar.tintColor =RGBA(139, 115, 85, 1.0);
 
     
 // //ナビゲーションバーの色とか変更用？
@@ -29,7 +29,7 @@
 //        //viewControllerで制御することを伝える。iOS7 からできたメソッド
 //        [self setNeedsStatusBarAppearanceUpdate];
 //    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
-    
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:1.000 green:0.549 blue:0.890 alpha:1.000];
     
     self.TV.dataSource=self;
     self.TV.delegate=self;
@@ -225,6 +225,37 @@
     NSLog(@"世界一周の透明ボタン設置" );
 #pragma mark -
     
+
+#pragma mark advertisement
+    
+    // iAd を生成
+    adView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+    
+    // 画面(ビュー)の下に表示する場合
+ //adView.frame = CGRectMake(0, self.view.frame.size.height - adView.frame.size.height, adView.frame.size.width, adView.frame.size.height);
+    
+    // adViewのフレーム矩形が変更された時にサブビューのサイズを自動的に変更
+    adView.autoresizesSubviews = YES;
+    
+    // 横向き、縦向きに回転した際に、自動的に広告の横幅を調整し、画面上に固定
+    // ※画面下に表示する場合は、コメントアウト。
+    adView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+    
+    // 横向き、縦向きに回転した際に、自動的に広告の横幅を調整し、画面下に固定
+    // ※画面上に表示する場合は、コメントアウト。
+    //adView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+    
+    // 非表示にしておく
+    adView.alpha = 0.0f;
+    
+    // ビューに追加
+    [self.view addSubview:adView];
+    
+    // デリゲートをこの UIViewContoroller に渡す
+    adView.delegate = self;
+
+#pragma mark -
+
 }
 
 
@@ -355,6 +386,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     
 
     [self.navigationController pushViewController:SecondViewController animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];//選択解除
 
 }
 
@@ -461,6 +494,34 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:6];
     [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
 }
+
+
+
+
+
+#pragma mark ad view
+// iAdの受信に成功したとき
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    // バナーが表示されていない場合
+    if ( !bannerIsVisible ) {
+        // 表示
+        banner.alpha = 1.0f;
+    }
+    // フラグをYESに
+    bannerIsVisible = YES;
+}
+
+// iAdの受信に失敗したとき
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    // バナーが表示されている場合
+    if ( bannerIsVisible ) {
+        // 非表示
+        banner.alpha = 0.0f;
+    }
+    // フラグをNOに
+    bannerIsVisible = NO;
+}
+#pragma mark -
 
 
 

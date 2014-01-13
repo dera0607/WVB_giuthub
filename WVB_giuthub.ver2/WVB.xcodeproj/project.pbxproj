@@ -20,6 +20,7 @@
 		501C4610186BA71C0004960A /* Paper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 501C460F186BA71B0004960A /* Paper.jpg */; };
 		508688B4185A879D0020E172 /* SafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 508688B3185A879D0020E172 /* SafariActivity.m */; };
 		508688B8185AD7990020E172 /* Safari.png in Resources */ = {isa = PBXBuildFile; fileRef = 508688B7185AD7990020E172 /* Safari.png */; };
+		5097E703187E6C33006FD90A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5097E702187E6C32006FD90A /* iAd.framework */; };
 		509C996F186621C4006D7E2E /* ウユニ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 509C995E186621C2006D7E2E /* ウユニ.jpg */; };
 		509C9971186621C4006D7E2E /* グレートオーシャンロード.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 509C9960186621C2006D7E2E /* グレートオーシャンロード.jpeg */; };
 		509C9974186621C4006D7E2E /* チベット.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 509C9963186621C3006D7E2E /* チベット.jpg */; };
@@ -107,6 +108,7 @@
 		508688B2185A879D0020E172 /* SafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariActivity.h; sourceTree = "<group>"; };
 		508688B3185A879D0020E172 /* SafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariActivity.m; sourceTree = "<group>"; };
 		508688B7185AD7990020E172 /* Safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Safari.png; sourceTree = "<group>"; };
+		5097E702187E6C32006FD90A /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		509C995B186621C2006D7E2E /* アルプス.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アルプス.jpeg"; sourceTree = "<group>"; };
 		509C995C186621C2006D7E2E /* アンテロープキャニオン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アンテロープキャニオン.jpeg"; sourceTree = "<group>"; };
 		509C995D186621C2006D7E2E /* イエローストーン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "イエローストーン.png"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5097E703187E6C33006FD90A /* iAd.framework in Frameworks */,
 				50F627C618472AA300F6F888 /* UIKit.framework in Frameworks */,
 				50F627C818472AA300F6F888 /* Foundation.framework in Frameworks */,
 				50F627CA18472AA300F6F888 /* CoreGraphics.framework in Frameworks */,
@@ -265,6 +268,7 @@
 		50F627C418472AA300F6F888 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5097E702187E6C32006FD90A /* iAd.framework */,
 				50F627C518472AA300F6F888 /* UIKit.framework */,
 				50F627C718472AA300F6F888 /* Foundation.framework */,
 				50F627C918472AA300F6F888 /* CoreGraphics.framework */,
