@@ -38,6 +38,8 @@
 		509C99B41866A986006D7E2E /* カールじいさんの空飛ぶ家.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 509C99B31866A981006D7E2E /* カールじいさんの空飛ぶ家.jpg */; };
 		509C99B61866AA90006D7E2E /* サウンドオブミュージック.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 509C99B51866AA8C006D7E2E /* サウンドオブミュージック.jpg */; };
 		509C99BF1866FDDD006D7E2E /* 魔女の宅急便.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 509C99BE1866FDD5006D7E2E /* 魔女の宅急便.jpg */; };
+		50B604B31883C7D500268281 /* ラダックの風息.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50B604B21883C7D500268281 /* ラダックの風息.jpg */; };
+		50B604B51883CC9700268281 /* マダガスカル.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50B604B41883CC9700268281 /* マダガスカル.jpg */; };
 		50BAB581187BCA62006B6A6E /* アジア.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB544187BCA61006B6A6E /* アジア.jpg */; };
 		50BAB583187BCA62006B6A6E /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB546187BCA61006B6A6E /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg */; };
 		50BAB584187BCA62006B6A6E /* アルプス.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB547187BCA61006B6A6E /* アルプス.jpeg */; };
@@ -59,12 +61,10 @@
 		50BAB5A3187BCA62006B6A6E /* プノンペン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB566187BCA62006B6A6E /* プノンペン.jpeg */; };
 		50BAB5A4187BCA62006B6A6E /* ペリトモレノ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB567187BCA62006B6A6E /* ペリトモレノ.jpg */; };
 		50BAB5A5187BCA62006B6A6E /* ボリビアを知るための68章.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB568187BCA62006B6A6E /* ボリビアを知るための68章.jpg */; };
-		50BAB5A6187BCA62006B6A6E /* マダガスカル.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB569187BCA62006B6A6E /* マダガスカル.jpeg */; };
 		50BAB5A8187BCA62006B6A6E /* マチュピチュ.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB56B187BCA62006B6A6E /* マチュピチュ.jpeg */; };
 		50BAB5A9187BCA62006B6A6E /* モーターサイクルダイアリーズ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB56C187BCA62006B6A6E /* モーターサイクルダイアリーズ.jpg */; };
 		50BAB5AA187BCA62006B6A6E /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB56D187BCA62006B6A6E /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg */; };
 		50BAB5AB187BCA62006B6A6E /* ラダック.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB56E187BCA62006B6A6E /* ラダック.jpeg */; };
-		50BAB5AC187BCA62006B6A6E /* ラダックの風息.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB56F187BCA62006B6A6E /* ラダックの風息.jpg */; };
 		50BAB5AE187BCA62006B6A6E /* ロライマ山.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB571187BCA62006B6A6E /* ロライマ山.jpeg */; };
 		50BAB5AF187BCA62006B6A6E /* 懐かしい未来 ラダックから学ぶ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB572187BCA62006B6A6E /* 懐かしい未来 ラダックから学ぶ.jpg */; };
 		50BAB5B0187BCA62006B6A6E /* 紅の豚.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50BAB573187BCA62006B6A6E /* 紅の豚.jpg */; };
@@ -152,6 +152,8 @@
 		509C99B51866AA8C006D7E2E /* サウンドオブミュージック.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "サウンドオブミュージック.jpg"; sourceTree = "<group>"; };
 		509C99BC1866FA6E006D7E2E /* 紅の豚.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "紅の豚.jpg"; sourceTree = "<group>"; };
 		509C99BE1866FDD5006D7E2E /* 魔女の宅急便.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "魔女の宅急便.jpg"; sourceTree = "<group>"; };
+		50B604B21883C7D500268281 /* ラダックの風息.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ラダックの風息.jpg"; path = "../../../../../Pictures/iPhoto Library/Previews/2013/12/26/20131226-143237/ラダックの風息.jpg"; sourceTree = "<group>"; };
+		50B604B41883CC9700268281 /* マダガスカル.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マダガスカル.jpg"; sourceTree = "<group>"; };
 		50BAB544187BCA61006B6A6E /* アジア.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アジア.jpg"; sourceTree = "<group>"; };
 		50BAB545187BCA61006B6A6E /* アタカマ砂漠.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アタカマ砂漠.jpg"; sourceTree = "<group>"; };
 		50BAB546187BCA61006B6A6E /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg"; sourceTree = "<group>"; };
@@ -189,13 +191,11 @@
 		50BAB566187BCA62006B6A6E /* プノンペン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "プノンペン.jpeg"; sourceTree = "<group>"; };
 		50BAB567187BCA62006B6A6E /* ペリトモレノ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ペリトモレノ.jpg"; sourceTree = "<group>"; };
 		50BAB568187BCA62006B6A6E /* ボリビアを知るための68章.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ボリビアを知るための68章.jpg"; sourceTree = "<group>"; };
-		50BAB569187BCA62006B6A6E /* マダガスカル.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マダガスカル.jpeg"; sourceTree = "<group>"; };
 		50BAB56A187BCA62006B6A6E /* マチュピチュ (写真でわかる謎への旅) .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マチュピチュ (写真でわかる謎への旅) .jpg"; sourceTree = "<group>"; };
 		50BAB56B187BCA62006B6A6E /* マチュピチュ.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マチュピチュ.jpeg"; sourceTree = "<group>"; };
 		50BAB56C187BCA62006B6A6E /* モーターサイクルダイアリーズ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "モーターサイクルダイアリーズ.jpg"; sourceTree = "<group>"; };
 		50BAB56D187BCA62006B6A6E /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg"; sourceTree = "<group>"; };
 		50BAB56E187BCA62006B6A6E /* ラダック.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ラダック.jpeg"; sourceTree = "<group>"; };
-		50BAB56F187BCA62006B6A6E /* ラダックの風息.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ラダックの風息.jpg"; sourceTree = "<group>"; };
 		50BAB570187BCA62006B6A6E /* リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg"; sourceTree = "<group>"; };
 		50BAB571187BCA62006B6A6E /* ロライマ山.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ロライマ山.jpeg"; sourceTree = "<group>"; };
 		50BAB572187BCA62006B6A6E /* 懐かしい未来 ラダックから学ぶ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "懐かしい未来 ラダックから学ぶ.jpg"; sourceTree = "<group>"; };
@@ -299,6 +299,7 @@
 				501C460F186BA71B0004960A /* Paper.jpg */,
 				501C46091869F91C0004960A /* ダークナイトライジング.jpg */,
 				501C46071869F7500004960A /* 地中海の光ベスト50--世界の名景.jpg */,
+				50B604B21883C7D500268281 /* ラダックの風息.jpg */,
 				501C46051869F4280004960A /* 中世都市ドゥブロヴニク―アドリア海の東西交易.jpg */,
 				501C46031869EB390004960A /* 旅へ！アジアへ！.jpg */,
 				501C460B186AA2B80004960A /* 懐かしい未来 ラダックから学ぶ.jpg */,
@@ -313,6 +314,7 @@
 				50BAB54C187BCA61006B6A6E /* エヴァー・スマイル、ニュージャージー.jpg */,
 				50BAB54D187BCA61006B6A6E /* カールじいさんの空飛ぶ家.jpg */,
 				50BAB54E187BCA61006B6A6E /* ガンジス.jpg */,
+				50B604B41883CC9700268281 /* マダガスカル.jpg */,
 				50BAB54F187BCA61006B6A6E /* ガンジス河でバタフライ.jpg */,
 				50BAB550187BCA61006B6A6E /* カンボジアからやってきたワンディ.jpg */,
 				50BAB551187BCA61006B6A6E /* くれいじー・ばいきん、オーストラリア.jpg */,
@@ -339,13 +341,11 @@
 				50BAB566187BCA62006B6A6E /* プノンペン.jpeg */,
 				50BAB567187BCA62006B6A6E /* ペリトモレノ.jpg */,
 				50BAB568187BCA62006B6A6E /* ボリビアを知るための68章.jpg */,
-				50BAB569187BCA62006B6A6E /* マダガスカル.jpeg */,
 				50BAB56A187BCA62006B6A6E /* マチュピチュ (写真でわかる謎への旅) .jpg */,
 				50BAB56B187BCA62006B6A6E /* マチュピチュ.jpeg */,
 				50BAB56C187BCA62006B6A6E /* モーターサイクルダイアリーズ.jpg */,
 				50BAB56D187BCA62006B6A6E /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg */,
 				50BAB56E187BCA62006B6A6E /* ラダック.jpeg */,
-				50BAB56F187BCA62006B6A6E /* ラダックの風息.jpg */,
 				50BAB570187BCA62006B6A6E /* リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg */,
 				50BAB571187BCA62006B6A6E /* ロライマ山.jpeg */,
 				50BAB572187BCA62006B6A6E /* 懐かしい未来 ラダックから学ぶ.jpg */,
@@ -479,7 +479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				50F627D018472AA300F6F888 /* InfoPlist.strings in Resources */,
-				50BAB5AC187BCA62006B6A6E /* ラダックの風息.jpg in Resources */,
 				50F627D818472AA300F6F888 /* Default.png in Resources */,
 				50F627DA18472AA300F6F888 /* Default@2x.png in Resources */,
 				50BAB5B1187BCA62006B6A6E /* 死ぬまでに行きたい! 世界の絶景.jpg in Resources */,
@@ -519,10 +518,10 @@
 				50BAB5AE187BCA62006B6A6E /* ロライマ山.jpeg in Resources */,
 				509C99B61866AA90006D7E2E /* サウンドオブミュージック.jpg in Resources */,
 				509C99BF1866FDDD006D7E2E /* 魔女の宅急便.jpg in Resources */,
+				50B604B31883C7D500268281 /* ラダックの風息.jpg in Resources */,
 				50BAB58D187BCA62006B6A6E /* カンボジアからやってきたワンディ.jpg in Resources */,
 				501C45F01867DC490004960A /* サハラ砂漠の秘密.jpg in Resources */,
 				501C45F41867DD610004960A /* どくとるアイアイと謎の島マダガスカル.jpg in Resources */,
-				50BAB5A6187BCA62006B6A6E /* マダガスカル.jpeg in Resources */,
 				50BAB5A5187BCA62006B6A6E /* ボリビアを知るための68章.jpg in Resources */,
 				501C45F61867DFCC0004960A /* 世界の中心で、愛をさけぶ スタンダード.jpg in Resources */,
 				50BAB5B4187BCA62006B6A6E /* 深夜特急.jpg in Resources */,
@@ -546,6 +545,7 @@
 				50BAB581187BCA62006B6A6E /* アジア.jpg in Resources */,
 				50BAB597187BCA62006B6A6E /* ダライ・ラマに恋して.jpg in Resources */,
 				50BAB5AA187BCA62006B6A6E /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg in Resources */,
+				50B604B51883CC9700268281 /* マダガスカル.jpg in Resources */,
 				501C460A1869F91D0004960A /* ダークナイトライジング.jpg in Resources */,
 				501C460E186BA6370004960A /* WorldMap.gif in Resources */,
 				501C4610186BA71C0004960A /* Paper.jpg in Resources */,

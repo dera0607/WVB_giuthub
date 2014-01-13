@@ -277,7 +277,7 @@
     //本2の画像
     BookImage2_Asia  = [@[
                           [UIImage imageNamed:@"ダライ・ラマに恋して.jpg"],
-                          [UIImage imageNamed:@"ラダックの風息 空の果てで暮らした日々.jpg"],
+                          [UIImage imageNamed:@"ラダックの風息.jpg"],
                           [UIImage imageNamed:@"深い河.jpg"],
                           [UIImage imageNamed:@"ダークナイトライジング.jpg"],
                           [UIImage imageNamed:@"僕たちは世界を変えることができない.jpg"]
@@ -423,7 +423,7 @@
     // UIWebView例文
     WV1 = [[UIWebView alloc] init];
     WV1.delegate = self;
-    WV1.frame = CGRectMake(10, 10,[[UIScreen mainScreen] bounds].size.width-20 ,[[UIScreen mainScreen] bounds].size.height-80);
+    WV1.frame = CGRectMake(10, 50,[[UIScreen mainScreen] bounds].size.width-20 ,[[UIScreen mainScreen] bounds].size.height-80);
     WV1.scalesPageToFit = YES;
     [self.view addSubview:WV1];
     
@@ -490,7 +490,7 @@
     // UIWebView例文
     WV2 = [[UIWebView alloc] init];
     WV2.delegate = self;
-    WV2.frame = CGRectMake(10, 10,[[UIScreen mainScreen] bounds].size.width-20 ,[[UIScreen mainScreen] bounds].size.height-80);
+    WV2.frame = CGRectMake(10, 40,[[UIScreen mainScreen] bounds].size.width-20 ,[[UIScreen mainScreen] bounds].size.height-80);
     WV2.scalesPageToFit = YES;
     [self.view addSubview:WV2];
     

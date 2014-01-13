@@ -29,7 +29,8 @@
 //        //viewControllerで制御することを伝える。iOS7 からできたメソッド
 //        [self setNeedsStatusBarAppearanceUpdate];
 //    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
-    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:1.000 green:0.549 blue:0.890 alpha:1.000];
+    [UINavigationBar appearance].barTintColor = RGBA(139, 115, 85, 1.0);
+//    [UIColor colorWithRed:1.000 green:0.549 blue:0.890 alpha:1.000];
     
     self.TV.dataSource=self;
     self.TV.delegate=self;
@@ -65,7 +66,7 @@
     
     //５つ目のセクション:アフリカ のセル名
     Africa5_NameData = [@[@"サハラ砂漠/モロッコ,モーリタニア,アルジェリア",@"バオバブ並木/マダガスカル"]mutableCopy];
-    Africa5_ImageData = [@[[UIImage imageNamed:@"サハラ砂漠.jpeg"],[UIImage imageNamed:@"マダガスカル.jpeg"]] mutableCopy];
+    Africa5_ImageData = [@[[UIImage imageNamed:@"サハラ砂漠.jpeg"],[UIImage imageNamed:@"マダガスカル.jpg"]] mutableCopy];
     NSLog(@"Africa_NameとImageのデータを配列に格納");
     
     //６つ目のセクション:オセアニア のセル名
