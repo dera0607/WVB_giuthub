@@ -30,6 +30,7 @@
 //        [self setNeedsStatusBarAppearanceUpdate];
 //    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
     [UINavigationBar appearance].barTintColor = RGBA(139, 115, 85, 1.0);
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
 //    [UIColor colorWithRed:1.000 green:0.549 blue:0.890 alpha:1.000];
     
     self.TV.dataSource=self;
@@ -112,7 +113,7 @@
     /* ビューを作成 */
     CGRect Rect_Asia = CGRectMake(205, 45+64, 70, 50);
     UIView *View_Asia = [[UIView alloc]initWithFrame:Rect_Asia];
-    View_Asia.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.5];
+    View_Asia.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.0];
     [self.view addSubview:View_Asia];
     [self.view bringSubviewToFront:View_Asia];//ビューを最前面に
     /* シングルタップ */

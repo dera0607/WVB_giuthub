@@ -52,7 +52,7 @@
     
 //    UIImage* MapImage =[UIImage imageNamed:@"WorldMap.gif"];
     UIImageView* sImageView =[[UIImageView alloc]initWithImage:appDelegate.Pass_NameImage];
-    CGRect rect_secondImageView = CGRectMake(10, 100, 300, 180);
+    CGRect rect_secondImageView = CGRectMake(10, 110, 300, 180);
     sImageView.frame = rect_secondImageView ;
     [self.view addSubview:sImageView];
 //    [self.view sendSubviewToBack:map_imageview];//ビューを再背面に
@@ -369,7 +369,7 @@
     //タップ用のビューを作成（ラベルと画像を覆うもの）
     //一つ目の本
     /* ビューを作成 */
-    CGRect rect1 = CGRectMake(47, 235, 92, 170);
+    CGRect rect1 = CGRectMake(30, 330, 120, 170);
     UIView *myView1 = [[UIView alloc]initWithFrame:rect1];
     myView1.backgroundColor = [UIColor blueColor];
     [self.view addSubview:myView1];
@@ -385,7 +385,7 @@
     
     //２つ目の本
     /* ビューを作成（二つ目の本） */
-    CGRect rect2 = CGRectMake(173, 235, 92, 170);
+    CGRect rect2 = CGRectMake(173, 330, 120, 170);
     UIView *myView2 = [[UIView alloc]initWithFrame:rect2];
     [self.view addSubview:myView2];
     myView2.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.0f];
@@ -423,7 +423,7 @@
     // UIWebView例文
     WV1 = [[UIWebView alloc] init];
     WV1.delegate = self;
-    WV1.frame = CGRectMake(10, 50,[[UIScreen mainScreen] bounds].size.width-20 ,[[UIScreen mainScreen] bounds].size.height-80);
+    WV1.frame = CGRectMake(10, 20,[[UIScreen mainScreen] bounds].size.width-20 ,[[UIScreen mainScreen] bounds].size.height-80);
     WV1.scalesPageToFit = YES;
     [self.view addSubview:WV1];
     
@@ -490,7 +490,7 @@
     // UIWebView例文
     WV2 = [[UIWebView alloc] init];
     WV2.delegate = self;
-    WV2.frame = CGRectMake(10, 40,[[UIScreen mainScreen] bounds].size.width-20 ,[[UIScreen mainScreen] bounds].size.height-80);
+    WV2.frame = CGRectMake(10, 20,[[UIScreen mainScreen] bounds].size.width-20 ,[[UIScreen mainScreen] bounds].size.height-80);
     WV2.scalesPageToFit = YES;
     [self.view addSubview:WV2];
     
@@ -546,6 +546,8 @@
         self.navigationController.toolbarHidden = YES;
     [WV1 removeFromSuperview];
     [ViewWeb1 removeFromSuperview];
+    [WV2 removeFromSuperview];
+    [ViewWeb2 removeFromSuperview];
     
     //ナビゲーションバーを表示
     self.navigationController.navigationBarHidden = NO;
