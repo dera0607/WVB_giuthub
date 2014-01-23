@@ -18,20 +18,34 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // //ナビゲーションバーの色とか変更用？
+    //    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+    //        //viewControllerで制御することを伝える。iOS7 からできたメソッド
+    //        [self setNeedsStatusBarAppearanceUpdate];
+
+//    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    //    [UIColor colorWithRed:1.000 green:0.549 blue:0.890 alpha:1.000];
+    
+    //ナビゲーションバーのボタンに使用されるテキストの色を変更
+    self.navigationController.navigationBar.tintColor = RGBA(245, 245, 220, 0.5);
+    //  ナビゲーションバーのタイトルの色を変更する
+//    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: RGBA(245, 245, 220, 0.5)};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: RGBA(245, 245, 220, 0.5)};
+//    [UINavigationBar appearance].barTintColor = RGBA(139, 115, 85, 1.0);
+    self.navigationController.navigationBar.barTintColor = RGBA(139, 115, 85, 1.0);
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 //    self.navigationController.navigationBar.tintColor =RGBA(139, 115, 85, 1.0);
 
     
-// //ナビゲーションバーの色とか変更用？
-//    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
-//        //viewControllerで制御することを伝える。iOS7 からできたメソッド
-//        [self setNeedsStatusBarAppearanceUpdate];
-//    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor]};
-    [UINavigationBar appearance].barTintColor = RGBA(139, 115, 85, 1.0);
-    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
-//    [UIColor colorWithRed:1.000 green:0.549 blue:0.890 alpha:1.000];
+
+    
     
     self.TV.dataSource=self;
     self.TV.delegate=self;

@@ -48,7 +48,9 @@
     [super viewDidLoad];  
     //AppDelegateから、タップされたセルのテキストと画像を読み込む
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    self.sLabel.text = appDelegate.Pass_NameData;
+//    self.sLabel.text = appDelegate.Pass_NameData;
+     self.navigationItem.title = appDelegate.Pass_NameData;
+    
     
 //    UIImage* MapImage =[UIImage imageNamed:@"WorldMap.gif"];
     UIImageView* sImageView =[[UIImageView alloc]initWithImage:appDelegate.Pass_NameImage];
@@ -308,7 +310,7 @@
                           ]mutableCopy];
     BookImage2_AroundTheWorld  = [@[
                                     [UIImage imageNamed:@"死ぬまでに行きたい! 世界の絶景.jpg"],
-                                    [UIImage imageNamed:@"旅へ！アジアへ！.jpg"]
+                                    [UIImage imageNamed:@"旅へ！アジアへ！2.jpg"]
                                   ]mutableCopy];
     
     BookImage2 = [@[BookImage2_Asia, BookImage2_NorthAmerica, BookImage2_SouthAmerica,BookImage2_Eourope, BookImage2_Africa, BookImage2_Oceania,BookImage2_AroundTheWorld ]mutableCopy];
