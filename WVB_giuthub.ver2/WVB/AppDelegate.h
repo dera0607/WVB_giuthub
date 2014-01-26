@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *Pass_NameData;
 @property (strong, nonatomic) UIImage *Pass_NameImage;
+@property (strong, nonatomic) NSString *Pass_Area;
 
 @property (strong, nonatomic) UIWindow *window;
 

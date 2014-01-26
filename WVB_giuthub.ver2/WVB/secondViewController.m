@@ -18,7 +18,6 @@
 
 @end
 
-
 @implementation secondViewController{
     // ローディング画面用変数
     UIView *_IndicatorBackView;
@@ -50,10 +49,12 @@
     [super viewDidLoad];  
     //AppDelegateから、タップされたセルのテキストと画像を読み込む
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//    self.sLabel.text = appDelegate.Pass_NameData;
-     self.navigationItem.title = appDelegate.Pass_NameData;
+    self.sLabel.text = appDelegate.Pass_NameData;
+//     self.navigationItem.title = appDelegate.Pass_NameData;
+    self.navigationItem.title = appDelegate.Pass_Area;
     
-   
+//    appDelegete.Pass_Area = AreaName[indexPath.section]
+
     UIImageView* sImageView =[[UIImageView alloc]initWithImage:appDelegate.Pass_NameImage];
     CGRect rect_secondImageView = CGRectMake(10, 90, 300, 180);
     sImageView.frame = rect_secondImageView ;
@@ -481,7 +482,7 @@
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     // toolbarにボタンとラベルをセットする
-   NSArray *items =   [NSArray arrayWithObjects:close, space, back, next, space, action, nil];
+   NSArray *items =   [NSArray arrayWithObjects:close, space, back, space, next, space, action, nil];
   self.toolbarItems = items;
 
 }

@@ -16,6 +16,15 @@
 
 @end
 
+@implementation UINavigationController (MyAppStatusBarStyle)
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+@end
+
 @implementation ViewController
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -337,6 +346,10 @@
     cell.textLabel.text = [NameData[indexPath.section] objectAtIndex:indexPath.row];
     cell.imageView.image = [ImageData[indexPath.section] objectAtIndex:indexPath.row];
     
+    cell.textLabel.textColor = RGBA(69, 44, 10, 1.0);
+    tableView.separatorColor = RGBA(255, 255, 255, 0.0);
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    
     NSLog(@"テキストと画像はいりました");
     
     return cell;//これ、セルの表示に必要！
@@ -383,6 +396,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
     appDelegete.Pass_NameData = [NameData[indexPath.section] objectAtIndex:indexPath.row];
     appDelegete.Pass_NameImage = [ImageData[indexPath.section] objectAtIndex:indexPath.row];
+    appDelegete.Pass_Area = AreaName[indexPath.section];
     
     NSLog(@"indexPath.section = %d",indexPath.section);
     NSLog(@"indexPath.row = %d",indexPath.row);
@@ -428,10 +442,10 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 
 ////デザイン変更
-////色の変更
-////ステータスバーの文字色変更
-//- (UIStatusBarStyle)preferredStatusBarStyle {
-//    //文字を白くする
+//////ステータスバーの文字色変更
+//
+//- (UIStatusBarStyle)preferredStatusBarStyle
+//{
 //    return UIStatusBarStyleLightContent;
 //}
 

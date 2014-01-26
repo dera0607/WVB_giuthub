@@ -12,7 +12,7 @@
 
 @synthesize Pass_NameData = _Pass_NameData;
 @synthesize Pass_NameImage = _Pass_NameImage;
-
+@synthesize Pass_Area = _Pass_Area;
 @synthesize SelectedSection = _SelectedSection;
 @synthesize SelectedRow = _SelectedRow;
 
