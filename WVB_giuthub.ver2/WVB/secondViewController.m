@@ -86,11 +86,7 @@
     NSLog(@"セカンドビューAppDelegate_indexPath.section = %d", appDelegate.SelectedSection);
     NSLog(@"セカンドビューAppDelegate_indexPath.section = %d", appDelegate.SelectedRow);
     
-    
-  
-    
-   
-    
+
 #pragma mark book1data
 
     //具体的な本データを挿入
@@ -216,11 +212,32 @@
     
    
     //本1の表示
-    //本の名前
-     NSLog(@"BookData1.count = %d", [BookData1 count]);
-    NSLog(@"本１の名前は%@です", [BookData1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow]);
-    self.book1Name.text = [BookData1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+    
+    //本の名前用、可変URLabel1作成、本1の名前データ挿入
+    UILabel* Book1Label = [[UILabel alloc] init];
+//    Book1Label.text = @"Every great iOS app starts with a great idea, ";
+    Book1Label.text = [BookData1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+    NSLog(@"本１の名前は%@！", Book1Label.text);
+	Book1Label.font = [UIFont systemFontOfSize:14.0];
+    //	Book1Label.backgroundColor = RGBA(230, 217, 181, 1.0);
+	Book1Label.numberOfLines = 0; //これがないとUILabelが複数行になりません。
+    Book1Label.textAlignment = NSTextAlignmentCenter;
+    Book1Label.textColor = RGBA(69, 44, 10, 1.0);
+	
+	CGRect frame1 = CGRectMake(10,[[UIScreen mainScreen] bounds].size.height-45,150,50);
+	
+	// 幅200,高さ900のRectの中に表示したときのサイズを計算
+	CGSize size1 = [Book1Label.text sizeWithFont:Book1Label.font
+                               constrainedToSize:CGSizeMake(150, 900)];
+	
+	frame1.size.height = size1.height;
+	Book1Label.frame = frame1;
+    [self.view addSubview:Book1Label];
     NSLog(@"本１の名前入れました");
+    
+    
+    
+    
     //本の画像
 
     self.book1Image.image = [BookImage1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
@@ -363,14 +380,38 @@
                                 ]mutableCopy];
     BookLink2 = [@[BookLink2_Asia, BookLink2_NorthAmerica, BookLink2_SouthAmerica, BookLink2_Eourope, BookLink2_Africa, BookLink2_Oceania, BookLink2_AroundTheWorld]mutableCopy];
     
-    NSLog(@"BookData2.count = %d", [BookData2 count]);
+//    NSLog(@"BookData2.count = %d", [BookData2 count]);
+//    
+//    self.book2Name.text = [BookData2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+//    NSLog(@"BookData2.count = %@", [BookData2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow]);
     
-    self.book2Name.text = [BookData2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
-    NSLog(@"BookData2.count = %@", [BookData2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow]);
+    
+    //本2の名前用、可変URLabel2作成、本2の名前データ挿入
+    UILabel* Book2Label = [[UILabel alloc] init];
+    //    Book1Label.text = @"Every great iOS app starts with a great idea, ";
+    Book2Label.text = [BookData2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+    NSLog(@"本2の名前は%@！", Book2Label.text);
+	Book2Label.font = [UIFont systemFontOfSize:14.0];
+    //	Book1Label.backgroundColor = RGBA(230, 217, 181, 1.0);
+	Book2Label.numberOfLines = 0; //これがないとUILabelが複数行になりません。
+    Book2Label.textAlignment = NSTextAlignmentCenter;
+    Book2Label.textColor = RGBA(69, 44, 10, 1.0);
+	
+	CGRect frame2 = CGRectMake(165,[[UIScreen mainScreen] bounds].size.height-45,150,50);
+	
+	// 幅200,高さ900のRectの中に表示したときのサイズを計算
+	CGSize size2 = [Book2Label.text sizeWithFont:Book2Label.font
+                               constrainedToSize:CGSizeMake(150, 900)];
+	
+	frame2.size.height = size2.height;
+	Book2Label.frame = frame2;
+    [self.view addSubview:Book2Label];
+    NSLog(@"本2の名前入れました");
+    
     
     self.book2Image.image = [BookImage2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
     self.book2Image.contentMode = UIViewContentModeScaleAspectFit;
-//    self.book2Image.contentMode = UIViewContentModeCenter;//サイズを自動調整
+  
     self.URL2 = [BookLink2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
 
    

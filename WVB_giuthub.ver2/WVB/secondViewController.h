@@ -103,8 +103,8 @@
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *book1Image;
-@property (weak, nonatomic) IBOutlet UILabel *book1Name;
-
+//@property (weak, nonatomic) IBOutlet UILabel *book1Name;
+//@property(weak, nonatomic) UILabel *Book1Name;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *book2Image;
