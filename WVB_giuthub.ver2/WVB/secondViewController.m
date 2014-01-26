@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "SafariActivity.h"
 
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]//色のための定義
+
 @interface secondViewController ()<UIPopoverControllerDelegate>{
 //	UIPopoverController *_popover; //よく分からんがActivityViewのsafariに必要っぽいとこ
 }
@@ -51,8 +53,7 @@
 //    self.sLabel.text = appDelegate.Pass_NameData;
      self.navigationItem.title = appDelegate.Pass_NameData;
     
-    
-//    UIImage* MapImage =[UIImage imageNamed:@"WorldMap.gif"];
+   
     UIImageView* sImageView =[[UIImageView alloc]initWithImage:appDelegate.Pass_NameImage];
     CGRect rect_secondImageView = CGRectMake(10, 90, 300, 180);
     sImageView.frame = rect_secondImageView ;
@@ -61,21 +62,21 @@
     self.sImageView.image = appDelegate.Pass_NameImage;
     
     
-    //背景の設定
+//    //背景の設定
+//    
+//    UIImage* backImage =[UIImage imageNamed:@"Paper.jpg"];
+//    UIImageView* imageView =[[UIImageView alloc]initWithImage:backImage];
+//    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+//    imageView.frame = rect;
+//    [self.view addSubview:imageView];
+//    [self.view sendSubviewToBack:imageView];//ビューを再背面に
     
-    UIImage* backImage =[UIImage imageNamed:@"Paper.jpg"];
-    UIImageView* imageView =[[UIImageView alloc]initWithImage:backImage];
-    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    imageView.frame = rect;
-    [self.view addSubview:imageView];
-    [self.view sendSubviewToBack:imageView];//ビューを再背面に
-    
-    
-    //UIImageViewのサイズを自動的にimageのサイズに合わせる
-    
-    
-    
-    
+    CGRect Rect_backGround = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
+    UIView *View_backGround = [[UIView alloc]initWithFrame:Rect_backGround];
+    View_backGround.backgroundColor =  RGBA(230, 217, 181, 1.0);
+    [self.view addSubview:View_backGround];
+    [self.view sendSubviewToBack:View_backGround];//ビューを最前面に
+  
     
     //AppDelegateから選択されたsectonとrowのデータを読み込む
     SelectedSection = appDelegate.SelectedSection;
@@ -87,7 +88,9 @@
     
   
     
+   
     
+#pragma mark book1data
 
     //具体的な本データを挿入
     //*１つ目の本*//
@@ -106,7 +109,7 @@
                        ]mutableCopy];
     BookData1_NorthAmerica  = [@[
                                @"2012",
-                               @"ジョニーベアー―イエローストーンの子グマ (シートン動物記 1) "
+                               @"駅馬車 "
                                ]mutableCopy];
     BookData1_SouthAmerica  = [@[
                                @"パチャママの贈り物",
@@ -143,7 +146,7 @@
                           [UIImage imageNamed:@"カンボジアからやってきたワンディ.jpg"]
                         ]mutableCopy];
     BookImage1_NorthAmerica  =[@[[UIImage imageNamed:@"2012.jpg"],
-                                 [UIImage imageNamed:@"ジョニーベアー―イエローストーンの子グマ (シートン動物記 1).jpg"]]mutableCopy];
+                                 [UIImage imageNamed:@"駅馬車.jpg"]]mutableCopy];
     BookImage1_SouthAmerica  = [@[
                                   [UIImage imageNamed:@"パチャママの贈りもの.jpg"],
                                   [UIImage imageNamed:@"マチュピチュ (写真でわかる謎への旅) .jpg"],
@@ -182,7 +185,7 @@
                       ]mutableCopy];
     BookLink1_NorthAmerica = [@[
                               @"http://www.amazon.co.jp/2012-%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%80%E3%83%BC%E3%83%89%E7%89%88-DVD-%E3%82%AD%E3%82%A6%E3%82%A7%E3%83%86%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%B8%E3%83%A7%E3%83%95%E3%82%A9%E3%83%BC/dp/B0035UZ5VG/ref=sr_1_11?ie=UTF8&qid=1387683798&sr=8-11&keywords=2012+%E6%98%A0%E7%94%BB%E3%80%80dvd",
-                              @"http://www.amazon.co.jp/%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%83%88%E3%83%BB%E3%82%AC%E3%83%B3%E3%83%97-DVD-%E3%83%88%E3%83%A0%E3%83%BB%E3%83%8F%E3%83%B3%E3%82%AF%E3%82%B9/dp/B000FBHTOO"
+                              @"http://www.amazon.co.jp/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%A9%E3%83%80%E3%82%A4%E3%83%B3-%E3%83%AB%E3%82%A4%E3%82%BA%E3%83%BB%E3%83%96%E3%83%A9%E3%83%83%E3%83%88-%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%B3-%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E3%83%BB%E3%83%9F%E3%83%83%E3%83%81%E3%82%A7%E3%83%AB-%E3%82%AF%E3%83%AC%E3%82%A2%E3%83%BB%E3%83%88%E3%83%AC%E3%83%B4%E3%82%A1/dp/B000LZ6E8Q"
                               ]mutableCopy];
     BookLink1_SouthAmerica = [@[
                               @"http://eiga.com/movie/54940/",
@@ -230,7 +233,10 @@
     NSLog(@"本１のリンク入れました");
  
     
+#pragma mark -
     
+    
+#pragma mark book2data
     
     
     
@@ -241,7 +247,7 @@
     //本2の名前
     BookData2_Asia  = [@[
                        @"ダライ・ラマに恋して ",
-                       @"ラダックの風息.jpg",
+                       @"ラダックの風息 空の果てで暮らした日々",
                        @"深い河",
                        @"The Dark Knight Rises",
                        @"僕たちは世界を変えることができない。"
@@ -339,7 +345,7 @@
                               ]mutableCopy];
     BookLink2_Eourope = [@[
                          @"http://www.amazon.co.jp/%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9-%E3%83%86%E3%83%B3%E3%83%88%E3%82%92%E8%83%8C%E4%B8%AD%E3%81%AB%E5%B1%B1%E3%81%AE%E6%97%85%E3%81%B8-%E9%AB%98%E6%A9%8B-%E5%BA%84%E5%A4%AA%E9%83%8E/dp/4777923118/ref=sr_1_17?ie=UTF8&qid=1387688813&sr=8-17&keywords=%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9",
-                       @"http://www.amazon.co.jp/product-reviews/4882021633/ref=dp_top_cm_cr_acr_txt?ie=UTF8&showViewpoints=1",
+                       @"http://www.amazon.co.jp/%E5%9C%B0%E4%B8%AD%E6%B5%B7%E3%81%AE%E5%85%89%E3%83%99%E3%82%B9%E3%83%8850-%E4%B8%96%E7%95%8C%E3%81%AE%E5%90%8D%E6%99%AF-%E6%B8%8B%E5%B7%9D-%E8%82%B2%E7%94%B1/dp/4309271383",
                          @"http://www.amazon.co.jp/%E4%B8%AD%E4%B8%96%E9%83%BD%E5%B8%82%E3%83%89%E3%82%A5%E3%83%96%E3%83%AD%E3%83%B4%E3%83%8B%E3%82%AF%E2%80%95%E3%82%A2%E3%83%89%E3%83%AA%E3%82%A2%E6%B5%B7%E3%81%AE%E6%9D%B1%E8%A5%BF%E4%BA%A4%E6%98%93-%E5%8F%A2%E6%9B%B8%E6%9D%B1%E6%AC%A7-%E3%83%90%E3%83%AA%E3%82%B7%E3%82%A1%E3%83%BB%E3%82%AF%E3%83%AC%E3%82%AD%E3%83%83%E3%83%81/dp/4882021633/ref=sr_1_1?s=books&ie=UTF8&qid=1387903865&sr=1-1&keywords=%E3%83%89%E3%82%A5%E3%83%96%E3%83%AD%E3%83%B4%E3%83%8B%E3%82%AF"
                          ]mutableCopy];
     BookLink2_Africa = [@[
@@ -366,6 +372,11 @@
 //    self.book2Image.contentMode = UIViewContentModeCenter;//サイズを自動調整
     self.URL2 = [BookLink2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
 
+   
+#pragma mark -
+    
+    
+#pragma mark viewFortTapping
     
 
     //タップ用のビューを作成（ラベルと画像を覆うもの）
@@ -400,6 +411,10 @@
     
 }
 
+#pragma mark -
+
+
+#pragma mark whenTapping1
 
 /**
  * 本1（の上の透明ビュー）がタップされたとき
@@ -447,14 +462,17 @@
     // ツールバーの作成
     self.navigationController.toolbarHidden = NO;
     
-
+    //ツールバーのボタンに使用されるテキストの色を変更
+    self.navigationController.toolbar.tintColor = RGBA(69, 44, 10, 1.0);
+    //  ツールバーのタイトルの色を変更する
+    self.navigationController.toolbar.barTintColor = RGBA(230, 217, 181, 1.0);
 
     
     //ツールバーにボタンを追加
     //閉じるボタン×追加
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(close_Tapped:)] ;
     //Actionボタン追加
-    UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(action_Tapped:)] ;
+    UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(action_Tapped1:)] ;
     //戻るボタン追加
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:WV1 action:@selector (goBack)];
     //進むボタン追加
@@ -468,7 +486,10 @@
 
 }
 
+#pragma mark -
 
+
+#pragma mark whenTapping2
 
 
 /**
@@ -516,13 +537,17 @@
     self.navigationController.toolbarHidden = NO;
     
     
+    //ツールバーのボタンに使用されるテキストの色を変更
+    self.navigationController.toolbar.tintColor = RGBA(69, 44, 10, 1.0);
+    //  ツールバーのタイトルの色を変更する
+    self.navigationController.toolbar.barTintColor = RGBA(230, 217, 181, 1.0);
     
     
     //ツールバーにボタンを追加
     //閉じるボタン×追加
     UIBarButtonItem *close = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(close_Tapped:)] ;
     //Actionボタン追加
-    UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(action_Tapped:)] ;
+    UIBarButtonItem *action = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(action_Tapped2:)] ;
     //戻るボタン追加
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:WV1 action:@selector (goBack)];
     //進むボタン追加
@@ -531,9 +556,11 @@
     UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     // toolbarにボタンとラベルをセットする
-    NSArray *items =   [NSArray arrayWithObjects:close, space, back, next, space, action, nil];
+    NSArray *items =   [NSArray arrayWithObjects:close, space, back, space, next, space, action, nil];
     self.toolbarItems = items;
-    
+    //    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: RGBA(245, 245, 220, 0.5)};
+//    self.navigationController.toolbarItems.
+
 }
 
 
@@ -567,16 +594,22 @@
     
 }
 
+#pragma mark -
 
 
+#pragma mark afterTappingToolBarAction1
 
-//アクションボタンがタップされたとき
-- (void)action_Tapped:(UITapGestureRecognizer *)sender{
+
+//本1のアクションボタンがタップされたとき
+- (void)action_Tapped1:(UITapGestureRecognizer *)sender{
     NSLog(@"Actionボタンがタップされました．");
+ 
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
     //シェアするもの
-    NSString *text = BookData1[0];
-     UIImage* image1 = BookImage1[0];
-     NSURL *url = [NSURL URLWithString:@"http://d.hatena.ne.jp/tilfin/"];
+    NSString *text = [BookData1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+     UIImage* image1 = [BookImage1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+     NSURL *url = [BookLink1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
     NSArray* actItems = [NSArray arrayWithObjects:text,url, image1, nil];
     
     UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:actItems applicationActivities:@[[[SafariActivity alloc] init]]];
@@ -590,8 +623,38 @@
 
 }
 
+#pragma mark -
 
 
+#pragma mark afterTappingToolBarAction2
+
+//本2のアクションボタンがタップされたとき
+- (void)action_Tapped2:(UITapGestureRecognizer *)sender{
+    NSLog(@"Actionボタンがタップされました．");
+   
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    //シェアするもの
+    NSString *text = [BookData1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+    UIImage* image1 = [BookImage1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+    NSURL *url = [BookLink1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
+    NSArray* actItems = [NSArray arrayWithObjects:text,url, image1, nil];
+    
+    UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:actItems applicationActivities:@[[[SafariActivity alloc] init]]];
+    
+    //表示しないアプリの設定
+    NSArray *excludeActivities = @[UIActivityTypePostToWeibo, UIActivityTypeMail, UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll];
+    activityView.excludedActivityTypes = excludeActivities;
+    
+    [self presentViewController:activityView animated:YES completion:^{}];
+    
+}
+
+
+#pragma mark -
+
+
+#pragma mark roading view
 
 
 
@@ -612,7 +675,7 @@
 
 
 
-#pragma mark roading view
+
 -(void) indicatorStart {
     
     NSLog(@"indicatorStart");
@@ -710,24 +773,6 @@
 }
 
 
-
-
-
-
-
-
-
-/**
- * ビューがタップされたとき
- */
-- (void)back_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"本2がタップされました．");
-//    NSString *urlString = @"http://www.google.co.jp";
-//    NSURL *url = [NSURL URLWithString:urlString];
-//    [[UIApplication sharedApplication] openURL:url];
-    
-}
 
 
 

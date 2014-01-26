@@ -21,6 +21,8 @@
 		501D3CB0188F9F7F00DBA446 /* 旅へ！アジアへ！2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 501D3CAF188F9F7F00DBA446 /* 旅へ！アジアへ！2.jpg */; };
 		501D3CB2188F9F8A00DBA446 /* ラダックの風息.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 501D3CB1188F9F8A00DBA446 /* ラダックの風息.jpg */; };
 		501D3CB4188F9FA200DBA446 /* チベット旅行記.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 501D3CB3188F9FA200DBA446 /* チベット旅行記.jpg */; };
+		502B36511894ED3D001790E2 /* 駅馬車.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 502B36501894ED3D001790E2 /* 駅馬車.jpg */; };
+		502B3653189516E8001790E2 /* secondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502B3652189516E8001790E2 /* secondViewController.m */; };
 		508688B4185A879D0020E172 /* SafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 508688B3185A879D0020E172 /* SafariActivity.m */; };
 		508688B8185AD7990020E172 /* Safari.png in Resources */ = {isa = PBXBuildFile; fileRef = 508688B7185AD7990020E172 /* Safari.png */; };
 		5097E703187E6C33006FD90A /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5097E702187E6C32006FD90A /* iAd.framework */; };
@@ -87,7 +89,6 @@
 		50F627DC18472AA300F6F888 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F627DB18472AA300F6F888 /* Default-568h@2x.png */; };
 		50F627DF18472AA300F6F888 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F627DD18472AA300F6F888 /* MainStoryboard.storyboard */; };
 		50F627E218472AA300F6F888 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F627E118472AA300F6F888 /* ViewController.m */; };
-		50F627EA18482B1400F6F888 /* secondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F627E918482B1400F6F888 /* secondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,8 @@
 		501D3CAF188F9F7F00DBA446 /* 旅へ！アジアへ！2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "旅へ！アジアへ！2.jpg"; sourceTree = "<group>"; };
 		501D3CB1188F9F8A00DBA446 /* ラダックの風息.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ラダックの風息.jpg"; sourceTree = "<group>"; };
 		501D3CB3188F9FA200DBA446 /* チベット旅行記.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "チベット旅行記.jpg"; sourceTree = "<group>"; };
+		502B36501894ED3D001790E2 /* 駅馬車.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "駅馬車.jpg"; sourceTree = "<group>"; };
+		502B3652189516E8001790E2 /* secondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondViewController.m; sourceTree = "<group>"; };
 		508688B2185A879D0020E172 /* SafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariActivity.h; sourceTree = "<group>"; };
 		508688B3185A879D0020E172 /* SafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariActivity.m; sourceTree = "<group>"; };
 		508688B7185AD7990020E172 /* Safari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Safari.png; sourceTree = "<group>"; };
@@ -229,7 +232,6 @@
 		50F627E018472AA300F6F888 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		50F627E118472AA300F6F888 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		50F627E818482B1400F6F888 /* secondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = secondViewController.h; sourceTree = "<group>"; };
-		50F627E918482B1400F6F888 /* secondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = secondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,7 +288,7 @@
 				50F627E018472AA300F6F888 /* ViewController.h */,
 				50F627E118472AA300F6F888 /* ViewController.m */,
 				50F627E818482B1400F6F888 /* secondViewController.h */,
-				50F627E918482B1400F6F888 /* secondViewController.m */,
+				502B3652189516E8001790E2 /* secondViewController.m */,
 				50BEACB0188E4A9A000311E3 /* Images.xcassets */,
 				50F627CC18472AA300F6F888 /* Supporting Files */,
 			);
@@ -302,6 +304,7 @@
 				501C46051869F4280004960A /* 中世都市ドゥブロヴニク―アドリア海の東西交易.jpg */,
 				501C460B186AA2B80004960A /* 懐かしい未来 ラダックから学ぶ.jpg */,
 				50BAB544187BCA61006B6A6E /* アジア.jpg */,
+				502B36501894ED3D001790E2 /* 駅馬車.jpg */,
 				50BAB545187BCA61006B6A6E /* アタカマ砂漠.jpg */,
 				50BAB546187BCA61006B6A6E /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg */,
 				50BAB547187BCA61006B6A6E /* アルプス.jpeg */,
@@ -485,6 +488,7 @@
 				50BAB584187BCA62006B6A6E /* アルプス.jpeg in Resources */,
 				50BAB5AB187BCA62006B6A6E /* ラダック.jpeg in Resources */,
 				50BEACB1188E4A9A000311E3 /* Images.xcassets in Resources */,
+				502B36511894ED3D001790E2 /* 駅馬車.jpg in Resources */,
 				50BAB59F187BCA62006B6A6E /* パタゴニアを行く―世界でもっとも美しい大地.jpg in Resources */,
 				509C996F186621C4006D7E2E /* ウユニ.jpg in Resources */,
 				509C9971186621C4006D7E2E /* グレートオーシャンロード.jpeg in Resources */,
@@ -560,8 +564,8 @@
 				50F627D218472AA300F6F888 /* main.m in Sources */,
 				50F627D618472AA300F6F888 /* AppDelegate.m in Sources */,
 				50F627E218472AA300F6F888 /* ViewController.m in Sources */,
-				50F627EA18482B1400F6F888 /* secondViewController.m in Sources */,
 				508688B4185A879D0020E172 /* SafariActivity.m in Sources */,
+				502B3653189516E8001790E2 /* secondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

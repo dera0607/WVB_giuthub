@@ -21,20 +21,19 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     // //ナビゲーションバーの色とか変更用？
-    //    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
-    //        //viewControllerで制御することを伝える。iOS7 からできたメソッド
-    //        [self setNeedsStatusBarAppearanceUpdate];
-
-//    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
-    //    [UIColor colorWithRed:1.000 green:0.549 blue:0.890 alpha:1.000];
-    
     //ナビゲーションバーのボタンに使用されるテキストの色を変更
-    self.navigationController.navigationBar.tintColor = RGBA(245, 245, 220, 0.5);
+    self.navigationController.navigationBar.tintColor = RGBA(230, 217, 181, 1.0);
     //  ナビゲーションバーのタイトルの色を変更する
 //    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: RGBA(245, 245, 220, 0.5)};
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: RGBA(245, 245, 220, 0.5)};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: RGBA(230, 217, 181, 1.0)};
 //    [UINavigationBar appearance].barTintColor = RGBA(139, 115, 85, 1.0);
-    self.navigationController.navigationBar.barTintColor = RGBA(139, 115, 85, 1.0);
+    self.navigationController.navigationBar.barTintColor = RGBA(69, 44, 10, 1.0);
+    
+    UIBarButtonItem *backBarButtonItem= [[UIBarButtonItem alloc] initWithTitle:@"戻る"
+                                                                         style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem setBackBarButtonItem:backBarButtonItem];
+//    [backBarButtonItem release];
+    
 }
 
 
@@ -248,14 +247,14 @@
     adView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
     
     // 画面(ビュー)の下に表示する場合
- //adView.frame = CGRectMake(0, self.view.frame.size.height - adView.frame.size.height, adView.frame.size.width, adView.frame.size.height);
+    adView.frame = CGRectMake(0, self.view.frame.size.height - adView.frame.size.height, adView.frame.size.width, adView.frame.size.height);
     
     // adViewのフレーム矩形が変更された時にサブビューのサイズを自動的に変更
     adView.autoresizesSubviews = YES;
     
     // 横向き、縦向きに回転した際に、自動的に広告の横幅を調整し、画面上に固定
     // ※画面下に表示する場合は、コメントアウト。
-    adView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+//    adView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     
     // 横向き、縦向きに回転した際に、自動的に広告の横幅を調整し、画面下に固定
     // ※画面上に表示する場合は、コメントアウト。
@@ -352,11 +351,11 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // For even
     if (indexPath.row % 2 == 0) {
-        cell.backgroundColor = RGBA(245, 245, 220, 0.5);//Beige
+        cell.backgroundColor = RGBA(230, 217, 181, 1.0);//Beige
     }
     // For odd
     else {
-        cell.backgroundColor = RGBA(245, 222, 179, 0.5);//Wheat
+        cell.backgroundColor = RGBA(245, 240, 207, 0.5);//Wheat
     }
 }
 
@@ -441,11 +440,11 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *View_SectionTitle = [[UIView alloc] init];
 //    [View_SectionTitle setBackgroundColor:RGBA(0, 0, 0, 1.0)];
-    View_SectionTitle.backgroundColor = RGBA(139, 115, 85, 1.0);
+    View_SectionTitle.backgroundColor = RGBA(69, 44, 10, 1.0);
     
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(5.0f, 0.0f, 320.0f, 22.0f)];
-    lbl.backgroundColor = RGBA(139, 115, 85, 1.0);
-    lbl.textColor = RGBA(256, 256, 256, 1.0);
+    lbl.backgroundColor = RGBA(69, 44, 10, 1.0);
+    lbl.textColor = RGBA(230, 217, 181, 1.0);
     lbl.text =AreaName[section];
 //    [NSString stringWithFormat:AreaName[section]];
     [View_SectionTitle addSubview:lbl];
