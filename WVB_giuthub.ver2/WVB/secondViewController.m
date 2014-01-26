@@ -50,6 +50,7 @@
     //AppDelegateから、タップされたセルのテキストと画像を読み込む
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.sLabel.text = appDelegate.Pass_NameData;
+    self.sLabel.textColor = RGBA(69, 44, 10, 1.0);
 //     self.navigationItem.title = appDelegate.Pass_NameData;
     self.navigationItem.title = appDelegate.Pass_Area;
     
@@ -99,10 +100,10 @@
     //@"1.アジア",@"2.北米",@"3.南米",@"4.ヨーロッパ",@"5.アフリカ",@"6.オセアニア",@"7.世界一周"
     BookData1_Asia  = [@[
                        @"チベット旅行記",
-                       @"懐かしい未来 ラダックから学ぶ",
-                       @"ガンジス河でバタフライ",
+                       @"懐かしい未来\nラダックから学ぶ",
+                       @"ガンジス河で\nバタフライ",
                        @"ONE PIECE 23",
-                       @"カンボジアからやってきたワンディ"
+                       @"カンボジアから\nやってきたワンディ"
                        ]mutableCopy];
     BookData1_NorthAmerica  = [@[
                                @"2012",
@@ -110,13 +111,13 @@
                                ]mutableCopy];
     BookData1_SouthAmerica  = [@[
                                @"パチャママの贈り物",
-                               @"マチュピチュ (写真でわかる謎への旅)",
-                               @"パタゴニアを行く―世界でもっとも美しい大地",
-                               @"モーターサイクル・ダイアリーズ ",
+                               @"マチュピチュ \n写真でわかる謎への旅",
+                               @"パタゴニアを行く\n世界でもっとも美しい大地",
+                               @"モーターサイクル・\nダイアリーズ ",
                                @"失われた世界"
                                ]mutableCopy];
     BookData1_Eourope  = [@[
-                          @"サウンド・オブ・ミュージック ",
+                          @"サウンド・オブ・\nミュージック ",
                           @"紅の豚",
                           @"魔女の宅急便"
                           ]mutableCopy];
@@ -213,12 +214,12 @@
    
     //本1の表示
     
-    //本の名前用、可変URLabel1作成、本1の名前データ挿入
+    //本1の名前用、可変URLabel1作成、本1の名前データ挿入
     UILabel* Book1Label = [[UILabel alloc] init];
 //    Book1Label.text = @"Every great iOS app starts with a great idea, ";
     Book1Label.text = [BookData1 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
     NSLog(@"本１の名前は%@！", Book1Label.text);
-	Book1Label.font = [UIFont systemFontOfSize:14.0];
+    Book1Label.font = [UIFont systemFontOfSize:14.0];
     //	Book1Label.backgroundColor = RGBA(230, 217, 181, 1.0);
 	Book1Label.numberOfLines = 0; //これがないとUILabelが複数行になりません。
     Book1Label.textAlignment = NSTextAlignmentCenter;
@@ -232,10 +233,21 @@
 	
 	frame1.size.height = size1.height;
 	Book1Label.frame = frame1;
+
+    
+    if(frame1.size.height>=50){
+        Book1Label.font = [UIFont systemFontOfSize:10.0];
+        CGSize size1 = [Book1Label.text sizeWithFont:Book1Label.font constrainedToSize:CGSizeMake(150, 900)];
+        frame1.size.height = size1.height;
+        Book1Label.frame = frame1;
+        
+    }
+    else{
+  	Book1Label.font = [UIFont systemFontOfSize:14.0];
+    }
+    
     [self.view addSubview:Book1Label];
     NSLog(@"本１の名前入れました");
-    
-    
     
     
     //本の画像
@@ -265,38 +277,38 @@
     //本2の名前
     BookData2_Asia  = [@[
                        @"ダライ・ラマに恋して ",
-                       @"ラダックの風息 空の果てで暮らした日々",
+                       @"ラダックの風息\n空の果てで暮らした日々",
                        @"深い河",
                        @"The Dark Knight Rises",
-                       @"僕たちは世界を変えることができない。"
+                       @"僕たちは世界を変える\nことができない。"
                        ]mutableCopy];
     BookData2_NorthAmerica  = [@[
-                               @"ジョニーベアー―イエローストーンの子グマ (シートン動物記 1)",
+                               @"ジョニーベアー\n―イエローストーンの子グマ\n(シートン動物記1)",
                                @"フォレスト・ガンプ"
                                ]mutableCopy];
     BookData2_SouthAmerica  = [@[
-                               @"ボリビアを知るための68章",
-                               @"ナスカの壷 ペルーからの手紙",
-                               @"エバースマイル・ニュージャージー",
-                               @"リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断",
-                               @"カールじいさんと空飛ぶ家"
+                               @"ボリビアを知るための\n68章",
+                               @"ナスカの壷\nペルーからの手紙",
+                               @"エバースマイル・\nニュージャージー",
+                               @"リヤカーマン\nアンデスを越える",
+                               @"カールじいさんと\n空飛ぶ家"
                                ]mutableCopy];
     BookData2_Eourope  = [@[
-                          @"北アルプス テントを背中に山の旅へ ",
-                          @"地中海の光ベスト50--世界の名景",
-                          @"中世都市ドゥブロヴニク―アドリア海の東西交易"
+                          @"北アルプス\nテントを背中に山の旅へ ",
+                          @"地中海の光ベスト50\n世界の名景",
+                          @"中世都市ドゥブロヴニク\nアドリア海の東西交易"
                           ]mutableCopy];
     BookData2_Africa  = [@[
                          @"サハラ砂漠の秘密",
-                         @"どくとるアイアイと謎の島マダガスカル"
+                         @"どくとるアイアイと\n謎の島マダガスカル"
                          ]mutableCopy];
     BookData2_Oceania  = [@[
-                          @"アボリジニの教え―大地と宇宙をつなぐ精霊の知恵",
-                          @"くれーじー・ばいきん、オーストラリアをゆく"
+                          @"アボリジニの教え\n大地と宇宙をつなぐ\n精霊の知恵",
+                          @"くれーじー・ばいきん、\nオーストラリアをゆく"
                           ]mutableCopy];
     BookData2_AroundTheWorld  = [@[
-                                 @"死ぬまでに行きたい! 世界の絶景",
-                                 @"旅へ!アジアへ!―ネパール・インド・タイ紀行"                                 ]mutableCopy];
+                                 @"死ぬまでに行きたい!\n世界の絶景",
+                                 @"旅へ!アジアへ!\nネパール・インド・タイ紀行"                                 ]mutableCopy];
     BookData2 = [@[BookData2_Asia, BookData2_NorthAmerica, BookData2_SouthAmerica,BookData2_Eourope,BookData2_Africa, BookData2_Oceania,BookData2_AroundTheWorld]mutableCopy];
     
     
@@ -388,11 +400,9 @@
     
     //本2の名前用、可変URLabel2作成、本2の名前データ挿入
     UILabel* Book2Label = [[UILabel alloc] init];
-    //    Book1Label.text = @"Every great iOS app starts with a great idea, ";
     Book2Label.text = [BookData2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
     NSLog(@"本2の名前は%@！", Book2Label.text);
-	Book2Label.font = [UIFont systemFontOfSize:14.0];
-    //	Book1Label.backgroundColor = RGBA(230, 217, 181, 1.0);
+    Book2Label.font = [UIFont systemFontOfSize:14.0];
 	Book2Label.numberOfLines = 0; //これがないとUILabelが複数行になりません。
     Book2Label.textAlignment = NSTextAlignmentCenter;
     Book2Label.textColor = RGBA(69, 44, 10, 1.0);
@@ -405,9 +415,21 @@
 	
 	frame2.size.height = size2.height;
 	Book2Label.frame = frame2;
+    
+    
+    if(frame2.size.height>=50){
+        Book2Label.font = [UIFont systemFontOfSize:10.0];
+        CGSize size2 = [Book2Label.text sizeWithFont:Book2Label.font constrainedToSize:CGSizeMake(150, 900)];
+        frame2.size.height = size2.height;
+        Book2Label.frame = frame2;
+        
+    }
+    else{
+        Book2Label.font = [UIFont systemFontOfSize:14.0];
+    }
+    
     [self.view addSubview:Book2Label];
     NSLog(@"本2の名前入れました");
-    
     
     self.book2Image.image = [BookImage2 [appDelegate.SelectedSection] objectAtIndex:appDelegate.SelectedRow];
     self.book2Image.contentMode = UIViewContentModeScaleAspectFit;
