@@ -67,38 +67,45 @@
     NSLog(@"AreaName終了");    
     
     //1つ目のセクション:アジア のセル名
-    Asia1_NameData = [@[@"チベット/中国", @"ラダック/インド", @"バラナシ/インド",@"ジョードプル/インド",@"プノンペン/カンボジア"]mutableCopy];
+    Asia1_NameData = [@[@"チベット", @"ラダック", @"バラナシ",@"ジョードプル",@"プノンペン"]mutableCopy];
+    Asia1_subNameData = [@[@"中国", @"インド", @"インド",@"インド",@"カンボジア"]mutableCopy];
     NSLog(@"Asia1_NameData を配列に格納");
     Asia1_ImageData = [@[[UIImage imageNamed:@"チベット.jpg"],[UIImage imageNamed:@"ラダック.jpeg"],[UIImage imageNamed:@"ガンジス.jpg"],[UIImage imageNamed:@"ジョードプル.jpeg"],[UIImage imageNamed:@"プノンペン.jpeg"]] mutableCopy];
     NSLog(@"Asia1_NameとImageのデータを配列に格納");
     
     //２つ目のセクション:北米 のセル名
-    NorthAmerica2_NameData = [@[@"イエローストーン/アメリカ",@"モニュメントバレー/アメリカ"]mutableCopy];
+    NorthAmerica2_NameData = [@[@"イエローストーン",@"モニュメントバレー"]mutableCopy];
+    NorthAmerica2_subNameData = [@[@"アメリカ",@"アメリカ"]mutableCopy];
     NorthAmerica2_ImageData = [@[[UIImage imageNamed:@"イエローストーン.png"],[UIImage imageNamed:@"アンテロープキャニオン.jpeg"]] mutableCopy];
     NSLog(@"NorthAmerica_NameとImageのデータを配列に格納");
     
     //３つ目のセクション:南米 のセル名
-    SouthAmerica3_NameData = [@[@"ウユニ/ボリビア",@"マチュピチュ/ペルー",@"ペリト・モレノ/アルゼンチン", @"アタカマ砂漠/チリ", @"ロライマ山/ベネズエラ"]mutableCopy];
+    SouthAmerica3_NameData = [@[@"ウユニ",@"マチュピチュ",@"ペリト・モレノ", @"アタカマ砂漠", @"ロライマ山"]mutableCopy];
+    SouthAmerica3_subNameData = [@[@"ボリビア",@"ペルー",@"アルゼンチン", @"チリ", @"ベネズエラ"]mutableCopy];
     SouthAmerica3_ImageData = [@[[UIImage imageNamed:@"ウユニ.jpg"],[UIImage imageNamed:@"マチュピチュ.jpeg"],[UIImage imageNamed:@"ペリトモレノ.jpg"],[UIImage imageNamed:@"アタカマ砂漠.jpg"],[UIImage imageNamed:@"ロライマ山.jpeg"]] mutableCopy];
     NSLog(@"SouthAmerica_NameとImageのデータを配列に格納");
  
     //４つ目のセクション:ヨーロッパ のセル名
-    Eourope4_NameData = [@[@"アルプス/スイス",@"ナバイオビーチ/ギリシャ", @"ドブロブニク/クロアチア"]mutableCopy];
+    Eourope4_NameData = [@[@"アルプス",@"ナバイオビーチ", @"ドブロブニク"]mutableCopy];
+    Eourope4_subNameData = [@[@"スイス",@"ギリシャ", @"クロアチア"]mutableCopy];
     Eourope4_ImageData = [@[[UIImage imageNamed:@"アルプス.jpeg"],[UIImage imageNamed:@"ナバイオビーチ.png"],[UIImage imageNamed:@"ドブロブニク.png"]] mutableCopy];
     NSLog(@"Eourope_NameとImageのデータを配列に格納");
     
     //５つ目のセクション:アフリカ のセル名
-    Africa5_NameData = [@[@"サハラ砂漠/モロッコ,モーリタニア,アルジェリア",@"バオバブ並木/マダガスカル"]mutableCopy];
+    Africa5_NameData = [@[@"サハラ砂漠",@"バオバブ並木"]mutableCopy];
+    Africa5_subNameData = [@[@"モロッコ",@"マダガスカル"]mutableCopy];
     Africa5_ImageData = [@[[UIImage imageNamed:@"サハラ砂漠.jpeg"],[UIImage imageNamed:@"マダガスカル.jpg"]] mutableCopy];
     NSLog(@"Africa_NameとImageのデータを配列に格納");
     
     //６つ目のセクション:オセアニア のセル名
-    Oceania6_NameData = [@[@"エアーズロック/オーストラリア",@"グレートオーシャンロード/オーストラリア"]mutableCopy];
+    Oceania6_NameData = [@[@"エアーズロック",@"グレートオーシャンロード"]mutableCopy];
+    Oceania6_subNameData = [@[@"オーストラリア",@"オーストラリア"]mutableCopy];
     Oceania6_ImageData = [@[[UIImage imageNamed:@"エアーズロック.jpg"],[UIImage imageNamed:@"グレートオーシャンロード.jpeg"]] mutableCopy];
     NSLog(@"Oceania_NameとImageのデータを配列に格納");
     
     //７つ目のセクション:その他広域 のセル名
     AroundTheWorld7_NameData = [@[@"世界一周",@"アジア"]mutableCopy];
+    AroundTheWorld7_subNameData = [@[@" ",@" "]mutableCopy];
     AroundTheWorld7_ImageData = [@[[UIImage imageNamed:@"地球.jpg"],[UIImage imageNamed:@"アジア.jpg"]] mutableCopy];
     NSLog(@"AroundTheWorld_NameとImageのデータを配列に格納");
     
@@ -106,6 +113,7 @@
     
     //各データ配列の配列を作成
     NameData = @[Asia1_NameData, NorthAmerica2_NameData, SouthAmerica3_NameData, Eourope4_NameData, Africa5_NameData, Oceania6_NameData, AroundTheWorld7_NameData];
+    subNameData = @[Asia1_subNameData, NorthAmerica2_subNameData, SouthAmerica3_subNameData, Eourope4_subNameData, Africa5_subNameData, Oceania6_subNameData, AroundTheWorld7_subNameData];
     NSLog(@"NameData");
     ImageData = @[Asia1_ImageData, NorthAmerica2_ImageData, SouthAmerica3_ImageData, Eourope4_ImageData, Africa5_ImageData,Oceania6_ImageData, AroundTheWorld7_ImageData];
     NSLog(@"ImageData");
@@ -118,14 +126,7 @@
     map_imageview.frame = rect_map;
     [self.view addSubview:map_imageview];
     [self.view sendSubviewToBack:map_imageview];//ビューを再背面に
-    
-//    self.Map.image = [UIImage imageNamed:@"WorldMap.gif"];
-//    self.Map.frame = CGRectMake(160, 64, 320, 480);
-//    [self.view addSubview:self.Map];
-    //     CGRect rect_map = CGRectMake(0, 160, self.view.frame.size.width, self.view.frame.size.height);
 
-//    self.TV.frame = CGRectMake(0, 160, 320, 480);
-//    NSLog(@"TVとMapのサイズ指定");
     
     
 
@@ -333,7 +334,7 @@
     
     //セルが作成されていなければ、初期化したセルを作成
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
     
@@ -344,6 +345,8 @@
      NSLog(@"%d番目のセクションの%d番目のセルに文字とイメージを入れる", indexPath.section,indexPath.row);
 
     cell.textLabel.text = [NameData[indexPath.section] objectAtIndex:indexPath.row];
+    cell.textLabel.adjustsFontSizeToFitWidth = YES;//フォントサイズ調整
+    cell.detailTextLabel.text = [subNameData[indexPath.section] objectAtIndex:indexPath.row];
     cell.imageView.image = [ImageData[indexPath.section] objectAtIndex:indexPath.row];
     
     cell.textLabel.textColor = RGBA(69, 44, 10, 1.0);
@@ -442,12 +445,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 
 ////デザイン変更
-//////ステータスバーの文字色変更
-//
-//- (UIStatusBarStyle)preferredStatusBarStyle
-//{
-//    return UIStatusBarStyleLightContent;
-//}
+
 
 //TableViewの色、フォント等変更
 
