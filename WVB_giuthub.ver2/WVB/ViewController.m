@@ -49,18 +49,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.navigationController.navigationBar.tintColor =RGBA(139, 115, 85, 1.0);
-
-    
-
-    
     
     self.TV.dataSource=self;
     self.TV.delegate=self;
     NSLog(@"デリゲートとデータソース終了");
     
     //背景の設定
-    
+    CGRect Rect_backGround = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
+    UIView *View_backGround = [[UIView alloc]initWithFrame:Rect_backGround];
+    View_backGround.backgroundColor =  RGBA(230, 217, 181, 1.0);
+    [self.view addSubview:View_backGround];
+    [self.view sendSubviewToBack:View_backGround];//ビューを再背面に
   
     
     AreaName = @[@"1.アジア",@"2.北米",@"3.南米",@"4.ヨーロッパ",@"5.アフリカ",@"6.オセアニア",@"7.その他広域"];
@@ -335,6 +334,7 @@
     //セルが作成されていなければ、初期化したセルを作成
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        //これと、storyboardのstyleをcustomからsubtitleにする必要あり
     }
     
     

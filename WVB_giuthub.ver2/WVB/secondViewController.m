@@ -65,19 +65,11 @@
     
     
 //    //背景の設定
-//    
-//    UIImage* backImage =[UIImage imageNamed:@"Paper.jpg"];
-//    UIImageView* imageView =[[UIImageView alloc]initWithImage:backImage];
-//    CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-//    imageView.frame = rect;
-//    [self.view addSubview:imageView];
-//    [self.view sendSubviewToBack:imageView];//ビューを再背面に
-    
     CGRect Rect_backGround = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
     UIView *View_backGround = [[UIView alloc]initWithFrame:Rect_backGround];
     View_backGround.backgroundColor =  RGBA(230, 217, 181, 1.0);
     [self.view addSubview:View_backGround];
-    [self.view sendSubviewToBack:View_backGround];//ビューを最前面に
+    [self.view sendSubviewToBack:View_backGround];//ビューを再背面に
   
     
     //AppDelegateから選択されたsectonとrowのデータを読み込む
