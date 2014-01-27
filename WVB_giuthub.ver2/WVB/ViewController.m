@@ -94,7 +94,7 @@
     //６つ目のセクション:オセアニア のセル名
     Oceania6_NameData = [@[@"エアーズロック",@"グレートオーシャンロード"]mutableCopy];
     Oceania6_subNameData = [@[@"オーストラリア",@"オーストラリア"]mutableCopy];
-    Oceania6_ImageData = [@[[UIImage imageNamed:@"エアーズロック.jpg"],[UIImage imageNamed:@"グレートオーシャンロード.jpeg"]] mutableCopy];
+    Oceania6_ImageData = [@[[UIImage imageNamed:@"エアーズロック.jpg"],[UIImage imageNamed:@"グレートオーシャンロード.jpg"]] mutableCopy];
     NSLog(@"Oceania_NameとImageのデータを配列に格納");
     
     //７つ目のセクション:その他広域 のセル名

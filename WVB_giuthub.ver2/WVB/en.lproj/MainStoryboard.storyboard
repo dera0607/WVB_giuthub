@@ -102,7 +102,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xKo-oW-OAw" firstAttribute="top" secondItem="Kly-MX-w20" secondAttribute="bottom" constant="176" id="8uz-Yy-mDe"/>
-                            <constraint firstAttribute="bottom" secondItem="xKo-oW-OAw" secondAttribute="bottom" constant="50" id="bYd-N2-TVU"/>
+                            <constraint firstAttribute="bottom" secondItem="xKo-oW-OAw" secondAttribute="bottom" id="bNC-so-K6W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="旅と本、ときどき、映画" id="mEZ-hY-M2h"/>
@@ -141,7 +141,7 @@
                             <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bs-3Y-Ysc">
                                 <rect key="frame" x="174" y="295" width="126" height="226"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="ここへ行く前に読みたい本！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ov-iR-O1P">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="ここへ行くなら読みたい本！観たい映画！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ov-iR-O1P">
                                 <rect key="frame" x="1" y="274" width="319" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="4sk-Yu-30t"/>

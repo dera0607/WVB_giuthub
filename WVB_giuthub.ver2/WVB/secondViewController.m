@@ -275,7 +275,7 @@
                        @"僕たちは世界を変える\nことができない。"
                        ]mutableCopy];
     BookData2_NorthAmerica  = [@[
-                               @"ジョニーベアー\n―イエローストーンの子グマ\n(シートン動物記1)",
+                               @"ジョニーベアー\nイエローストーンの子グマ",
                                @"フォレスト・ガンプ"
                                ]mutableCopy];
     BookData2_SouthAmerica  = [@[
