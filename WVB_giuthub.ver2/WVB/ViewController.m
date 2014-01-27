@@ -53,14 +53,9 @@
     self.TV.dataSource=self;
     self.TV.delegate=self;
     NSLog(@"デリゲートとデータソース終了");
-    
-    //背景の設定
-    CGRect Rect_backGround = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height);
-    UIView *View_backGround = [[UIView alloc]initWithFrame:Rect_backGround];
-    View_backGround.backgroundColor =  RGBA(230, 217, 181, 1.0);
-    [self.view addSubview:View_backGround];
-    [self.view sendSubviewToBack:View_backGround];//ビューを再背面に
   
+    
+    //データの入れ込み
     
     AreaName = @[@"1.アジア",@"2.北米",@"3.南米",@"4.ヨーロッパ",@"5.アフリカ",@"6.オセアニア",@"7.その他広域"];
     NSLog(@"AreaName終了");    
@@ -116,9 +111,11 @@
     NSLog(@"NameData");
     ImageData = @[Asia1_ImageData, NorthAmerica2_ImageData, SouthAmerica3_ImageData, Eourope4_ImageData, Africa5_ImageData,Oceania6_ImageData, AroundTheWorld7_ImageData];
     NSLog(@"ImageData");
+ 
 
 
-    
+
+    //地図をおく
     UIImage* MapImage =[UIImage imageNamed:@"WorldMap.gif"];
     UIImageView* map_imageview =[[UIImageView alloc]initWithImage:MapImage];
     CGRect rect_map = CGRectMake(0, 64, 320, 180);
@@ -126,10 +123,16 @@
     [self.view addSubview:map_imageview];
     [self.view sendSubviewToBack:map_imageview];//ビューを再背面に
 
-    
-    
+    //背景の設定
+    CGRect Rect_backGround = CGRectMake(0, 240, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height-240);
+    UIView *View_backGround = [[UIView alloc]initWithFrame:Rect_backGround];
+    View_backGround.backgroundColor =  RGBA(230, 217, 181, 1.0);
+    [self.view addSubview:View_backGround];
+     [self.view sendSubviewToBack:View_backGround];//ビューを再背面に
 
-#pragma mark transparent button 
+
+    
+#pragma mark transparent button
 
     //透明ボタン（1.アジア）青
     /* ビューを作成 */
@@ -337,10 +340,8 @@
         //これと、storyboardのstyleをcustomからsubtitleにする必要あり
     }
     
-    
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    
-    
+
     // セルにテキストとイメージを設定
      NSLog(@"%d番目のセクションの%d番目のセルに文字とイメージを入れる", indexPath.section,indexPath.row);
 
@@ -365,13 +366,17 @@
   willDisplayCell:(UITableViewCell *)cell
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+//    cell.backgroundColor = [UIColor clearColor];
+    tableView.backgroundColor = [UIColor clearColor];
+    
     // For even
     if (indexPath.row % 2 == 0) {
         cell.backgroundColor = RGBA(230, 217, 181, 1.0);//Beige
     }
     // For odd
     else {
-        cell.backgroundColor = RGBA(245, 240, 207, 0.5);//Wheat
+        cell.backgroundColor = RGBA(245, 240, 207, 1.0);//Wheat
     }
 }
 
@@ -379,10 +384,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 70;
 }
-
-
-
-
 
 
 

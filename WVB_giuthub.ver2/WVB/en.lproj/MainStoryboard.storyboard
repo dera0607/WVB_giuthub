@@ -18,8 +18,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="325" placeholderIntrinsicHeight="227" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="25" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xKo-oW-OAw">
-                                <rect key="frame" x="0.0" y="240" width="320" height="328"/>
+                                <rect key="frame" x="0.0" y="240" width="320" height="329"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TVC" textLabel="JSG-na-c6M" detailTextLabel="pgv-Iq-POS" style="IBUITableViewCellStyleSubtitle" id="4Ek-iK-S7y">
                                         <rect key="frame" x="0.0" y="89" width="320" height="44"/>
@@ -44,6 +45,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -100,7 +102,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xKo-oW-OAw" firstAttribute="top" secondItem="Kly-MX-w20" secondAttribute="bottom" constant="176" id="8uz-Yy-mDe"/>
-                            <constraint firstItem="RLA-71-Q4a" firstAttribute="top" secondItem="xKo-oW-OAw" secondAttribute="bottom" id="w9W-Se-zYP"/>
+                            <constraint firstAttribute="bottom" secondItem="xKo-oW-OAw" secondAttribute="bottom" constant="50" id="bYd-N2-TVU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="旅と本、ときどき、映画" id="mEZ-hY-M2h"/>
