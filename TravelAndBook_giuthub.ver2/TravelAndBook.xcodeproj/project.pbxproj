@@ -227,14 +227,14 @@
 		50BAB57E187BCA62006B6A6E /* 僕たちは世界を変えることができない.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "僕たちは世界を変えることができない.jpg"; sourceTree = "<group>"; };
 		50BAB57F187BCA62006B6A6E /* 魔女の宅急便.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "魔女の宅急便.jpg"; sourceTree = "<group>"; };
 		50BEACB0188E4A9A000311E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		50F627C218472AA300F6F888 /* WVB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WVB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F627C218472AA300F6F888 /* TravelAndBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelAndBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F627C518472AA300F6F888 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50F627C718472AA300F6F888 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50F627C918472AA300F6F888 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		50F627CD18472AA300F6F888 /* WVB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WVB-Info.plist"; sourceTree = "<group>"; };
+		50F627CD18472AA300F6F888 /* TravelAndBook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TravelAndBook-Info.plist"; sourceTree = "<group>"; };
 		50F627CF18472AA300F6F888 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50F627D118472AA300F6F888 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		50F627D318472AA300F6F888 /* WVB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WVB-Prefix.pch"; sourceTree = "<group>"; };
+		50F627D318472AA300F6F888 /* TravelAndBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TravelAndBook-Prefix.pch"; sourceTree = "<group>"; };
 		50F627D418472AA300F6F888 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		50F627D518472AA300F6F888 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		50F627DE18472AA300F6F888 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 		50F627B918472AA300F6F888 = {
 			isa = PBXGroup;
 			children = (
-				50F627CB18472AA300F6F888 /* WVB */,
+				50F627CB18472AA300F6F888 /* TravelAndBook */,
 				50F627C418472AA300F6F888 /* Frameworks */,
 				50F627C318472AA300F6F888 /* Products */,
 			);
@@ -270,7 +270,7 @@
 		50F627C318472AA300F6F888 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50F627C218472AA300F6F888 /* WVB.app */,
+				50F627C218472AA300F6F888 /* TravelAndBook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		50F627CB18472AA300F6F888 /* WVB */ = {
+		50F627CB18472AA300F6F888 /* TravelAndBook */ = {
 			isa = PBXGroup;
 			children = (
 				508688B2185A879D0020E172 /* SafariActivity.h */,
@@ -301,7 +301,7 @@
 				50BEACB0188E4A9A000311E3 /* Images.xcassets */,
 				50F627CC18472AA300F6F888 /* Supporting Files */,
 			);
-			path = WVB;
+			path = TravelAndBook;
 			sourceTree = "<group>";
 		};
 		50F627CC18472AA300F6F888 /* Supporting Files */ = {
@@ -432,10 +432,10 @@
 				504D9BFE189627480071F3A1 /* グレートオーシャンロード.jpg */,
 				508688B7185AD7990020E172 /* Safari.png */,
 				501C460D186BA6370004960A /* WorldMap.gif */,
-				50F627CD18472AA300F6F888 /* WVB-Info.plist */,
+				50F627CD18472AA300F6F888 /* TravelAndBook-Info.plist */,
 				50F627CE18472AA300F6F888 /* InfoPlist.strings */,
 				50F627D118472AA300F6F888 /* main.m */,
-				50F627D318472AA300F6F888 /* WVB-Prefix.pch */,
+				50F627D318472AA300F6F888 /* TravelAndBook-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -443,9 +443,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		50F627C118472AA300F6F888 /* WVB */ = {
+		50F627C118472AA300F6F888 /* TravelAndBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50F627E518472AA300F6F888 /* Build configuration list for PBXNativeTarget "WVB" */;
+			buildConfigurationList = 50F627E518472AA300F6F888 /* Build configuration list for PBXNativeTarget "TravelAndBook" */;
 			buildPhases = (
 				50F627BE18472AA300F6F888 /* Sources */,
 				50F627BF18472AA300F6F888 /* Frameworks */,
@@ -455,9 +455,9 @@
 			);
 			dependencies = (
 			);
-			name = WVB;
+			name = TravelAndBook;
 			productName = WVB;
-			productReference = 50F627C218472AA300F6F888 /* WVB.app */;
+			productReference = 50F627C218472AA300F6F888 /* TravelAndBook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -474,7 +474,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 50F627BD18472AA300F6F888 /* Build configuration list for PBXProject "WVB" */;
+			buildConfigurationList = 50F627BD18472AA300F6F888 /* Build configuration list for PBXProject "TravelAndBook" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -486,7 +486,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50F627C118472AA300F6F888 /* WVB */,
+				50F627C118472AA300F6F888 /* TravelAndBook */,
 			);
 		};
 /* End PBXProject section */
@@ -677,9 +677,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WVB/WVB-Prefix.pch";
-				INFOPLIST_FILE = "WVB/WVB-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "TravelAndBook/TravelAndBook-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TravelAndBook/TravelAndBook-Info.plist";
+				PRODUCT_NAME = TravelAndBook;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -691,9 +691,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WVB/WVB-Prefix.pch";
-				INFOPLIST_FILE = "WVB/WVB-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "TravelAndBook/TravelAndBook-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/TravelAndBook/TravelAndBook-Info.plist";
+				PRODUCT_NAME = TravelAndBook;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -701,7 +701,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50F627BD18472AA300F6F888 /* Build configuration list for PBXProject "WVB" */ = {
+		50F627BD18472AA300F6F888 /* Build configuration list for PBXProject "TravelAndBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50F627E318472AA300F6F888 /* Debug */,
@@ -710,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50F627E518472AA300F6F888 /* Build configuration list for PBXNativeTarget "WVB" */ = {
+		50F627E518472AA300F6F888 /* Build configuration list for PBXNativeTarget "TravelAndBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50F627E618472AA300F6F888 /* Debug */,

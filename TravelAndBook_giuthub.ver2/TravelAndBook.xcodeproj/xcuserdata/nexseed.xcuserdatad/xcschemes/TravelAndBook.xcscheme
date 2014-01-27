@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "50F627C118472AA300F6F888"
-               BuildableName = "WVB.app"
-               BlueprintName = "WVB"
-               ReferencedContainer = "container:WVB.xcodeproj">
+               BuildableName = "TravelAndBook.app"
+               BlueprintName = "TravelAndBook"
+               ReferencedContainer = "container:TravelAndBook.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50F627C118472AA300F6F888"
-            BuildableName = "WVB.app"
-            BlueprintName = "WVB"
-            ReferencedContainer = "container:WVB.xcodeproj">
+            BuildableName = "TravelAndBook.app"
+            BlueprintName = "TravelAndBook"
+            ReferencedContainer = "container:TravelAndBook.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50F627C118472AA300F6F888"
-            BuildableName = "WVB.app"
-            BlueprintName = "WVB"
-            ReferencedContainer = "container:WVB.xcodeproj">
+            BuildableName = "TravelAndBook.app"
+            BlueprintName = "TravelAndBook"
+            ReferencedContainer = "container:TravelAndBook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "50F627C118472AA300F6F888"
-            BuildableName = "WVB.app"
-            BlueprintName = "WVB"
-            ReferencedContainer = "container:WVB.xcodeproj">
+            BuildableName = "TravelAndBook.app"
+            BlueprintName = "TravelAndBook"
+            ReferencedContainer = "container:TravelAndBook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
