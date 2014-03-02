@@ -9,12 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import <iAd/iAd.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,ADBannerViewDelegate>{
+
+    
+ @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource,ADBannerViewDelegate,CLLocationManagerDelegate,MKMapViewDelegate>{
+    
 //    NSArray *SectionName;
 //    NSArray *PlaceName;
 //    NSArray *PlacePic;
     
+//    UIView* mapView;//地図
     
     NSArray *AreaName;
     NSArray *AreaPlace;
@@ -50,6 +56,11 @@
     NSMutableArray *AroundTheWorld7_NameData;
     NSMutableArray *AroundTheWorld7_subNameData;
     NSMutableArray *AroundTheWorld7_ImageData;
+     
+     
+    MKPointAnnotation* pin_tibet;
+    MKPointAnnotation* pin_Ladakh;
+    MKPointAnnotation* pin_varanasi;
     
     
     
@@ -59,18 +70,15 @@
     //広告
     ADBannerView *adView;
     BOOL bannerIsVisible;
-    
-    
 
-    
-
-    
-    
 }
 
 
 @property (weak, nonatomic) IBOutlet UITableView *TV;
-@property (weak, nonatomic) IBOutlet UIImageView *Map;
+
+@property (nonatomic, retain) CLLocationManager *locationManager;//何に必要？
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 
-@end
+
+@end    

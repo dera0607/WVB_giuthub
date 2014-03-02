@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "secondViewController.h" //これ必要？
+#import <MapKit/MapKit.h>
 
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]//色のための定義
 
@@ -53,8 +54,9 @@
     self.TV.dataSource=self;
     self.TV.delegate=self;
     NSLog(@"デリゲートとデータソース終了");
-  
+
     
+
     //データの入れ込み
     
     AreaName = @[@"1.アジア",@"2.北米",@"3.南米",@"4.ヨーロッパ",@"5.アフリカ",@"6.オセアニア",@"7.その他広域"];
@@ -115,13 +117,13 @@
 
 
 
-    //地図をおく
-    UIImage* MapImage =[UIImage imageNamed:@"WorldMap.gif"];
-    UIImageView* map_imageview =[[UIImageView alloc]initWithImage:MapImage];
-    CGRect rect_map = CGRectMake(0, 64, 320, 180);
-    map_imageview.frame = rect_map;
-    [self.view addSubview:map_imageview];
-    [self.view sendSubviewToBack:map_imageview];//ビューを再背面に
+//    //地図をおく
+//    UIImage* MapImage =[UIImage imageNamed:@"WorldMap.gif"];
+//    UIImageView* map_imageview =[[UIImageView alloc]initWithImage:MapImage];
+//    CGRect rect_map = CGRectMake(0, 64, 320, 180);
+//    map_imageview.frame = rect_map;
+//    [self.view addSubview:map_imageview];
+//    [self.view sendSubviewToBack:map_imageview];//ビューを再背面に
 
     //背景の設定
     CGRect Rect_backGround = CGRectMake(0, 240, [[UIScreen mainScreen] bounds].size.width, [[UIScreen mainScreen] bounds].size.height-240);
@@ -130,127 +132,129 @@
     [self.view addSubview:View_backGround];
      [self.view sendSubviewToBack:View_backGround];//ビューを再背面に
 
-
-    
-#pragma mark transparent button
-
-    //透明ボタン（1.アジア）青
-    /* ビューを作成 */
-    CGRect Rect_Asia = CGRectMake(205, 45+64, 70, 50);
-    UIView *View_Asia = [[UIView alloc]initWithFrame:Rect_Asia];
-    View_Asia.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.0];
-    [self.view addSubview:View_Asia];
-    [self.view bringSubviewToFront:View_Asia];//ビューを最前面に
-    /* シングルタップ */
-    UITapGestureRecognizer *tapGesture_Asia =
-    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Asia_Tapped:)];
-    
-    // ビューにジェスチャーを追加
-    [View_Asia addGestureRecognizer:tapGesture_Asia];
-    
-    NSLog(@"アジアの透明ボタン設置" );
     
     
+//ボタン押したらテーブルビューのセルの位置が動くためのコード！
     
-    //透明ボタン（2.北米）赤
-    /* ビューを作成 */
-    CGRect Rect_NorthAmerica = CGRectMake(10, 5+64, 135, 69);
-    UIView *View_NorthAmerica = [[UIView alloc]initWithFrame:Rect_NorthAmerica];
-    View_NorthAmerica.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.0];
-    [self.view addSubview:View_NorthAmerica];
-    
-    /* シングルタップ */
-    UITapGestureRecognizer *tapGesture_NorthAmeria =
-    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(NorthAmerica_Tapped:)];
-    
-    // ビューにジェスチャーを追加
-    [View_NorthAmerica addGestureRecognizer:tapGesture_NorthAmeria];
-
-    NSLog(@"北米の透明ボタン設置" );
-    
-    
-    //透明ボタン（3.南米）緑
-    /* ビューを作成 */
-    CGRect Rect_SouthAmerica = CGRectMake(80, 75+64, 60, 70);
-    UIView *View_SouthAmerica = [[UIView alloc]initWithFrame:Rect_SouthAmerica];
-    View_SouthAmerica.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.0];
-    [self.view addSubview:View_SouthAmerica];
-    [self.view bringSubviewToFront:View_SouthAmerica];//ビューを最前面に
-    /* シングルタップ */
-    UITapGestureRecognizer *tapGesture_SouthAmerica =
-    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(SouthAmerica_Tapped:)];
-    
-    // ビューにジェスチャーを追加
-    [View_SouthAmerica addGestureRecognizer:tapGesture_SouthAmerica];
-    NSLog(@"南米の透明ボタン設置" );
-    
-    
-    //透明ボタン（4.ヨーロッパ）黒
-    /* ビューを作成 */
-    CGRect Rect_Eourope = CGRectMake(150, 15+64, 65, 45);
-    UIView *View_Eourope = [[UIView alloc]initWithFrame:Rect_Eourope];
-    View_Eourope.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
-    [self.view addSubview:View_Eourope];
-    [self.view bringSubviewToFront:View_Eourope];//ビューを最前面に
-    /* シングルタップ */
-    UITapGestureRecognizer *tapGesture_Eourope =
-    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Eourope_Tapped:)];
-    
-    // ビューにジェスチャーを追加
-    [View_Eourope addGestureRecognizer:tapGesture_Eourope];
-    NSLog(@"ヨーロッパの透明ボタン設置" );
-    
-    //透明ボタン（5.アフリカ）白
-    /* ビューを作成 */
-    CGRect Rect_Africa = CGRectMake(145, 60+64, 55, 60);
-    UIView *View_Africa = [[UIView alloc]initWithFrame:Rect_Africa];
-    View_Africa.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.0];
-    [self.view addSubview:View_Africa];
-    [self.view bringSubviewToFront:View_Africa];//ビューを最前面に
-    /* シングルタップ */
-    UITapGestureRecognizer *tapGesture_Africa =
-    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Africa_Tapped:)];
-    
-    // ビューにジェスチャーを追加
-    [View_Africa addGestureRecognizer:tapGesture_Africa];
-    NSLog(@"アフリカの透明ボタン設置" );
-    
-    //透明ボタン（6.オセアニア）黄色
-    /* ビューを作成 */
-    CGRect Rect_Oceania = CGRectMake(240, 95+64, 70, 40);
-    UIView *View_Oceania = [[UIView alloc]initWithFrame:Rect_Oceania];
-    View_Oceania.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:0.0];
-    [self.view addSubview:View_Oceania];
-    [self.view bringSubviewToFront:View_Oceania];//ビューを最前面に
-    /* シングルタップ */
-    UITapGestureRecognizer *tapGesture_Oceania =
-    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Oceania_Tapped:)];
-    
-    // ビューにジェスチャーを追加
-    [View_Oceania addGestureRecognizer:tapGesture_Oceania];
-    NSLog(@"オセアニアの透明ボタン設置" );
-    
-    //透明ボタン（7.世界一周）ピンク
-    /* ビューを作成 */
-    UIScreen *sc = [UIScreen mainScreen];
-    CGRect rect = sc.bounds;
-    
-    CGRect Rect_AroundTheWorld = CGRectMake(0, 0+64, rect.size.width, 200);
-    UIView *View_AroundTheWorld = [[UIView alloc]initWithFrame:Rect_AroundTheWorld];
-    View_AroundTheWorld.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:1.0 alpha:0.0];
-    [self.view addSubview:View_AroundTheWorld];
-    [self.view sendSubviewToBack:View_AroundTheWorld];//ビューを再背面に
-    [self.view sendSubviewToBack:self.Map];//ビューを再背面に
-    [self.view sendSubviewToBack:map_imageview];
-//    self.Map.image = [UIImage imageNamed:@"WorldMap.gif"];
-    /* シングルタップ */
-    UITapGestureRecognizer *tapGesture_AroundTheWorld =
-    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(AroundTheWorld_Tapped:)];
-    
-    // ビューにジェスチャーを追加
-    [View_AroundTheWorld addGestureRecognizer:tapGesture_AroundTheWorld];
-    NSLog(@"世界一周の透明ボタン設置" );
-#pragma mark -
+//#pragma mark transparent button
+//
+//    //透明ボタン（1.アジア）青
+//    /* ビューを作成 */
+//    CGRect Rect_Asia = CGRectMake(205, 45+64, 70, 50);
+//    UIView *View_Asia = [[UIView alloc]initWithFrame:Rect_Asia];
+//    View_Asia.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:0.0];
+//    [self.view addSubview:View_Asia];
+//    [self.view bringSubviewToFront:View_Asia];//ビューを最前面に
+//    /* シングルタップ */
+//    UITapGestureRecognizer *tapGesture_Asia =
+//    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Asia_Tapped:)];
+//    
+//    // ビューにジェスチャーを追加
+//    [View_Asia addGestureRecognizer:tapGesture_Asia];
+//    
+//    NSLog(@"アジアの透明ボタン設置" );
+//
+//    
+//    
+//    //透明ボタン（2.北米）赤
+//    /* ビューを作成 */
+//    CGRect Rect_NorthAmerica = CGRectMake(10, 5+64, 135, 69);
+//    UIView *View_NorthAmerica = [[UIView alloc]initWithFrame:Rect_NorthAmerica];
+//    View_NorthAmerica.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:0.0];
+//    [self.view addSubview:View_NorthAmerica];
+//    
+//    /* シングルタップ */
+//    UITapGestureRecognizer *tapGesture_NorthAmeria =
+//    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(NorthAmerica_Tapped:)];
+//    
+//    // ビューにジェスチャーを追加
+//    [View_NorthAmerica addGestureRecognizer:tapGesture_NorthAmeria];
+//
+//    NSLog(@"北米の透明ボタン設置" );
+//    
+//    
+//    //透明ボタン（3.南米）緑
+//    /* ビューを作成 */
+//    CGRect Rect_SouthAmerica = CGRectMake(80, 75+64, 60, 70);
+//    UIView *View_SouthAmerica = [[UIView alloc]initWithFrame:Rect_SouthAmerica];
+//    View_SouthAmerica.backgroundColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.0];
+//    [self.view addSubview:View_SouthAmerica];
+//    [self.view bringSubviewToFront:View_SouthAmerica];//ビューを最前面に
+//    /* シングルタップ */
+//    UITapGestureRecognizer *tapGesture_SouthAmerica =
+//    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(SouthAmerica_Tapped:)];
+//    
+//    // ビューにジェスチャーを追加
+//    [View_SouthAmerica addGestureRecognizer:tapGesture_SouthAmerica];
+//    NSLog(@"南米の透明ボタン設置" );
+//    
+//    
+//    //透明ボタン（4.ヨーロッパ）黒
+//    /* ビューを作成 */
+//    CGRect Rect_Eourope = CGRectMake(150, 15+64, 65, 45);
+//    UIView *View_Eourope = [[UIView alloc]initWithFrame:Rect_Eourope];
+//    View_Eourope.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
+//    [self.view addSubview:View_Eourope];
+//    [self.view bringSubviewToFront:View_Eourope];//ビューを最前面に
+//    /* シングルタップ */
+//    UITapGestureRecognizer *tapGesture_Eourope =
+//    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Eourope_Tapped:)];
+//    
+//    // ビューにジェスチャーを追加
+//    [View_Eourope addGestureRecognizer:tapGesture_Eourope];
+//    NSLog(@"ヨーロッパの透明ボタン設置" );
+//    
+//    //透明ボタン（5.アフリカ）白
+//    /* ビューを作成 */
+//    CGRect Rect_Africa = CGRectMake(145, 60+64, 55, 60);
+//    UIView *View_Africa = [[UIView alloc]initWithFrame:Rect_Africa];
+//    View_Africa.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.0];
+//    [self.view addSubview:View_Africa];
+//    [self.view bringSubviewToFront:View_Africa];//ビューを最前面に
+//    /* シングルタップ */
+//    UITapGestureRecognizer *tapGesture_Africa =
+//    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Africa_Tapped:)];
+//    
+//    // ビューにジェスチャーを追加
+//    [View_Africa addGestureRecognizer:tapGesture_Africa];
+//    NSLog(@"アフリカの透明ボタン設置" );
+//    
+//    //透明ボタン（6.オセアニア）黄色
+//    /* ビューを作成 */
+//    CGRect Rect_Oceania = CGRectMake(240, 95+64, 70, 40);
+//    UIView *View_Oceania = [[UIView alloc]initWithFrame:Rect_Oceania];
+//    View_Oceania.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:0.0 alpha:0.0];
+//    [self.view addSubview:View_Oceania];
+//    [self.view bringSubviewToFront:View_Oceania];//ビューを最前面に
+//    /* シングルタップ */
+//    UITapGestureRecognizer *tapGesture_Oceania =
+//    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Oceania_Tapped:)];
+//    
+//    // ビューにジェスチャーを追加
+//    [View_Oceania addGestureRecognizer:tapGesture_Oceania];
+//    NSLog(@"オセアニアの透明ボタン設置" );
+//    
+//    //透明ボタン（7.世界一周）ピンク
+//    /* ビューを作成 */
+//    UIScreen *sc = [UIScreen mainScreen];
+//    CGRect rect = sc.bounds;
+//    
+//    CGRect Rect_AroundTheWorld = CGRectMake(0, 0+64, rect.size.width, 200);
+//    UIView *View_AroundTheWorld = [[UIView alloc]initWithFrame:Rect_AroundTheWorld];
+//    View_AroundTheWorld.backgroundColor = [UIColor colorWithRed:1.0 green:0.0 blue:1.0 alpha:0.0];
+//    [self.view addSubview:View_AroundTheWorld];
+//    [self.view sendSubviewToBack:View_AroundTheWorld];//ビューを再背面に
+////    [self.view sendSubviewToBack:self.Map];//ビューを再背面に
+////    [self.view sendSubviewToBack:map_imageview];
+////    self.Map.image = [UIImage imageNamed:@"WorldMap.gif"];
+//    /* シングルタップ */
+//    UITapGestureRecognizer *tapGesture_AroundTheWorld =
+//    [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(AroundTheWorld_Tapped:)];
+//    
+//    // ビューにジェスチャーを追加
+//    [View_AroundTheWorld addGestureRecognizer:tapGesture_AroundTheWorld];
+//    NSLog(@"世界一周の透明ボタン設置" );
+//#pragma mark -
     
 
 #pragma mark advertisement
@@ -282,8 +286,92 @@
     adView.delegate = self;
 
 #pragma mark -
+    
+#pragma mark map
+    
+    //Map機能！！
+    _mapView.delegate = self;
+    
+    // 初期位置の設定
+    MKCoordinateSpan span = MKCoordinateSpanMake(180.0, 360.0);
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(34.649388888, 135.001472222);
+    [_mapView setRegion:MKCoordinateRegionMake(center, span) animated:NO];
+    
+
+    //ピンの位置を設定、表示
+    pin_tibet = [[MKPointAnnotation alloc] init];
+    pin_tibet.coordinate = CLLocationCoordinate2DMake(29.64556087351928, 91.14086151123047);
+    pin_tibet.title = @"チベット";
+    [_mapView addAnnotation:pin_tibet];
+    
+    pin_Ladakh = [[MKPointAnnotation alloc] init];
+    pin_Ladakh.coordinate = CLLocationCoordinate2DMake(34.1338312, 77.47466329999997);
+    pin_Ladakh.title = @"ラダック";
+    [_mapView addAnnotation:pin_Ladakh];
+    
+    pin_varanasi = [[MKPointAnnotation alloc] init];
+    pin_varanasi.coordinate = CLLocationCoordinate2DMake(25.317552432761605, 82.97381401062012);
+    pin_varanasi.title = @"バラナシ";
+    [_mapView addAnnotation:pin_varanasi];
+
+    
+    
+    
+    //地図をおく
+    //    UIImage* MapImage =[UIImage imageNamed:@"WorldMap.gif"];
+    //    UIImageView* map_imageview =[[UIImageView alloc]initWithImage:MapImage];
+    //    CGRect rect_map = CGRectMake(0, 64, 320, 180);
+    //    map_imageview.frame = rect_map;
+    //    [self.view addSubview:map_imageview];
+    //    [self.view sendSubviewToBack:map_imageview];//ビューを再背面に
+    
+//    MKMapView *mapView = [[MKMapView alloc] init];
+//    mapView.frame = 	CGRectMake(0,64,320,180);
+//    [self.view addSubview:mapView];
+
+    
+
+    
+//    // Tokyo Tower
+//    CustomAnnotation* tt = [[CustomAnnotation alloc] init];
+//    tt.coordinate = CLLocationCoordinate2DMake(35.655333, 139.748611);
+//    tt.title = @"Tokyo Tower";
+//    tt.subtitle = @"opening in Dec 1958";
+//    tt.sample = @"35.655, 139.748";
+//    
+//    // Tokyo Skytree
+//    CustomAnnotation* st = [[CustomAnnotation alloc] init];
+//    st.coordinate = CLLocationCoordinate2DMake(35.710139, 139.810833);
+//    st.title = @"Tokyo Skytree";
+//    st.subtitle = @"opening in May 2012";
+//    st.sample = @"35.710, 139.810";
+//    
+//    // add annotations to map
+//    [map_ addAnnotations:@[tt, st]];
+    
+#pragma mark -
 
 }
+
+//ピンのリサイクル？
+-(MKAnnotationView*)mapView:(MKMapView*)mapView
+          viewForAnnotation:(id)annotation{
+    
+    static NSString *PinIdentifier = @"PinAnnotationIdentifier";
+    MKPinAnnotationView *pinView = (MKPinAnnotationView*) [_mapView dequeueReusableAnnotationViewWithIdentifier:PinIdentifier];
+    if(pinView == nil){
+        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
+        pinView.canShowCallout = YES;//ピンを押したら吹き出しがでるように
+        pinView.animatesDrop = YES;
+        return pinView;
+    }
+    return pinView;
+}
+
+
+
+
+
 
 
 #pragma mark number of section
@@ -467,62 +555,62 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 
 
-/** * ビューがタップされたとき（1.アジア）*/
-- (void)Asia_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"アジアがタップされました．");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
-
-/*** ビューがタップされたとき（2.北米）*/
-- (void)NorthAmerica_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"北米タップされました．");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
-    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
-
-/*** ビューがタップされたとき（3.南米）*/
-- (void)SouthAmerica_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"南米タップされました．");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:2];
-    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
-
-/*** ビューがタップされたとき（4.ヨーロッパ）*/
-- (void)Eourope_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"北米タップされました．");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:3];
-    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
-
-/*** ビューがタップされたとき（5.アフリカ）*/
-- (void)Africa_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"アフリカタップされました．");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:4];
-    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
-
-/*** ビューがタップされたとき（6.オセアニア）*/
-- (void)Oceania_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"オセアニアタップされました．");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:5];
-    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
-
-/*** ビューがタップされたとき（7.世界一周）*/
-- (void)AroundTheWorld_Tapped:(UITapGestureRecognizer *)sender
-{
-    NSLog(@"世界一周タップされました．");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:6];
-    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
-}
-
+///** * ビューがタップされたとき（1.アジア）*/
+//- (void)Asia_Tapped:(UITapGestureRecognizer *)sender
+//{
+//    NSLog(@"アジアがタップされました．");
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//}
+//
+///*** ビューがタップされたとき（2.北米）*/
+//- (void)NorthAmerica_Tapped:(UITapGestureRecognizer *)sender
+//{
+//    NSLog(@"北米タップされました．");
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+//    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//}
+//
+///*** ビューがタップされたとき（3.南米）*/
+//- (void)SouthAmerica_Tapped:(UITapGestureRecognizer *)sender
+//{
+//    NSLog(@"南米タップされました．");
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:2];
+//    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//}
+//
+///*** ビューがタップされたとき（4.ヨーロッパ）*/
+//- (void)Eourope_Tapped:(UITapGestureRecognizer *)sender
+//{
+//    NSLog(@"北米タップされました．");
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:3];
+//    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//}
+//
+///*** ビューがタップされたとき（5.アフリカ）*/
+//- (void)Africa_Tapped:(UITapGestureRecognizer *)sender
+//{
+//    NSLog(@"アフリカタップされました．");
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:4];
+//    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//}
+//
+///*** ビューがタップされたとき（6.オセアニア）*/
+//- (void)Oceania_Tapped:(UITapGestureRecognizer *)sender
+//{
+//    NSLog(@"オセアニアタップされました．");
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:5];
+//    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//}
+//
+///*** ビューがタップされたとき（7.世界一周）*/
+//- (void)AroundTheWorld_Tapped:(UITapGestureRecognizer *)sender
+//{
+//    NSLog(@"世界一周タップされました．");
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:6];
+//    [self.TV scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//}
+//
 
 
 

@@ -98,6 +98,10 @@
                                 <color key="textColor" red="0.27058823529999998" green="0.17254901959999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2DE-5x-5v2">
+                                <rect key="frame" x="0.0" y="64" width="320" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -108,6 +112,7 @@
                     <navigationItem key="navigationItem" title="旅と本、ときどき、映画" id="mEZ-hY-M2h"/>
                     <connections>
                         <outlet property="TV" destination="xKo-oW-OAw" id="w5o-aE-Eqq"/>
+                        <outlet property="mapView" destination="2DE-5x-5v2" id="GtJ-6P-7ZW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
