@@ -10,6 +10,12 @@
 
 @implementation AppDelegate
 
+@synthesize Pass_NameData = Pass_NameData;
+@synthesize Pass_NameImage = Pass_NameImage;
+@synthesize Pass_Area = Pass_Area;
+@synthesize SelectedSection = SelectedSection;
+@synthesize SelectedRow = SelectedRow;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

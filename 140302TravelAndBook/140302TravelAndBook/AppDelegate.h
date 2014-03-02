@@ -10,6 +10,15 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow *window;//もともとあるやつ
+
+@property (strong, nonatomic) NSString *Pass_NameData;
+@property (strong, nonatomic) UIImage *Pass_NameImage;
+@property (strong, nonatomic) NSString *Pass_Area;
+
+
+@property (nonatomic ,assign) int SelectedSection;
+@property (nonatomic ,assign) int SelectedRow;
+
 
 @end

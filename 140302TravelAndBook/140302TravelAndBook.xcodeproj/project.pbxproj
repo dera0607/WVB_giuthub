@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		501FFA2518C319EF00304DBD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501FFA2418C319EE00304DBD /* QuartzCore.framework */; };
 		5035F0B618C2F0DE004CC7C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B518C2F0DE004CC7C3 /* Foundation.framework */; };
 		5035F0B818C2F0DE004CC7C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B718C2F0DE004CC7C3 /* CoreGraphics.framework */; };
 		5035F0BA18C2F0DE004CC7C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B918C2F0DE004CC7C3 /* UIKit.framework */; };
@@ -22,6 +23,70 @@
 		5035F0DA18C2F0DE004CC7C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B918C2F0DE004CC7C3 /* UIKit.framework */; };
 		5035F0E218C2F0DE004CC7C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0E018C2F0DE004CC7C3 /* InfoPlist.strings */; };
 		5035F0E418C2F0DE004CC7C3 /* _40302TravelAndBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5035F0E318C2F0DE004CC7C3 /* _40302TravelAndBookTests.m */; };
+		5035F0EE18C2F3C0004CC7C3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0ED18C2F3C0004CC7C3 /* MapKit.framework */; };
+		5035F10218C2F5D1004CC7C3 /* アジア.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F018C2F5D1004CC7C3 /* アジア.jpg */; };
+		5035F10318C2F5D1004CC7C3 /* アタカマ砂漠.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F118C2F5D1004CC7C3 /* アタカマ砂漠.jpg */; };
+		5035F10418C2F5D1004CC7C3 /* アルプス.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F218C2F5D1004CC7C3 /* アルプス.jpeg */; };
+		5035F10518C2F5D1004CC7C3 /* アンテロープキャニオン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F318C2F5D1004CC7C3 /* アンテロープキャニオン.jpeg */; };
+		5035F10618C2F5D1004CC7C3 /* イエローストーン.png in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F418C2F5D1004CC7C3 /* イエローストーン.png */; };
+		5035F10718C2F5D1004CC7C3 /* ウユニ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F518C2F5D1004CC7C3 /* ウユニ.jpg */; };
+		5035F10818C2F5D1004CC7C3 /* エアーズロック.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F618C2F5D1004CC7C3 /* エアーズロック.jpg */; };
+		5035F10918C2F5D1004CC7C3 /* ガンジス.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F718C2F5D1004CC7C3 /* ガンジス.jpg */; };
+		5035F10A18C2F5D1004CC7C3 /* サハラ砂漠.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F818C2F5D1004CC7C3 /* サハラ砂漠.jpeg */; };
+		5035F10B18C2F5D1004CC7C3 /* チベット.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0F918C2F5D1004CC7C3 /* チベット.jpg */; };
+		5035F10C18C2F5D1004CC7C3 /* ドブロブニク.png in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0FA18C2F5D1004CC7C3 /* ドブロブニク.png */; };
+		5035F10D18C2F5D1004CC7C3 /* プノンペン.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0FB18C2F5D1004CC7C3 /* プノンペン.jpeg */; };
+		5035F10E18C2F5D1004CC7C3 /* フィッツロイ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0FC18C2F5D1004CC7C3 /* フィッツロイ.jpg */; };
+		5035F10F18C2F5D1004CC7C3 /* ペリトモレノ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0FD18C2F5D1004CC7C3 /* ペリトモレノ.jpg */; };
+		5035F11018C2F5D1004CC7C3 /* マチュピチュ.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0FE18C2F5D1004CC7C3 /* マチュピチュ.jpeg */; };
+		5035F11118C2F5D1004CC7C3 /* ラダック.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F0FF18C2F5D1004CC7C3 /* ラダック.jpeg */; };
+		5035F11218C2F5D1004CC7C3 /* ロライマ山.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F10018C2F5D1004CC7C3 /* ロライマ山.jpeg */; };
+		5035F11318C2F5D1004CC7C3 /* 地球.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F10118C2F5D1004CC7C3 /* 地球.jpg */; };
+		5035F14118C2F5DE004CC7C3 /* くれいじー・ばいきん、オーストラリア.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11518C2F5DE004CC7C3 /* くれいじー・ばいきん、オーストラリア.jpg */; };
+		5035F14218C2F5DE004CC7C3 /* どくとるアイアイと謎の島マダガスカル.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11618C2F5DE004CC7C3 /* どくとるアイアイと謎の島マダガスカル.jpg */; };
+		5035F14318C2F5DE004CC7C3 /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11718C2F5DE004CC7C3 /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg */; };
+		5035F14418C2F5DE004CC7C3 /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11818C2F5DE004CC7C3 /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg */; };
+		5035F14518C2F5DE004CC7C3 /* エヴァー・スマイル、ニュージャージー.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11918C2F5DE004CC7C3 /* エヴァー・スマイル、ニュージャージー.jpg */; };
+		5035F14618C2F5DE004CC7C3 /* ガンジス河でバタフライ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11A18C2F5DE004CC7C3 /* ガンジス河でバタフライ.jpg */; };
+		5035F14718C2F5DE004CC7C3 /* カンボジアからやってきたワンディ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11B18C2F5DE004CC7C3 /* カンボジアからやってきたワンディ.jpg */; };
+		5035F14818C2F5DE004CC7C3 /* カールじいさんの空飛ぶ家.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11C18C2F5DE004CC7C3 /* カールじいさんの空飛ぶ家.jpg */; };
+		5035F14918C2F5DE004CC7C3 /* グレートオーシャンロード.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11D18C2F5DE004CC7C3 /* グレートオーシャンロード.jpg */; };
+		5035F14A18C2F5DE004CC7C3 /* サウンドオブミュージック.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11E18C2F5DE004CC7C3 /* サウンドオブミュージック.jpg */; };
+		5035F14B18C2F5DE004CC7C3 /* サハラに死す.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F11F18C2F5DE004CC7C3 /* サハラに死す.jpg */; };
+		5035F14C18C2F5DE004CC7C3 /* サハラ砂漠の秘密.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12018C2F5DE004CC7C3 /* サハラ砂漠の秘密.jpg */; };
+		5035F14D18C2F5DE004CC7C3 /* ジョニーベアー―イエローストーンの子グマ (シートン動物記 1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12118C2F5DE004CC7C3 /* ジョニーベアー―イエローストーンの子グマ (シートン動物記 1).jpg */; };
+		5035F14E18C2F5DE004CC7C3 /* ジョードプル.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12218C2F5DE004CC7C3 /* ジョードプル.jpeg */; };
+		5035F14F18C2F5DE004CC7C3 /* ダライ・ラマに恋して.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12318C2F5DE004CC7C3 /* ダライ・ラマに恋して.jpg */; };
+		5035F15018C2F5DE004CC7C3 /* ダークナイトライジング.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12418C2F5DE004CC7C3 /* ダークナイトライジング.jpg */; };
+		5035F15118C2F5DE004CC7C3 /* チベット旅行記.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12518C2F5DE004CC7C3 /* チベット旅行記.jpg */; };
+		5035F15218C2F5DE004CC7C3 /* ナスカの壷　ペルーからの手紙 .jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12618C2F5DE004CC7C3 /* ナスカの壷　ペルーからの手紙 .jpg */; };
+		5035F15318C2F5DE004CC7C3 /* ナバイオビーチ.png in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12718C2F5DE004CC7C3 /* ナバイオビーチ.png */; };
+		5035F15418C2F5DE004CC7C3 /* パタゴニアを行く―世界でもっとも美しい大地.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12818C2F5DE004CC7C3 /* パタゴニアを行く―世界でもっとも美しい大地.jpg */; };
+		5035F15518C2F5DE004CC7C3 /* パチャママの贈りもの.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12918C2F5DE004CC7C3 /* パチャママの贈りもの.jpg */; };
+		5035F15618C2F5DE004CC7C3 /* ハート・ブルー.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12A18C2F5DE004CC7C3 /* ハート・ブルー.jpg */; };
+		5035F15718C2F5DE004CC7C3 /* フォレスト・ガンプ .jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12B18C2F5DE004CC7C3 /* フォレスト・ガンプ .jpg */; };
+		5035F15818C2F5DE004CC7C3 /* ボリビアを知るための68章.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12C18C2F5DE004CC7C3 /* ボリビアを知るための68章.jpg */; };
+		5035F15918C2F5DE004CC7C3 /* マダガスカル.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12D18C2F5DE004CC7C3 /* マダガスカル.jpg */; };
+		5035F15A18C2F5DE004CC7C3 /* マチュピチュ (写真でわかる謎への旅) .jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12E18C2F5DE004CC7C3 /* マチュピチュ (写真でわかる謎への旅) .jpg */; };
+		5035F15B18C2F5DE004CC7C3 /* モーターサイクルダイアリーズ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F12F18C2F5DE004CC7C3 /* モーターサイクルダイアリーズ.jpg */; };
+		5035F15C18C2F5DE004CC7C3 /* ラダックの風息.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13018C2F5DE004CC7C3 /* ラダックの風息.jpg */; };
+		5035F15D18C2F5DE004CC7C3 /* リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13118C2F5DE004CC7C3 /* リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg */; };
+		5035F15E18C2F5DE004CC7C3 /* 世界の中心で、愛をさけぶ スタンダード.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13218C2F5DE004CC7C3 /* 世界の中心で、愛をさけぶ スタンダード.jpg */; };
+		5035F15F18C2F5DE004CC7C3 /* 中世都市ドゥブロヴニク―アドリア海の東西交易.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13318C2F5DE004CC7C3 /* 中世都市ドゥブロヴニク―アドリア海の東西交易.jpg */; };
+		5035F16018C2F5DE004CC7C3 /* 僕たちは世界を変えることができない.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13418C2F5DE004CC7C3 /* 僕たちは世界を変えることができない.jpg */; };
+		5035F16118C2F5DE004CC7C3 /* 北アルプス テントを背中に山の旅へ .jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13518C2F5DE004CC7C3 /* 北アルプス テントを背中に山の旅へ .jpg */; };
+		5035F16218C2F5DE004CC7C3 /* 地中海の光ベスト50--世界の名景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13618C2F5DE004CC7C3 /* 地中海の光ベスト50--世界の名景.jpg */; };
+		5035F16318C2F5DE004CC7C3 /* 失われた世界.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13718C2F5DE004CC7C3 /* 失われた世界.jpg */; };
+		5035F16418C2F5DE004CC7C3 /* 懐かしい未来 ラダックから学ぶ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13818C2F5DE004CC7C3 /* 懐かしい未来 ラダックから学ぶ.jpg */; };
+		5035F16518C2F5DE004CC7C3 /* 旅へ！アジアへ！2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13918C2F5DE004CC7C3 /* 旅へ！アジアへ！2.jpg */; };
+		5035F16618C2F5DE004CC7C3 /* 星の王子様.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13A18C2F5DE004CC7C3 /* 星の王子様.jpg */; };
+		5035F16718C2F5DE004CC7C3 /* 死ぬまでに行きたい! 世界の絶景.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13B18C2F5DE004CC7C3 /* 死ぬまでに行きたい! 世界の絶景.jpg */; };
+		5035F16818C2F5DE004CC7C3 /* 深い河.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13C18C2F5DE004CC7C3 /* 深い河.jpg */; };
+		5035F16918C2F5DE004CC7C3 /* 深夜特急.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13D18C2F5DE004CC7C3 /* 深夜特急.jpg */; };
+		5035F16A18C2F5DE004CC7C3 /* 紅の豚.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13E18C2F5DE004CC7C3 /* 紅の豚.jpg */; };
+		5035F16B18C2F5DE004CC7C3 /* 駅馬車.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F13F18C2F5DE004CC7C3 /* 駅馬車.jpg */; };
+		5035F16C18C2F5DE004CC7C3 /* 魔女の宅急便.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5035F14018C2F5DE004CC7C3 /* 魔女の宅急便.jpg */; };
+		5035F16F18C2F649004CC7C3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5035F16E18C2F649004CC7C3 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +100,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		501FFA2418C319EE00304DBD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5035F0B218C2F0DE004CC7C3 /* 140302TravelAndBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 140302TravelAndBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5035F0B518C2F0DE004CC7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5035F0B718C2F0DE004CC7C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +122,71 @@
 		5035F0DF18C2F0DE004CC7C3 /* 140302TravelAndBookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "140302TravelAndBookTests-Info.plist"; sourceTree = "<group>"; };
 		5035F0E118C2F0DE004CC7C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5035F0E318C2F0DE004CC7C3 /* _40302TravelAndBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _40302TravelAndBookTests.m; sourceTree = "<group>"; };
+		5035F0ED18C2F3C0004CC7C3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5035F0F018C2F5D1004CC7C3 /* アジア.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アジア.jpg"; sourceTree = "<group>"; };
+		5035F0F118C2F5D1004CC7C3 /* アタカマ砂漠.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アタカマ砂漠.jpg"; sourceTree = "<group>"; };
+		5035F0F218C2F5D1004CC7C3 /* アルプス.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アルプス.jpeg"; sourceTree = "<group>"; };
+		5035F0F318C2F5D1004CC7C3 /* アンテロープキャニオン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アンテロープキャニオン.jpeg"; sourceTree = "<group>"; };
+		5035F0F418C2F5D1004CC7C3 /* イエローストーン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "イエローストーン.png"; sourceTree = "<group>"; };
+		5035F0F518C2F5D1004CC7C3 /* ウユニ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ウユニ.jpg"; sourceTree = "<group>"; };
+		5035F0F618C2F5D1004CC7C3 /* エアーズロック.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "エアーズロック.jpg"; sourceTree = "<group>"; };
+		5035F0F718C2F5D1004CC7C3 /* ガンジス.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ガンジス.jpg"; sourceTree = "<group>"; };
+		5035F0F818C2F5D1004CC7C3 /* サハラ砂漠.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "サハラ砂漠.jpeg"; sourceTree = "<group>"; };
+		5035F0F918C2F5D1004CC7C3 /* チベット.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "チベット.jpg"; sourceTree = "<group>"; };
+		5035F0FA18C2F5D1004CC7C3 /* ドブロブニク.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ドブロブニク.png"; sourceTree = "<group>"; };
+		5035F0FB18C2F5D1004CC7C3 /* プノンペン.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "プノンペン.jpeg"; sourceTree = "<group>"; };
+		5035F0FC18C2F5D1004CC7C3 /* フィッツロイ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "フィッツロイ.jpg"; sourceTree = "<group>"; };
+		5035F0FD18C2F5D1004CC7C3 /* ペリトモレノ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ペリトモレノ.jpg"; sourceTree = "<group>"; };
+		5035F0FE18C2F5D1004CC7C3 /* マチュピチュ.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マチュピチュ.jpeg"; sourceTree = "<group>"; };
+		5035F0FF18C2F5D1004CC7C3 /* ラダック.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ラダック.jpeg"; sourceTree = "<group>"; };
+		5035F10018C2F5D1004CC7C3 /* ロライマ山.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ロライマ山.jpeg"; sourceTree = "<group>"; };
+		5035F10118C2F5D1004CC7C3 /* 地球.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "地球.jpg"; sourceTree = "<group>"; };
+		5035F11518C2F5DE004CC7C3 /* くれいじー・ばいきん、オーストラリア.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "くれいじー・ばいきん、オーストラリア.jpg"; sourceTree = "<group>"; };
+		5035F11618C2F5DE004CC7C3 /* どくとるアイアイと謎の島マダガスカル.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "どくとるアイアイと謎の島マダガスカル.jpg"; sourceTree = "<group>"; };
+		5035F11718C2F5DE004CC7C3 /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg"; sourceTree = "<group>"; };
+		5035F11818C2F5DE004CC7C3 /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg"; sourceTree = "<group>"; };
+		5035F11918C2F5DE004CC7C3 /* エヴァー・スマイル、ニュージャージー.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "エヴァー・スマイル、ニュージャージー.jpg"; sourceTree = "<group>"; };
+		5035F11A18C2F5DE004CC7C3 /* ガンジス河でバタフライ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ガンジス河でバタフライ.jpg"; sourceTree = "<group>"; };
+		5035F11B18C2F5DE004CC7C3 /* カンボジアからやってきたワンディ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "カンボジアからやってきたワンディ.jpg"; sourceTree = "<group>"; };
+		5035F11C18C2F5DE004CC7C3 /* カールじいさんの空飛ぶ家.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "カールじいさんの空飛ぶ家.jpg"; sourceTree = "<group>"; };
+		5035F11D18C2F5DE004CC7C3 /* グレートオーシャンロード.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "グレートオーシャンロード.jpg"; sourceTree = "<group>"; };
+		5035F11E18C2F5DE004CC7C3 /* サウンドオブミュージック.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "サウンドオブミュージック.jpg"; sourceTree = "<group>"; };
+		5035F11F18C2F5DE004CC7C3 /* サハラに死す.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "サハラに死す.jpg"; sourceTree = "<group>"; };
+		5035F12018C2F5DE004CC7C3 /* サハラ砂漠の秘密.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "サハラ砂漠の秘密.jpg"; sourceTree = "<group>"; };
+		5035F12118C2F5DE004CC7C3 /* ジョニーベアー―イエローストーンの子グマ (シートン動物記 1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ジョニーベアー―イエローストーンの子グマ (シートン動物記 1).jpg"; sourceTree = "<group>"; };
+		5035F12218C2F5DE004CC7C3 /* ジョードプル.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ジョードプル.jpeg"; sourceTree = "<group>"; };
+		5035F12318C2F5DE004CC7C3 /* ダライ・ラマに恋して.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ダライ・ラマに恋して.jpg"; sourceTree = "<group>"; };
+		5035F12418C2F5DE004CC7C3 /* ダークナイトライジング.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ダークナイトライジング.jpg"; sourceTree = "<group>"; };
+		5035F12518C2F5DE004CC7C3 /* チベット旅行記.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "チベット旅行記.jpg"; sourceTree = "<group>"; };
+		5035F12618C2F5DE004CC7C3 /* ナスカの壷　ペルーからの手紙 .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ナスカの壷　ペルーからの手紙 .jpg"; sourceTree = "<group>"; };
+		5035F12718C2F5DE004CC7C3 /* ナバイオビーチ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ナバイオビーチ.png"; sourceTree = "<group>"; };
+		5035F12818C2F5DE004CC7C3 /* パタゴニアを行く―世界でもっとも美しい大地.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "パタゴニアを行く―世界でもっとも美しい大地.jpg"; sourceTree = "<group>"; };
+		5035F12918C2F5DE004CC7C3 /* パチャママの贈りもの.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "パチャママの贈りもの.jpg"; sourceTree = "<group>"; };
+		5035F12A18C2F5DE004CC7C3 /* ハート・ブルー.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ハート・ブルー.jpg"; sourceTree = "<group>"; };
+		5035F12B18C2F5DE004CC7C3 /* フォレスト・ガンプ .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "フォレスト・ガンプ .jpg"; sourceTree = "<group>"; };
+		5035F12C18C2F5DE004CC7C3 /* ボリビアを知るための68章.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ボリビアを知るための68章.jpg"; sourceTree = "<group>"; };
+		5035F12D18C2F5DE004CC7C3 /* マダガスカル.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マダガスカル.jpg"; sourceTree = "<group>"; };
+		5035F12E18C2F5DE004CC7C3 /* マチュピチュ (写真でわかる謎への旅) .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "マチュピチュ (写真でわかる謎への旅) .jpg"; sourceTree = "<group>"; };
+		5035F12F18C2F5DE004CC7C3 /* モーターサイクルダイアリーズ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "モーターサイクルダイアリーズ.jpg"; sourceTree = "<group>"; };
+		5035F13018C2F5DE004CC7C3 /* ラダックの風息.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ラダックの風息.jpg"; sourceTree = "<group>"; };
+		5035F13118C2F5DE004CC7C3 /* リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg"; sourceTree = "<group>"; };
+		5035F13218C2F5DE004CC7C3 /* 世界の中心で、愛をさけぶ スタンダード.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "世界の中心で、愛をさけぶ スタンダード.jpg"; sourceTree = "<group>"; };
+		5035F13318C2F5DE004CC7C3 /* 中世都市ドゥブロヴニク―アドリア海の東西交易.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "中世都市ドゥブロヴニク―アドリア海の東西交易.jpg"; sourceTree = "<group>"; };
+		5035F13418C2F5DE004CC7C3 /* 僕たちは世界を変えることができない.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "僕たちは世界を変えることができない.jpg"; sourceTree = "<group>"; };
+		5035F13518C2F5DE004CC7C3 /* 北アルプス テントを背中に山の旅へ .jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "北アルプス テントを背中に山の旅へ .jpg"; sourceTree = "<group>"; };
+		5035F13618C2F5DE004CC7C3 /* 地中海の光ベスト50--世界の名景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "地中海の光ベスト50--世界の名景.jpg"; sourceTree = "<group>"; };
+		5035F13718C2F5DE004CC7C3 /* 失われた世界.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "失われた世界.jpg"; sourceTree = "<group>"; };
+		5035F13818C2F5DE004CC7C3 /* 懐かしい未来 ラダックから学ぶ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "懐かしい未来 ラダックから学ぶ.jpg"; sourceTree = "<group>"; };
+		5035F13918C2F5DE004CC7C3 /* 旅へ！アジアへ！2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "旅へ！アジアへ！2.jpg"; sourceTree = "<group>"; };
+		5035F13A18C2F5DE004CC7C3 /* 星の王子様.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "星の王子様.jpg"; sourceTree = "<group>"; };
+		5035F13B18C2F5DE004CC7C3 /* 死ぬまでに行きたい! 世界の絶景.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "死ぬまでに行きたい! 世界の絶景.jpg"; sourceTree = "<group>"; };
+		5035F13C18C2F5DE004CC7C3 /* 深い河.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "深い河.jpg"; sourceTree = "<group>"; };
+		5035F13D18C2F5DE004CC7C3 /* 深夜特急.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "深夜特急.jpg"; sourceTree = "<group>"; };
+		5035F13E18C2F5DE004CC7C3 /* 紅の豚.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "紅の豚.jpg"; sourceTree = "<group>"; };
+		5035F13F18C2F5DE004CC7C3 /* 駅馬車.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "駅馬車.jpg"; sourceTree = "<group>"; };
+		5035F14018C2F5DE004CC7C3 /* 魔女の宅急便.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "魔女の宅急便.jpg"; sourceTree = "<group>"; };
+		5035F16D18C2F649004CC7C3 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5035F16E18C2F649004CC7C3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +194,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				501FFA2518C319EF00304DBD /* QuartzCore.framework in Frameworks */,
+				5035F0EE18C2F3C0004CC7C3 /* MapKit.framework in Frameworks */,
 				5035F0B818C2F0DE004CC7C3 /* CoreGraphics.framework in Frameworks */,
 				5035F0BA18C2F0DE004CC7C3 /* UIKit.framework in Frameworks */,
 				5035F0B618C2F0DE004CC7C3 /* Foundation.framework in Frameworks */,
@@ -104,6 +237,8 @@
 		5035F0B418C2F0DE004CC7C3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				501FFA2418C319EE00304DBD /* QuartzCore.framework */,
+				5035F0ED18C2F3C0004CC7C3 /* MapKit.framework */,
 				5035F0B518C2F0DE004CC7C3 /* Foundation.framework */,
 				5035F0B718C2F0DE004CC7C3 /* CoreGraphics.framework */,
 				5035F0B918C2F0DE004CC7C3 /* UIKit.framework */,
@@ -122,6 +257,8 @@
 				5035F0CB18C2F0DE004CC7C3 /* FirstViewController.m */,
 				5035F0CD18C2F0DE004CC7C3 /* SecondViewController.h */,
 				5035F0CE18C2F0DE004CC7C3 /* SecondViewController.m */,
+				5035F16D18C2F649004CC7C3 /* DetailViewController.h */,
+				5035F16E18C2F649004CC7C3 /* DetailViewController.m */,
 				5035F0D018C2F0DE004CC7C3 /* Images.xcassets */,
 				5035F0BC18C2F0DE004CC7C3 /* Supporting Files */,
 			);
@@ -131,6 +268,8 @@
 		5035F0BC18C2F0DE004CC7C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5035F11418C2F5DE004CC7C3 /* BookImage */,
+				5035F0EF18C2F5D1004CC7C3 /* Landscape */,
 				5035F0BD18C2F0DE004CC7C3 /* 140302TravelAndBook-Info.plist */,
 				5035F0BE18C2F0DE004CC7C3 /* InfoPlist.strings */,
 				5035F0C118C2F0DE004CC7C3 /* main.m */,
@@ -155,6 +294,82 @@
 				5035F0E018C2F0DE004CC7C3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5035F0EF18C2F5D1004CC7C3 /* Landscape */ = {
+			isa = PBXGroup;
+			children = (
+				5035F0F018C2F5D1004CC7C3 /* アジア.jpg */,
+				5035F0F118C2F5D1004CC7C3 /* アタカマ砂漠.jpg */,
+				5035F0F218C2F5D1004CC7C3 /* アルプス.jpeg */,
+				5035F0F318C2F5D1004CC7C3 /* アンテロープキャニオン.jpeg */,
+				5035F0F418C2F5D1004CC7C3 /* イエローストーン.png */,
+				5035F0F518C2F5D1004CC7C3 /* ウユニ.jpg */,
+				5035F0F618C2F5D1004CC7C3 /* エアーズロック.jpg */,
+				5035F0F718C2F5D1004CC7C3 /* ガンジス.jpg */,
+				5035F0F818C2F5D1004CC7C3 /* サハラ砂漠.jpeg */,
+				5035F0F918C2F5D1004CC7C3 /* チベット.jpg */,
+				5035F0FA18C2F5D1004CC7C3 /* ドブロブニク.png */,
+				5035F0FB18C2F5D1004CC7C3 /* プノンペン.jpeg */,
+				5035F0FC18C2F5D1004CC7C3 /* フィッツロイ.jpg */,
+				5035F0FD18C2F5D1004CC7C3 /* ペリトモレノ.jpg */,
+				5035F0FE18C2F5D1004CC7C3 /* マチュピチュ.jpeg */,
+				5035F0FF18C2F5D1004CC7C3 /* ラダック.jpeg */,
+				5035F10018C2F5D1004CC7C3 /* ロライマ山.jpeg */,
+				5035F10118C2F5D1004CC7C3 /* 地球.jpg */,
+			);
+			path = Landscape;
+			sourceTree = "<group>";
+		};
+		5035F11418C2F5DE004CC7C3 /* BookImage */ = {
+			isa = PBXGroup;
+			children = (
+				5035F11518C2F5DE004CC7C3 /* くれいじー・ばいきん、オーストラリア.jpg */,
+				5035F11618C2F5DE004CC7C3 /* どくとるアイアイと謎の島マダガスカル.jpg */,
+				5035F11718C2F5DE004CC7C3 /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg */,
+				5035F11818C2F5DE004CC7C3 /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg */,
+				5035F11918C2F5DE004CC7C3 /* エヴァー・スマイル、ニュージャージー.jpg */,
+				5035F11A18C2F5DE004CC7C3 /* ガンジス河でバタフライ.jpg */,
+				5035F11B18C2F5DE004CC7C3 /* カンボジアからやってきたワンディ.jpg */,
+				5035F11C18C2F5DE004CC7C3 /* カールじいさんの空飛ぶ家.jpg */,
+				5035F11D18C2F5DE004CC7C3 /* グレートオーシャンロード.jpg */,
+				5035F11E18C2F5DE004CC7C3 /* サウンドオブミュージック.jpg */,
+				5035F11F18C2F5DE004CC7C3 /* サハラに死す.jpg */,
+				5035F12018C2F5DE004CC7C3 /* サハラ砂漠の秘密.jpg */,
+				5035F12118C2F5DE004CC7C3 /* ジョニーベアー―イエローストーンの子グマ (シートン動物記 1).jpg */,
+				5035F12218C2F5DE004CC7C3 /* ジョードプル.jpeg */,
+				5035F12318C2F5DE004CC7C3 /* ダライ・ラマに恋して.jpg */,
+				5035F12418C2F5DE004CC7C3 /* ダークナイトライジング.jpg */,
+				5035F12518C2F5DE004CC7C3 /* チベット旅行記.jpg */,
+				5035F12618C2F5DE004CC7C3 /* ナスカの壷　ペルーからの手紙 .jpg */,
+				5035F12718C2F5DE004CC7C3 /* ナバイオビーチ.png */,
+				5035F12818C2F5DE004CC7C3 /* パタゴニアを行く―世界でもっとも美しい大地.jpg */,
+				5035F12918C2F5DE004CC7C3 /* パチャママの贈りもの.jpg */,
+				5035F12A18C2F5DE004CC7C3 /* ハート・ブルー.jpg */,
+				5035F12B18C2F5DE004CC7C3 /* フォレスト・ガンプ .jpg */,
+				5035F12C18C2F5DE004CC7C3 /* ボリビアを知るための68章.jpg */,
+				5035F12D18C2F5DE004CC7C3 /* マダガスカル.jpg */,
+				5035F12E18C2F5DE004CC7C3 /* マチュピチュ (写真でわかる謎への旅) .jpg */,
+				5035F12F18C2F5DE004CC7C3 /* モーターサイクルダイアリーズ.jpg */,
+				5035F13018C2F5DE004CC7C3 /* ラダックの風息.jpg */,
+				5035F13118C2F5DE004CC7C3 /* リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg */,
+				5035F13218C2F5DE004CC7C3 /* 世界の中心で、愛をさけぶ スタンダード.jpg */,
+				5035F13318C2F5DE004CC7C3 /* 中世都市ドゥブロヴニク―アドリア海の東西交易.jpg */,
+				5035F13418C2F5DE004CC7C3 /* 僕たちは世界を変えることができない.jpg */,
+				5035F13518C2F5DE004CC7C3 /* 北アルプス テントを背中に山の旅へ .jpg */,
+				5035F13618C2F5DE004CC7C3 /* 地中海の光ベスト50--世界の名景.jpg */,
+				5035F13718C2F5DE004CC7C3 /* 失われた世界.jpg */,
+				5035F13818C2F5DE004CC7C3 /* 懐かしい未来 ラダックから学ぶ.jpg */,
+				5035F13918C2F5DE004CC7C3 /* 旅へ！アジアへ！2.jpg */,
+				5035F13A18C2F5DE004CC7C3 /* 星の王子様.jpg */,
+				5035F13B18C2F5DE004CC7C3 /* 死ぬまでに行きたい! 世界の絶景.jpg */,
+				5035F13C18C2F5DE004CC7C3 /* 深い河.jpg */,
+				5035F13D18C2F5DE004CC7C3 /* 深夜特急.jpg */,
+				5035F13E18C2F5DE004CC7C3 /* 紅の豚.jpg */,
+				5035F13F18C2F5DE004CC7C3 /* 駅馬車.jpg */,
+				5035F14018C2F5DE004CC7C3 /* 魔女の宅急便.jpg */,
+			);
+			path = BookImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +448,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5035F16418C2F5DE004CC7C3 /* 懐かしい未来 ラダックから学ぶ.jpg in Resources */,
+				5035F14F18C2F5DE004CC7C3 /* ダライ・ラマに恋して.jpg in Resources */,
+				5035F16818C2F5DE004CC7C3 /* 深い河.jpg in Resources */,
 				5035F0D118C2F0DE004CC7C3 /* Images.xcassets in Resources */,
+				5035F15818C2F5DE004CC7C3 /* ボリビアを知るための68章.jpg in Resources */,
+				5035F14618C2F5DE004CC7C3 /* ガンジス河でバタフライ.jpg in Resources */,
+				5035F16718C2F5DE004CC7C3 /* 死ぬまでに行きたい! 世界の絶景.jpg in Resources */,
+				5035F16C18C2F5DE004CC7C3 /* 魔女の宅急便.jpg in Resources */,
+				5035F10418C2F5D1004CC7C3 /* アルプス.jpeg in Resources */,
+				5035F16218C2F5DE004CC7C3 /* 地中海の光ベスト50--世界の名景.jpg in Resources */,
+				5035F16118C2F5DE004CC7C3 /* 北アルプス テントを背中に山の旅へ .jpg in Resources */,
+				5035F15B18C2F5DE004CC7C3 /* モーターサイクルダイアリーズ.jpg in Resources */,
+				5035F14418C2F5DE004CC7C3 /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg in Resources */,
+				5035F14E18C2F5DE004CC7C3 /* ジョードプル.jpeg in Resources */,
+				5035F14818C2F5DE004CC7C3 /* カールじいさんの空飛ぶ家.jpg in Resources */,
+				5035F16918C2F5DE004CC7C3 /* 深夜特急.jpg in Resources */,
+				5035F14B18C2F5DE004CC7C3 /* サハラに死す.jpg in Resources */,
+				5035F15A18C2F5DE004CC7C3 /* マチュピチュ (写真でわかる謎への旅) .jpg in Resources */,
+				5035F15418C2F5DE004CC7C3 /* パタゴニアを行く―世界でもっとも美しい大地.jpg in Resources */,
+				5035F10918C2F5D1004CC7C3 /* ガンジス.jpg in Resources */,
 				5035F0C018C2F0DE004CC7C3 /* InfoPlist.strings in Resources */,
+				5035F15718C2F5DE004CC7C3 /* フォレスト・ガンプ .jpg in Resources */,
+				5035F16A18C2F5DE004CC7C3 /* 紅の豚.jpg in Resources */,
+				5035F15518C2F5DE004CC7C3 /* パチャママの贈りもの.jpg in Resources */,
 				5035F0C918C2F0DE004CC7C3 /* Main.storyboard in Resources */,
+				5035F15C18C2F5DE004CC7C3 /* ラダックの風息.jpg in Resources */,
+				5035F14D18C2F5DE004CC7C3 /* ジョニーベアー―イエローストーンの子グマ (シートン動物記 1).jpg in Resources */,
+				5035F15E18C2F5DE004CC7C3 /* 世界の中心で、愛をさけぶ スタンダード.jpg in Resources */,
+				5035F16618C2F5DE004CC7C3 /* 星の王子様.jpg in Resources */,
+				5035F14718C2F5DE004CC7C3 /* カンボジアからやってきたワンディ.jpg in Resources */,
+				5035F16518C2F5DE004CC7C3 /* 旅へ！アジアへ！2.jpg in Resources */,
+				5035F11318C2F5D1004CC7C3 /* 地球.jpg in Resources */,
+				5035F10A18C2F5D1004CC7C3 /* サハラ砂漠.jpeg in Resources */,
+				5035F15118C2F5DE004CC7C3 /* チベット旅行記.jpg in Resources */,
+				5035F15618C2F5DE004CC7C3 /* ハート・ブルー.jpg in Resources */,
+				5035F15218C2F5DE004CC7C3 /* ナスカの壷　ペルーからの手紙 .jpg in Resources */,
+				5035F14218C2F5DE004CC7C3 /* どくとるアイアイと謎の島マダガスカル.jpg in Resources */,
+				5035F14518C2F5DE004CC7C3 /* エヴァー・スマイル、ニュージャージー.jpg in Resources */,
+				5035F10618C2F5D1004CC7C3 /* イエローストーン.png in Resources */,
+				5035F14918C2F5DE004CC7C3 /* グレートオーシャンロード.jpg in Resources */,
+				5035F11218C2F5D1004CC7C3 /* ロライマ山.jpeg in Resources */,
+				5035F10218C2F5D1004CC7C3 /* アジア.jpg in Resources */,
+				5035F14C18C2F5DE004CC7C3 /* サハラ砂漠の秘密.jpg in Resources */,
+				5035F15318C2F5DE004CC7C3 /* ナバイオビーチ.png in Resources */,
+				5035F14318C2F5DE004CC7C3 /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg in Resources */,
+				5035F14118C2F5DE004CC7C3 /* くれいじー・ばいきん、オーストラリア.jpg in Resources */,
+				5035F15D18C2F5DE004CC7C3 /* リヤカーマン アンデスを越える―アタカマ砂漠、アンデス山脈越え1000キロ徒歩横断.jpg in Resources */,
+				5035F16018C2F5DE004CC7C3 /* 僕たちは世界を変えることができない.jpg in Resources */,
+				5035F10B18C2F5D1004CC7C3 /* チベット.jpg in Resources */,
+				5035F10E18C2F5D1004CC7C3 /* フィッツロイ.jpg in Resources */,
+				5035F16B18C2F5DE004CC7C3 /* 駅馬車.jpg in Resources */,
+				5035F11018C2F5D1004CC7C3 /* マチュピチュ.jpeg in Resources */,
+				5035F10718C2F5D1004CC7C3 /* ウユニ.jpg in Resources */,
+				5035F15918C2F5DE004CC7C3 /* マダガスカル.jpg in Resources */,
+				5035F14A18C2F5DE004CC7C3 /* サウンドオブミュージック.jpg in Resources */,
+				5035F16318C2F5DE004CC7C3 /* 失われた世界.jpg in Resources */,
+				5035F10C18C2F5D1004CC7C3 /* ドブロブニク.png in Resources */,
+				5035F15018C2F5DE004CC7C3 /* ダークナイトライジング.jpg in Resources */,
+				5035F11118C2F5D1004CC7C3 /* ラダック.jpeg in Resources */,
+				5035F10518C2F5D1004CC7C3 /* アンテロープキャニオン.jpeg in Resources */,
+				5035F10818C2F5D1004CC7C3 /* エアーズロック.jpg in Resources */,
+				5035F10F18C2F5D1004CC7C3 /* ペリトモレノ.jpg in Resources */,
+				5035F15F18C2F5DE004CC7C3 /* 中世都市ドゥブロヴニク―アドリア海の東西交易.jpg in Resources */,
+				5035F10D18C2F5D1004CC7C3 /* プノンペン.jpeg in Resources */,
+				5035F10318C2F5D1004CC7C3 /* アタカマ砂漠.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5035F16F18C2F649004CC7C3 /* DetailViewController.m in Sources */,
 				5035F0CF18C2F0DE004CC7C3 /* SecondViewController.m in Sources */,
 				5035F0C618C2F0DE004CC7C3 /* AppDelegate.m in Sources */,
 				5035F0CC18C2F0DE004CC7C3 /* FirstViewController.m in Sources */,
@@ -466,6 +744,7 @@
 				5035F0E918C2F0DF004CC7C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5035F0EA18C2F0DF004CC7C3 /* Build configuration list for PBXNativeTarget "140302TravelAndBookTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +753,7 @@
 				5035F0EC18C2F0DF004CC7C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
