@@ -43,7 +43,7 @@
     [super viewDidLoad];
     
     self.tabBarController.tabBar.hidden = YES;
-//    hidesBottomBarWhenPushed = YES;
+    
     
     //AppDelegateから、タップされたセルのテキストと画像を読み込む
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
@@ -514,6 +514,15 @@
     
     // ツールバーの作成
     self.navigationController.toolbarHidden = NO;
+//        UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,100, 320, 44)];
+//    [self.view addSubview:toolbar];
+    
+    self.navigationController.toolbar.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height-100, [[UIScreen mainScreen] bounds].size.width, 100);
+    
+//    self.navigationController.toolbar.frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height-100, [[UIScreen mainScreen] bounds].size.width, 100);
+//
+   
+
     
     //ツールバーのボタンに使用されるテキストの色を変更
     self.navigationController.toolbar.tintColor = RGBA(69, 44, 10, 1.0);
@@ -580,9 +589,11 @@
     
     // ツールバーの作成
     self.navigationController.toolbarHidden = NO;
+
     
     
     //ツールバーのボタンに使用されるテキストの色を変更
+    
     self.navigationController.toolbar.tintColor = RGBA(69, 44, 10, 1.0);
     //  ツールバーのタイトルの色を変更する
     self.navigationController.toolbar.barTintColor = RGBA(230, 217, 181, 1.0);

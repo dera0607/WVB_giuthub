@@ -24,22 +24,25 @@
     //ナビゲーションバーのボタンに使用されるテキストの色を変更
     self.navigationController.navigationBar.tintColor = RGBA(230, 217, 181, 1.0);
     //  ナビゲーションバーのタイトルの色を変更する
-    //    [UINavigationBar appearance].titleTextAttributes = @{NSForegroundColorAttributeName: RGBA(245, 245, 220, 0.5)};
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: RGBA(230, 217, 181, 1.0)};
-    //    [UINavigationBar appearance].barTintColor = RGBA(139, 115, 85, 1.0);
     self.navigationController.navigationBar.barTintColor = RGBA(69, 44, 10, 1.0);
     
     UIBarButtonItem *backBarButtonItem= [[UIBarButtonItem alloc] initWithTitle:@"戻る"
                                                                          style:UIBarButtonItemStylePlain target:nil action:nil];
     [self.navigationItem setBackBarButtonItem:backBarButtonItem];
-    //    [backBarButtonItem release];
+    
+        self.tabBarController.tabBar.hidden = NO;
     
 }
+
+
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+
     
     self.TableView.dataSource=self;
     self.TableView.delegate=self;
@@ -220,6 +223,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     NSLog(@"appDelegete.SelectedSection = %d",appDelegete.SelectedSection);
     NSLog(@"appDelegete.SelectedRow = %d",appDelegete.SelectedRow);
     
+    //tabBarを隠す
+    self.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:DetailView animated:YES];
     
