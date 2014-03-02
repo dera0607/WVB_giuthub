@@ -235,11 +235,11 @@
 			isa = PBXGroup;
 			children = (
 				501FFA3118C349D500304DBD /* JPSThumbnail.h */,
+				501FFA3618C349D500304DBD /* JPSThumnail.m */,
 				501FFA3218C349D500304DBD /* JPSThumbnailAnnotation.h */,
 				501FFA3318C349D500304DBD /* JPSThumbnailAnnotation.m */,
 				501FFA3418C349D500304DBD /* JPSThumbnailAnnotationView.h */,
 				501FFA3518C349D500304DBD /* JPSThumbnailAnnotationView.m */,
-				501FFA3618C349D500304DBD /* JPSThumnail.m */,
 			);
 			path = JPSThumbnailAnnotation;
 			sourceTree = "<group>";
