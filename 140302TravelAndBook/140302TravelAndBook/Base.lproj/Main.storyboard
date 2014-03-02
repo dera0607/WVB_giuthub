@@ -50,7 +50,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4HJ-Wf-EV4"/>
+                    <navigationItem key="navigationItem" title="世界の行きたいところ" id="4HJ-Wf-EV4"/>
                     <connections>
                         <outlet property="TableView" destination="04L-ZH-qYP" id="vLS-sZ-qXV"/>
                     </connections>
@@ -85,11 +85,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sMq-g3-zGx">
-                                <rect key="frame" x="11" y="295" width="135" height="177"/>
+                                <rect key="frame" x="16" y="295" width="135" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yFJ-xu-Wpy">
-                                <rect key="frame" x="175" y="295" width="136" height="177"/>
+                                <rect key="frame" x="170" y="295" width="136" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		501FFA2518C319EF00304DBD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501FFA2418C319EE00304DBD /* QuartzCore.framework */; };
+		501FFA2718C31DEE00304DBD /* ONE PIECE 23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 501FFA2618C31DEE00304DBD /* ONE PIECE 23.jpg */; };
+		501FFA2918C31E3100304DBD /* 2012.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 501FFA2818C31E3100304DBD /* 2012.jpg */; };
+		501FFA2F18C3219400304DBD /* SafariActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 501FFA2E18C3219400304DBD /* SafariActivity.m */; };
 		5035F0B618C2F0DE004CC7C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B518C2F0DE004CC7C3 /* Foundation.framework */; };
 		5035F0B818C2F0DE004CC7C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B718C2F0DE004CC7C3 /* CoreGraphics.framework */; };
 		5035F0BA18C2F0DE004CC7C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B918C2F0DE004CC7C3 /* UIKit.framework */; };
@@ -101,6 +104,10 @@
 
 /* Begin PBXFileReference section */
 		501FFA2418C319EE00304DBD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		501FFA2618C31DEE00304DBD /* ONE PIECE 23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ONE PIECE 23.jpg"; sourceTree = "<group>"; };
+		501FFA2818C31E3100304DBD /* 2012.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2012.jpg; sourceTree = "<group>"; };
+		501FFA2D18C3219400304DBD /* SafariActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SafariActivity.h; sourceTree = "<group>"; };
+		501FFA2E18C3219400304DBD /* SafariActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafariActivity.m; sourceTree = "<group>"; };
 		5035F0B218C2F0DE004CC7C3 /* 140302TravelAndBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 140302TravelAndBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5035F0B518C2F0DE004CC7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5035F0B718C2F0DE004CC7C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -250,6 +257,8 @@
 		5035F0BB18C2F0DE004CC7C3 /* 140302TravelAndBook */ = {
 			isa = PBXGroup;
 			children = (
+				501FFA2D18C3219400304DBD /* SafariActivity.h */,
+				501FFA2E18C3219400304DBD /* SafariActivity.m */,
 				5035F0C418C2F0DE004CC7C3 /* AppDelegate.h */,
 				5035F0C518C2F0DE004CC7C3 /* AppDelegate.m */,
 				5035F0C718C2F0DE004CC7C3 /* Main.storyboard */,
@@ -324,6 +333,8 @@
 		5035F11418C2F5DE004CC7C3 /* BookImage */ = {
 			isa = PBXGroup;
 			children = (
+				501FFA2818C31E3100304DBD /* 2012.jpg */,
+				501FFA2618C31DEE00304DBD /* ONE PIECE 23.jpg */,
 				5035F11518C2F5DE004CC7C3 /* くれいじー・ばいきん、オーストラリア.jpg */,
 				5035F11618C2F5DE004CC7C3 /* どくとるアイアイと謎の島マダガスカル.jpg */,
 				5035F11718C2F5DE004CC7C3 /* やった。―4年3カ月も有給休暇をもらって世界一周5万5000キロを自転車で走ってきちゃった男.jpg */,
@@ -462,6 +473,7 @@
 				5035F15B18C2F5DE004CC7C3 /* モーターサイクルダイアリーズ.jpg in Resources */,
 				5035F14418C2F5DE004CC7C3 /* アボリジニの教え―大地と宇宙をつなぐ精霊の知恵.jpg in Resources */,
 				5035F14E18C2F5DE004CC7C3 /* ジョードプル.jpeg in Resources */,
+				501FFA2718C31DEE00304DBD /* ONE PIECE 23.jpg in Resources */,
 				5035F14818C2F5DE004CC7C3 /* カールじいさんの空飛ぶ家.jpg in Resources */,
 				5035F16918C2F5DE004CC7C3 /* 深夜特急.jpg in Resources */,
 				5035F14B18C2F5DE004CC7C3 /* サハラに死す.jpg in Resources */,
@@ -502,6 +514,7 @@
 				5035F11018C2F5D1004CC7C3 /* マチュピチュ.jpeg in Resources */,
 				5035F10718C2F5D1004CC7C3 /* ウユニ.jpg in Resources */,
 				5035F15918C2F5DE004CC7C3 /* マダガスカル.jpg in Resources */,
+				501FFA2918C31E3100304DBD /* 2012.jpg in Resources */,
 				5035F14A18C2F5DE004CC7C3 /* サウンドオブミュージック.jpg in Resources */,
 				5035F16318C2F5DE004CC7C3 /* 失われた世界.jpg in Resources */,
 				5035F10C18C2F5D1004CC7C3 /* ドブロブニク.png in Resources */,
@@ -535,6 +548,7 @@
 				5035F0CF18C2F0DE004CC7C3 /* SecondViewController.m in Sources */,
 				5035F0C618C2F0DE004CC7C3 /* AppDelegate.m in Sources */,
 				5035F0CC18C2F0DE004CC7C3 /* FirstViewController.m in Sources */,
+				501FFA2F18C3219400304DBD /* SafariActivity.m in Sources */,
 				5035F0C218C2F0DE004CC7C3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
