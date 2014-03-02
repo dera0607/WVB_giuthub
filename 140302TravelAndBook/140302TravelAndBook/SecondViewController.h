@@ -9,7 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface SecondViewController : UIViewController<MKMapViewDelegate>
+@interface SecondViewController : UIViewController<MKMapViewDelegate>{
+    UIImageView *myImageView;
+    
+    int selectedSection;
+}
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
+
+
 
 @end

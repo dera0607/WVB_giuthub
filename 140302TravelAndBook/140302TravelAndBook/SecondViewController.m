@@ -8,6 +8,9 @@
 
 #import "SecondViewController.h"
 #import "JPSThumbnailAnnotation.h"
+#import "OwnAnnotation.h"
+#import "DetailViewController.h"
+#import "AppDelegate.h"
 
 @interface SecondViewController ()
 
@@ -25,17 +28,134 @@
 //    [self.MapView addAnnotations:[self generateAnnotations]];
 
     
-    CLLocationCoordinate2D co;
-    co.latitude = 35.68664111;  // 経度
-    co.longitude = 139.6948839;  // 緯度
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 35.68664111;  // 経度
+    coordinate.longitude = 139.6948839;  // 緯度
+    
     
     // アノテーションを地図へ追加
-    HogeAnnotation *ha = [[[HogeAnnotation alloc] init] autorelease];
-    ha.coordinate = co;
-    ha.title = @"Hoge";
-    [mv addAnnotation:ha];
+    OwnAnnotation *Annotation = [[OwnAnnotation alloc] init];
+    Annotation.coordinate = coordinate;
+    Annotation.title = @"タイトル";
+    Annotation.subtitle = @"サブタイトル";
+    [self.MapView addAnnotation:Annotation];
 
 }
+
+//-(MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+//    
+//    MKAnnotationView *annotationView;
+//    NSString* identifier = @"Pin";
+//    annotationView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+//    if(nil == annotationView) {
+//        annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+//    }
+//    annotationView.image = [UIImage imageNamed:@"2012.png"];
+//    annotationView.canShowCallout = YES;
+//    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//    annotationView.annotation = annotation;
+//    
+//    return annotationView;  
+//}
+
+//- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {
+//    // add detail disclosure button to callout
+//    [views enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL* stop) {
+//        ((MKAnnotationView*)obj).rightCalloutAccessoryView
+//        = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//    }];
+//}
+
+// アノテーションが表示される時に呼ばれる
+-(MKAnnotationView*)mapView:(MKMapView*)mapView
+          viewForAnnotation:(id)annotation{
+    
+    static NSString *PinIdentifier = @"Pin";
+//    MKAnnotationView *AnnotationView =(MKAnnotationView*)[self.MapView dequeueReusableAnnotationViewWithIdentifier:PinIdentifier];
+//    if(AnnotationView  == nil){
+//        AnnotationView  = [[MKAnnotationView alloc]
+//               initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
+//        AnnotationView .image = [UIImage imageNamed:@"2012.png"];  // アノテーションの画像を指定する
+//                AnnotationView .canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
+//    }
+//    return AnnotationView;
+    
+    MKPinAnnotationView *PinAnnotationView =
+    (MKPinAnnotationView*)
+    [self.MapView dequeueReusableAnnotationViewWithIdentifier:PinIdentifier];
+    if(PinAnnotationView  == nil){
+        PinAnnotationView  = [[MKPinAnnotationView alloc]
+                initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
+        PinAnnotationView .animatesDrop = YES;  // アニメーションをする
+//        PinAnnotationView .pinColor = MKPinAnnotationColorPurple;  // ピンの色を紫にする
+        PinAnnotationView.image= [UIImage imageNamed:@"アジア.jpg"];  // アノテーションの画像を指定する？
+        PinAnnotationView .canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
+        PinAnnotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        //左に画像を表示
+        myImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"アジア.jpg"]];
+        myImageView.frame = CGRectMake (0,0,31,31);
+        PinAnnotationView.leftCalloutAccessoryView = myImageView;
+        
+    }
+    return PinAnnotationView ;
+
+}
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+    NSLog(@"title: %@", view.annotation.title);
+    NSLog(@"subtitle: %@", view.annotation.subtitle);
+    NSLog(@"coord: %f, %f", view.annotation.coordinate.latitude, view.annotation.coordinate.longitude);
+    
+    
+    DetailViewController *DetailView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewID"];
+    //DetailViewControllerクラス（StoryBoardの右で設定）のSecondVewControllerを作成し、IDがsecondVewController（StoryBoardの右で設定）と一致するものと結びつける。セグウェイで繋がっていないので、DetailViewControllerのID一致必要。
+    
+    
+    AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    appDelegete.Pass_NameData = view.annotation.title;
+    appDelegete.Pass_NameImage = myImageView.image;
+    appDelegete.Pass_Area = view.annotation.title;
+    
+    
+//    AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+//    appDelegete.Pass_NameData = [NameData[indexPath.section] objectAtIndex:indexPath.row];
+//    appDelegete.Pass_NameImage = [ImageData[indexPath.section] objectAtIndex:indexPath.row];
+//    appDelegete.Pass_Area = AreaName[indexPath.section];
+//    NSLog(@"indexPath.section = %d",indexPath.section);
+//    NSLog(@"indexPath.row = %d",indexPath.row);
+    
+    //DetailViewControllerの本のデータ取得用
+    appDelegete.SelectedSection = indexPath.section;
+    appDelegete.SelectedRow = indexPath.row;
+    
+    
+    
+    NSLog(@"appDelegete.SelectedSection = %d",appDelegete.SelectedSection);
+    NSLog(@"appDelegete.SelectedRow = %d",appDelegete.SelectedRow);
+    
+     [self performSegueWithIdentifier:@"DetailViewID" sender:self];
+}
+
+// class MapViewController？？ビューを外す？フォーカスを外す？
+- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
+    view.rightCalloutAccessoryView
+    = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+}
+
+//// class MapViewController選択されたとき？
+//-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+//    // create right accessory view
+//    UILabel* sample = [[UILabel alloc] initWithFrame:CGRectMake(0.f, 0.f, 100.f, 32.f)];
+//    sample.backgroundColor = [UIColor clearColor];
+//    sample.font = [UIFont fontWithName:@"Helvetica" size: 13];
+//    sample.text = ((CustomAnnotation*)view.annotation).sample;
+//    sample.textColor = [UIColor whiteColor];
+//    
+//    // add view to callout
+//    view.rightCalloutAccessoryView = nil; // ??
+//    view.rightCalloutAccessoryView = sample;
+//}
+
 
 //- (NSArray *)generateAnnotations {
 //    NSMutableArray *annotations = [[NSMutableArray alloc] initWithCapacity:3];

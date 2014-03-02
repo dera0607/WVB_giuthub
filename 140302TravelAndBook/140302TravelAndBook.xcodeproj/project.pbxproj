@@ -14,6 +14,7 @@
 		501FFA3718C349D500304DBD /* JPSThumbnailAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 501FFA3318C349D500304DBD /* JPSThumbnailAnnotation.m */; };
 		501FFA3818C349D500304DBD /* JPSThumbnailAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 501FFA3518C349D500304DBD /* JPSThumbnailAnnotationView.m */; };
 		501FFA3918C349D500304DBD /* JPSThumnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 501FFA3618C349D500304DBD /* JPSThumnail.m */; };
+		501FFA3C18C3526600304DBD /* OwnAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 501FFA3B18C3526600304DBD /* OwnAnnotation.m */; };
 		5035F0B618C2F0DE004CC7C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B518C2F0DE004CC7C3 /* Foundation.framework */; };
 		5035F0B818C2F0DE004CC7C3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B718C2F0DE004CC7C3 /* CoreGraphics.framework */; };
 		5035F0BA18C2F0DE004CC7C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5035F0B918C2F0DE004CC7C3 /* UIKit.framework */; };
@@ -117,6 +118,8 @@
 		501FFA3418C349D500304DBD /* JPSThumbnailAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSThumbnailAnnotationView.h; sourceTree = "<group>"; };
 		501FFA3518C349D500304DBD /* JPSThumbnailAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSThumbnailAnnotationView.m; sourceTree = "<group>"; };
 		501FFA3618C349D500304DBD /* JPSThumnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSThumnail.m; sourceTree = "<group>"; };
+		501FFA3A18C3526600304DBD /* OwnAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnAnnotation.h; sourceTree = "<group>"; };
+		501FFA3B18C3526600304DBD /* OwnAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnAnnotation.m; sourceTree = "<group>"; };
 		5035F0B218C2F0DE004CC7C3 /* 140302TravelAndBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 140302TravelAndBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5035F0B518C2F0DE004CC7C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5035F0B718C2F0DE004CC7C3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -282,6 +285,8 @@
 				501FFA3018C349D500304DBD /* JPSThumbnailAnnotation */,
 				501FFA2D18C3219400304DBD /* SafariActivity.h */,
 				501FFA2E18C3219400304DBD /* SafariActivity.m */,
+				501FFA3A18C3526600304DBD /* OwnAnnotation.h */,
+				501FFA3B18C3526600304DBD /* OwnAnnotation.m */,
 				5035F0C418C2F0DE004CC7C3 /* AppDelegate.h */,
 				5035F0C518C2F0DE004CC7C3 /* AppDelegate.m */,
 				5035F0C718C2F0DE004CC7C3 /* Main.storyboard */,
@@ -570,6 +575,7 @@
 				501FFA3918C349D500304DBD /* JPSThumnail.m in Sources */,
 				5035F16F18C2F649004CC7C3 /* DetailViewController.m in Sources */,
 				5035F0CF18C2F0DE004CC7C3 /* SecondViewController.m in Sources */,
+				501FFA3C18C3526600304DBD /* OwnAnnotation.m in Sources */,
 				5035F0C618C2F0DE004CC7C3 /* AppDelegate.m in Sources */,
 				5035F0CC18C2F0DE004CC7C3 /* FirstViewController.m in Sources */,
 				501FFA3718C349D500304DBD /* JPSThumbnailAnnotation.m in Sources */,
