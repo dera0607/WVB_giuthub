@@ -21,4 +21,40 @@
 @property (nonatomic ,assign) int SelectedRow;
 
 
+//データ入力用
+@property (strong, nonatomic)  NSArray *AreaName;
+@property (strong, nonatomic) NSArray *AreaPlace;
+
+@property (strong, nonatomic) NSArray *NameData;
+@property (strong, nonatomic) NSArray *subNameData;
+@property (strong, nonatomic) NSArray *ImageData;
+
+@property (nonatomic, retain) NSMutableArray *Asia1_NameData;
+@property (nonatomic, retain) NSMutableArray *Asia1_subNameData;
+@property (nonatomic, retain) NSMutableArray *Asia1_ImageData;
+
+@property (nonatomic, retain) NSMutableArray *NorthAmerica2_NameData;
+@property (nonatomic, retain) NSMutableArray *NorthAmerica2_subNameData;
+@property (nonatomic, retain) NSMutableArray *NorthAmerica2_ImageData;
+
+@property (nonatomic, retain) NSMutableArray *SouthAmerica3_NameData;
+@property (nonatomic, retain) NSMutableArray *SouthAmerica3_subNameData;
+@property (nonatomic, retain) NSMutableArray *SouthAmerica3_ImageData;
+
+@property (nonatomic, retain) NSMutableArray *Eourope4_NameData;
+@property (nonatomic, retain) NSMutableArray *Eourope4_subNameData;
+@property (nonatomic, retain) NSMutableArray *Eourope4_ImageData;
+
+@property (nonatomic, retain) NSMutableArray *Africa5_NameData;
+@property (nonatomic, retain) NSMutableArray *Africa5_subNameData;
+@property (nonatomic, retain) NSMutableArray *Africa5_ImageData;
+
+@property (nonatomic, retain) NSMutableArray *Oceania6_NameData;
+@property (nonatomic, retain) NSMutableArray *Oceania6_subNameData;
+@property (nonatomic, retain) NSMutableArray *Oceania6_ImageData;
+
+@property (nonatomic, retain) NSMutableArray *AroundTheWorld7_NameData;
+@property (nonatomic, retain) NSMutableArray *AroundTheWorld7_subNameData;
+@property (nonatomic, retain) NSMutableArray *AroundTheWorld7_ImageData;
+
 @end
