@@ -12,7 +12,7 @@
 @interface SecondViewController : UIViewController<MKMapViewDelegate>{
     UIImageView *myImageView;
     
-    int selectedSection;
+
 }
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
 

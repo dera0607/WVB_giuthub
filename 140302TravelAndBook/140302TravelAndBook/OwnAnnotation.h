@@ -14,13 +14,18 @@
     CLLocationCoordinate2D coordinate;
     NSString *title;
     NSString *subtile;
-    
+    NSNumber *selectedArea_Section;
+    NSNumber *selectedPlace_Row;
+    UIImage *placeImage;
+
 }
 
 @property(nonatomic)CLLocationCoordinate2D coordinate;
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *subtitle;
-
+@property(nonatomic) NSNumber *selectedArea_Section;
+@property(nonatomic) NSNumber *selectedPlace_Row;
+@property (strong, nonatomic) UIImage *placeImage;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D)co;
 

@@ -13,6 +13,9 @@
 @synthesize coordinate;
 @synthesize title;
 @synthesize subtitle;
+@synthesize selectedArea_Section;
+@synthesize selectedPlace_Row;
+@synthesize placeImage;
 
 -(id)initWithCoordinate:(CLLocationCoordinate2D)co{
     coordinate = co;

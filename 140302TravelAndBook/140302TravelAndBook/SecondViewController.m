@@ -18,15 +18,149 @@
 
 @implementation SecondViewController
 
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//    
+//    self.MapView.delegate = self;
+//    
+//    CLLocationCoordinate2D coordinate;
+//    coordinate.latitude = 35.68664111;  // 経度
+//    coordinate.longitude = 139.6948839;  // 緯度
+//    
+//    
+//    // アノテーションを地図へ追加
+//    OwnAnnotation *Annotation = [[OwnAnnotation alloc] init];
+//    Annotation.coordinate = coordinate;
+//    Annotation.title = @"タイトル";
+//    Annotation.subtitle = @"サブタイトル";
+//    Annotation.placeImage = [UIImage imageNamed:@"アジア.jpg"];
+//    Annotation.selectedArea_Section =[[NSNumber alloc]initWithInteger:1];
+//    Annotation.selectedPlace_Row = [[NSNumber alloc] initWithInteger:2];
+//
+//
+//    [self.MapView addAnnotation:Annotation];
+//}
+//
+//
+//// アノテーションが表示される時に呼ばれる
+//
+//-(MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id)annotation{
+//  static NSString *PinIdentifier = @"Pin";
+//    
+//    return annotation;
+//    
+//    
+//    MKPinAnnotationView *PinAnnotationView =
+//    (MKPinAnnotationView*)
+//    [self.MapView dequeueReusableAnnotationViewWithIdentifier:PinIdentifier];
+//    if(PinAnnotationView  == nil){
+//        PinAnnotationView  = [[MKPinAnnotationView alloc]
+//                              initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
+//        PinAnnotationView .animatesDrop = YES;  // アニメーションをする
+//        //        PinAnnotationView .pinColor = MKPinAnnotationColorPurple;  // ピンの色を紫にする
+//        //        PinAnnotationView.image= [UIImage imageNamed:@"アジア.jpg"];  // アノテーションの画像を指定する？
+//        PinAnnotationView .canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
+//        PinAnnotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        //左に画像を表示
+//        myImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"アジア.jpg"]];
+//        myImageView.frame = CGRectMake (0,0,31,31);
+//        PinAnnotationView.leftCalloutAccessoryView = myImageView;
+//        
+//    }
+//    return PinAnnotationView ;
+//    
+//
+//}
+//
+//-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
+//    NSLog(@"title: %@", view.annotation.title);
+//    NSLog(@"subtitle: %@", view.annotation.subtitle);
+//    NSLog(@"coord: %f, %f", view.annotation.coordinate.latitude, view.annotation.coordinate.longitude);
+//   
+////     DetailViewController *DetailView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewID"];
+////    AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+////    appDelegete.Pass_NameData = view.annotation.title;
+////    appDelegete.Pass_NameImage = myImageView.image;
+////    appDelegete.Pass_Area = view.annotation.title;
+//    
+//    
+////        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//
+////    
+//////FirstViewと共通のデータを入れていれて遷移？
+////    for (int i=1; i<10; i++){
+////        if(NameData[i] !=nil){
+////            if (view.annotation.subtitle = NameData[i]){
+////                for (j=1; j= nil; j++){
+////                    if([NameData[i] objectAtIndex:j] !=nil){
+////                        if(view.annotation.title = [NameData[i] objectAtIndex:j]){
+////                            appDelegate.SelectedSection = i;//ndexPath.section
+////                            appDelegate.SelectedRow = j;//indexPath.row
+////                            appDelegete.Pass_NameData = [NameData[i] objectAtIndex:j];
+////                            appDelegete.Pass_NameImage = [ImageData[i] objectAtIndex:j];
+////                            appDelegete.Pass_Area = AreaName[i];
+////                        }
+////                        else{
+////                        }
+////                    }
+////                    else{
+////                        break;
+////                    }
+////                }
+////            }
+////            else{
+////            }
+////        }
+////        else{
+////            break;
+////        }
+////    }
+////    
+//    
+// 
+//      AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//    appDelegate.Pass_NameData = view.annotation.title;
+//    appDelegate.Pass_NameImage = myImageView.image;
+//    appDelegate.Pass_Area = view.annotation.title;
+//    
+////    
+////    NSLog(@"appDelegete.SelectedSection = %d",appDelegete.SelectedSection);
+////    NSLog(@"appDelegete.SelectedRow = %d",appDelegete.SelectedRow);
+//   
+//     [self performSegueWithIdentifier:@"DetailViewID" sender:self];
+//}
+//
+//
+//
+//
+//
+//
+//
+//- (void)didReceiveMemoryWarning
+//{
+//    [super didReceiveMemoryWarning];
+//    // Dispose of any resources that can be recreated.
+//}
+//
+//
+//
+//
+
+
+
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.MapView.delegate = self;
     
-//    // Annotations
-//    [self.MapView addAnnotations:[self generateAnnotations]];
-
+    //    // Annotations
+    //    [self.MapView addAnnotations:[self generateAnnotations]];
+    
     
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = 35.68664111;  // 経度
@@ -38,12 +172,16 @@
     Annotation.coordinate = coordinate;
     Annotation.title = @"タイトル";
     Annotation.subtitle = @"サブタイトル";
-    [self.MapView addAnnotation:Annotation];
+    Annotation.placeImage = [UIImage imageNamed:@"アジア.jpg"];
+    Annotation.selectedArea_Section =[[NSNumber alloc]initWithInteger:1];
+    Annotation.selectedPlace_Row = [[NSNumber alloc] initWithInteger:2];
 
+    [self.MapView addAnnotation:Annotation];
+    
 }
 
 //-(MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-//    
+//
 //    MKAnnotationView *annotationView;
 //    NSString* identifier = @"Pin";
 //    annotationView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
@@ -54,8 +192,8 @@
 //    annotationView.canShowCallout = YES;
 //    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
 //    annotationView.annotation = annotation;
-//    
-//    return annotationView;  
+//
+//    return annotationView;
 //}
 
 //- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {
@@ -71,24 +209,24 @@
           viewForAnnotation:(id)annotation{
     
     static NSString *PinIdentifier = @"Pin";
-//    MKAnnotationView *AnnotationView =(MKAnnotationView*)[self.MapView dequeueReusableAnnotationViewWithIdentifier:PinIdentifier];
-//    if(AnnotationView  == nil){
-//        AnnotationView  = [[MKAnnotationView alloc]
-//               initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
-//        AnnotationView .image = [UIImage imageNamed:@"2012.png"];  // アノテーションの画像を指定する
-//                AnnotationView .canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
-//    }
-//    return AnnotationView;
+    //    MKAnnotationView *AnnotationView =(MKAnnotationView*)[self.MapView dequeueReusableAnnotationViewWithIdentifier:PinIdentifier];
+    //    if(AnnotationView  == nil){
+    //        AnnotationView  = [[MKAnnotationView alloc]
+    //               initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
+    //        AnnotationView .image = [UIImage imageNamed:@"2012.png"];  // アノテーションの画像を指定する
+    //                AnnotationView .canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
+    //    }
+    //    return AnnotationView;
     
     MKPinAnnotationView *PinAnnotationView =
     (MKPinAnnotationView*)
     [self.MapView dequeueReusableAnnotationViewWithIdentifier:PinIdentifier];
     if(PinAnnotationView  == nil){
         PinAnnotationView  = [[MKPinAnnotationView alloc]
-                initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
+                              initWithAnnotation:annotation reuseIdentifier:PinIdentifier];
         PinAnnotationView .animatesDrop = YES;  // アニメーションをする
-//        PinAnnotationView .pinColor = MKPinAnnotationColorPurple;  // ピンの色を紫にする
-        PinAnnotationView.image= [UIImage imageNamed:@"アジア.jpg"];  // アノテーションの画像を指定する？
+        //        PinAnnotationView .pinColor = MKPinAnnotationColorPurple;  // ピンの色を紫にする
+        //        PinAnnotationView.image= [UIImage imageNamed:@"アジア.jpg"];  // アノテーションの画像を指定する？
         PinAnnotationView .canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
         PinAnnotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         //左に画像を表示
@@ -98,7 +236,7 @@
         
     }
     return PinAnnotationView ;
-
+    
 }
 
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
@@ -117,23 +255,23 @@
     appDelegete.Pass_Area = view.annotation.title;
     
     
-//    AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
-//    appDelegete.Pass_NameData = [NameData[indexPath.section] objectAtIndex:indexPath.row];
-//    appDelegete.Pass_NameImage = [ImageData[indexPath.section] objectAtIndex:indexPath.row];
-//    appDelegete.Pass_Area = AreaName[indexPath.section];
-//    NSLog(@"indexPath.section = %d",indexPath.section);
-//    NSLog(@"indexPath.row = %d",indexPath.row);
+    //    AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+    //    appDelegete.Pass_NameData = [NameData[indexPath.section] objectAtIndex:indexPath.row];
+    //    appDelegete.Pass_NameImage = [ImageData[indexPath.section] objectAtIndex:indexPath.row];
+    //    appDelegete.Pass_Area = AreaName[indexPath.section];
+    //    NSLog(@"indexPath.section = %d",indexPath.section);
+    //    NSLog(@"indexPath.row = %d",indexPath.row);
     
     //DetailViewControllerの本のデータ取得用
-    appDelegete.SelectedSection = indexPath.section;
-    appDelegete.SelectedRow = indexPath.row;
+    //    appDelegete.SelectedSection = indexPath.section;
+    //    appDelegete.SelectedRow = indexPath.row;
     
     
     
     NSLog(@"appDelegete.SelectedSection = %d",appDelegete.SelectedSection);
     NSLog(@"appDelegete.SelectedRow = %d",appDelegete.SelectedRow);
     
-     [self performSegueWithIdentifier:@"DetailViewID" sender:self];
+    [self performSegueWithIdentifier:@"DetailViewID" sender:self];
 }
 
 // class MapViewController？？ビューを外す？フォーカスを外す？
@@ -150,7 +288,7 @@
 //    sample.font = [UIFont fontWithName:@"Helvetica" size: 13];
 //    sample.text = ((CustomAnnotation*)view.annotation).sample;
 //    sample.textColor = [UIColor whiteColor];
-//    
+//
 //    // add view to callout
 //    view.rightCalloutAccessoryView = nil; // ??
 //    view.rightCalloutAccessoryView = sample;
@@ -159,7 +297,7 @@
 
 //- (NSArray *)generateAnnotations {
 //    NSMutableArray *annotations = [[NSMutableArray alloc] initWithCapacity:3];
-//    
+//
 //    // Empire State Building
 //    JPSThumbnail *empire = [[JPSThumbnail alloc] init];
 //    empire.image = [UIImage imageNamed:@"アンテロープキャニオン.jpeg"];
@@ -167,9 +305,9 @@
 //    empire.subtitle = @"NYC Landmark";
 //    empire.coordinate = CLLocationCoordinate2DMake(40.75, -73.99);
 //    empire.disclosureBlock = ^{ NSLog(@"%@", empire.title); };
-//    
+//
 //    [annotations addObject:[[JPSThumbnailAnnotation alloc] initWithThumbnail:empire]];
-//    
+//
 //    // Apple HQ
 //    JPSThumbnail *apple = [[JPSThumbnail alloc] init];
 //    apple.image = [UIImage imageNamed:@"イエローストーン.png"];
@@ -177,9 +315,9 @@
 //    apple.subtitle = @"Apple Headquarters";
 //    apple.coordinate = CLLocationCoordinate2DMake(37.33, -122.03);
 //    apple.disclosureBlock = ^{ NSLog(@"selected Appple"); };
-//    
+//
 //    [annotations addObject:[[JPSThumbnailAnnotation alloc] initWithThumbnail:apple]];
-//    
+//
 //    // Parliament of Canada
 //    JPSThumbnail *ottawa = [[JPSThumbnail alloc] init];
 //    ottawa.image = [UIImage imageNamed:@"エアーズロック.jpg"];
@@ -187,9 +325,9 @@
 //    ottawa.subtitle = @"Oh Canada!";
 //    ottawa.coordinate = CLLocationCoordinate2DMake(45.43, -75.70);
 //    ottawa.disclosureBlock = ^{ NSLog(@"selected Ottawa"); };
-//    
+//
 //    [annotations addObject:[[JPSThumbnailAnnotation alloc] initWithThumbnail:ottawa]];
-//    
+//
 //    return annotations;
 //}
 //
@@ -232,5 +370,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
 
 @end
