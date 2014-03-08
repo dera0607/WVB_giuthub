@@ -11,10 +11,44 @@
 
 @interface SecondViewController : UIViewController<MKMapViewDelegate>{
     UIImageView *myImageView;
-    
-
+    CLLocationCoordinate2D *points;
 }
+
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
+
+@property (nonatomic, retain) NSMutableArray *Annotation;
+@property (nonatomic, retain) NSMutableArray *Annotation_Asia1;
+@property (nonatomic, retain) NSMutableArray *Annotation_NorthAmerica2;
+@property (nonatomic, retain) NSMutableArray *Annotation_SouthAmerica3;
+@property (nonatomic, retain) NSMutableArray *Annotation_Eourope4;
+@property (nonatomic, retain) NSMutableArray *Annotation_Africa5;
+@property (nonatomic, retain) NSMutableArray *Annotation_Oceania6;
+@property (nonatomic, retain) NSMutableArray *Annotation_AroundTheWorld7;
+
+@property (nonatomic, retain) NSMutableArray *co_Asia1;
+@property (nonatomic, retain) NSMutableArray *co_NorthAmerica2;
+@property (nonatomic, retain) NSMutableArray *co_SouthAmerica3;
+@property (nonatomic, retain) NSMutableArray *co_Eourope4;
+@property (nonatomic, retain) NSMutableArray *co_Africa5;
+@property (nonatomic, retain) NSMutableArray *co_Oceania6;
+@property (nonatomic, retain) NSMutableArray *co_AroundTheWorld7;
+
+//@property (nonatomic, retain) NSMutableArray *co_Asia1_latitude;
+//@property (nonatomic, retain) NSMutableArray *co_NorthAmerica2_latitude;
+//@property (nonatomic, retain) NSMutableArray *co_SouthAmerica3_latitude;
+//@property (nonatomic, retain) NSMutableArray *co_Eourope4_latitude;
+//@property (nonatomic, retain) NSMutableArray *co_Africa5_latitude;
+//@property (nonatomic, retain) NSMutableArray *co_Oceania6_latitude;
+//@property (nonatomic, retain) NSMutableArray *co_AroundTheWorld7_latitude;
+//
+//@property (nonatomic, retain) NSMutableArray *co_Asia1_longitude;
+//@property (nonatomic, retain) NSMutableArray *co_NorthAmerica2_longitude;
+//@property (nonatomic, retain) NSMutableArray *co_SouthAmerica3_longitude;
+//@property (nonatomic, retain) NSMutableArray *co_Eourope4_longitude;
+//@property (nonatomic, retain) NSMutableArray *co_Africa5_longitude;
+//@property (nonatomic, retain) NSMutableArray *co_Oceania6_longitude;
+//@property (nonatomic, retain) NSMutableArray *co_AroundTheWorld7_longitude;
+
 
 
 

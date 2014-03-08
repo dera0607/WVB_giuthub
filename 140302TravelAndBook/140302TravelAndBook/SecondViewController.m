@@ -14,6 +14,7 @@
 
 @interface SecondViewController ()
 
+
 @end
 
 @implementation SecondViewController
@@ -161,14 +162,188 @@
     //    // Annotations
     //    [self.MapView addAnnotations:[self generateAnnotations]];
     
+    AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
+
     
+    // アノテーションを地図へ追加
+    //Asia1
+    OwnAnnotation *An_Asia1_Tibet = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Tibet;
+    co_Tibet.latitude = 91.140855;  // 経度
+    co_Tibet.longitude = 29.645554;  // 緯度
+    An_Asia1_Tibet.coordinate = co_Tibet;
+    
+    OwnAnnotation *An_Asia1_Ladakh = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Ladakh;
+    co_Ladakh.latitude = 77.474663;  // 経度
+    co_Ladakh.longitude = 34.133831;  // 緯度
+    An_Asia1_Ladakh.coordinate = co_Ladakh;
+    
+    OwnAnnotation *An_Asia1_Varanasi = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Varanasi;
+    co_Varanasi.latitude = 82.973914;  // 経度
+    co_Varanasi.longitude = 25.317645;  // 緯度
+    An_Asia1_Varanasi.coordinate = co_Varanasi;
+    
+    OwnAnnotation *An_Asia1_Jodhpur = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Jodhpur;
+    co_Jodhpur.latitude = 73.024309;  // 経度
+    co_Jodhpur.longitude = 26.238946;  // 緯度
+    An_Asia1_Jodhpur.coordinate = co_Jodhpur;
+    
+    OwnAnnotation *An_Asia1_Phnompenh = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Phnompenh;
+    co_Phnompenh.latitude = 104.917445;  // 経度
+    co_Phnompenh.longitude = 11.558830;  // 緯度
+    An_Asia1_Phnompenh.coordinate = co_Phnompenh;
+    
+    _Annotation_Asia1 = [@[An_Asia1_Tibet, An_Asia1_Ladakh, An_Asia1_Varanasi,An_Asia1_Jodhpur,An_Asia1_Phnompenh]mutableCopy];
+
+    
+    //NorthAmerica2
+    OwnAnnotation *An_NorthAmerica2_Yellowstone = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Yellowstone;
+    co_Yellowstone.latitude = -108.434381;  // 経度
+    co_Yellowstone.longitude = 45.785657;  // 緯度
+    An_NorthAmerica2_Yellowstone.coordinate = co_Yellowstone;
+    
+    OwnAnnotation *An_NorthAmerica2_MonumentValley = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_MonumentValley;
+    co_MonumentValley.latitude = -108.434381;  // 経度
+    co_MonumentValley.longitude = 45.785657;  // 緯度
+    An_NorthAmerica2_MonumentValley.coordinate = co_MonumentValley;
+    
+    _Annotation_NorthAmerica2 = [@[An_NorthAmerica2_Yellowstone, An_NorthAmerica2_MonumentValley ]mutableCopy];
+ 
+    
+    //SouthAmerica3
+    OwnAnnotation *An_SouthAmerica3_Uyuni = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Uyuni;
+    co_Uyuni.latitude = -66.824967;  // 経度
+    co_Uyuni.longitude = -20.460350;  // 緯度
+    An_SouthAmerica3_Uyuni.coordinate = co_Uyuni;
+    
+    OwnAnnotation *An_SouthAmerica3_MachuPicchu = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_MachuPicchu;
+    co_MachuPicchu.latitude = -72.545861;  // 経度
+    co_MachuPicchu.longitude = -13.163587;  // 緯度
+    An_SouthAmerica3_MachuPicchu.coordinate = co_MachuPicchu;
+    
+    OwnAnnotation *An_SouthAmerica3_PeritoMoreno = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_PeritoMoreno;
+    co_PeritoMoreno.latitude = -73.234167;  // 経度
+    co_PeritoMoreno.longitude = -50.330556;  // 緯度
+    An_SouthAmerica3_PeritoMoreno.coordinate = co_PeritoMoreno;
+    
+    OwnAnnotation *An_SouthAmerica3_Atacama = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Atacama;
+    co_Atacama.latitude = -70.050315;  // 経度
+    co_Atacama.longitude = -27.566056;  // 緯度
+    An_SouthAmerica3_Atacama.coordinate = co_Atacama;
+    
+    OwnAnnotation *An_SouthAmerica3_Roraima = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Roraima;
+    co_Roraima.latitude = -60.762500;  // 経度
+    co_Roraima.longitude = 5.143333;  // 緯度
+    An_SouthAmerica3_Roraima.coordinate = co_Roraima;
+    
+    _Annotation_SouthAmerica3 = [@[An_SouthAmerica3_Uyuni, An_SouthAmerica3_MachuPicchu, An_SouthAmerica3_PeritoMoreno, An_SouthAmerica3_Atacama, An_SouthAmerica3_Roraima]mutableCopy];
+
+    
+    //Eourope4
+    OwnAnnotation *An_Eourope4_Alps = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Alps;
+    co_Alps.latitude = 8.600803;  // 経度
+    co_Alps.longitude = 39.528184;  // 緯度
+    An_Eourope4_Alps.coordinate = co_Alps;
+    
+    OwnAnnotation *An_Eourope4_Navagio = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Navagio;
+    co_Navagio.latitude = 20.624900;  // 経度
+    co_Navagio.longitude = 37.859464;  // 緯度
+    An_Eourope4_Navagio.coordinate = co_Navagio;
+    
+    OwnAnnotation *An_Eourope4_Dubrovnik = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Dubrovnik;
+    co_Dubrovnik.latitude = 18.094423;  // 経度
+    co_Dubrovnik.longitude = 42.650660;  // 緯度
+    An_Eourope4_Dubrovnik.coordinate = co_Dubrovnik;
+    
+    _Annotation_Eourope4 = [@[An_Eourope4_Alps, An_Eourope4_Navagio, An_Eourope4_Dubrovnik ]mutableCopy];
+    
+    
+    //Africa5
+    OwnAnnotation *An_Africa5_Sahara = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Sahara;
+    co_Sahara.latitude = 18.094423;  // 経度
+    co_Sahara.longitude = 42.650660;  // 緯度
+    An_Africa5_Sahara.coordinate = co_Sahara;
+    
+    OwnAnnotation *An_Africa5_Baobab = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_Baobab;
+    co_Baobab.latitude = 44.291896;  // 経度
+    co_Baobab.longitude = -20.291494;  // 緯度
+    An_Africa5_Baobab.coordinate = co_Baobab;
+    
+    _Annotation_Africa5 = [@[An_Africa5_Sahara, An_Africa5_Baobab]mutableCopy];
+
+    
+    //Oceania6
+    OwnAnnotation *An_Oceania6_AyersRock = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_AyersRock;
+    co_AyersRock.latitude = 131.034879;  // 経度
+    co_AyersRock.longitude = -25.345371;  // 緯度
+    An_Oceania6_AyersRock.coordinate = co_AyersRock;
+    
+    OwnAnnotation *An_Oceania6_GreatOceanRoad = [[OwnAnnotation alloc] init];
+    CLLocationCoordinate2D co_GreatOceanRoad;
+    co_GreatOceanRoad.latitude = 131.034879;  // 経度
+    co_GreatOceanRoad.longitude = -25.345371;  // 緯度
+    An_Oceania6_GreatOceanRoad.coordinate = co_GreatOceanRoad;
+    
+    _Annotation_Oceania6 = [@[An_Oceania6_AyersRock, An_Oceania6_GreatOceanRoad]mutableCopy];
+ 
+    
+    _Annotation = [@[_Annotation_Asia1, _Annotation_NorthAmerica2,_Annotation_SouthAmerica3, _Annotation_Eourope4, _Annotation_Africa5, _Annotation_Oceania6]mutableCopy];
+    
+//    //AroundTheWorld7
+//    OwnAnnotation *An_AroundTheWorld7_AroundtheWorld = [[OwnAnnotation alloc] init];
+//    OwnAnnotation *An_AroundTheWorld7_Asia = [[OwnAnnotation alloc] init];
+//    
+//    _Annotation_AroundTheWorld7 = [@[An_AroundTheWorld7_AroundtheWorld, An_AroundTheWorld7_Asia]mutableCopy];
+    
+
+    
+    
+    
+//あとは経度緯度を入れていけば、for文でまわしてなんとかなる？
+    for (int i=1; i<10; i++){
+        if(_Annotation[i] !=nil){
+               for (int j=1; j< 10; j++){
+                    if([_Annotation[i] objectAtIndex:j] !=nil){
+                        _Annotation[i][j].title = [appDelegete.NameData[i] objectAtIndex:j];
+                        [_Annotation[i] objectAtIndex:j].subtitle = [appDelegete.subNameData[i] objectAtIndex:j];
+                        [_Annotation[i] objectAtIndex:j].placeImage = [appDelegete.ImageData[i] objectAtIndex:j];
+                        [_Annotation[i] objectAtIndex:j].selectedArea_Section =[[NSNumber alloc]initWithInteger:i];
+                        [_Annotation[i] objectAtIndex:j].selectedPlace_Row = [[NSNumber alloc] initWithInteger:j];
+                        }
+                        else{
+                            break;
+                        }
+                    }
+        }
+        else{
+            break;
+        }
+    }
+    
+    
+    
+    //例
+    OwnAnnotation *Annotation = [[OwnAnnotation alloc] init];
     CLLocationCoordinate2D coordinate;
     coordinate.latitude = 35.68664111;  // 経度
     coordinate.longitude = 139.6948839;  // 緯度
-    
-    
-    // アノテーションを地図へ追加
-    OwnAnnotation *Annotation = [[OwnAnnotation alloc] init];
     Annotation.coordinate = coordinate;
     Annotation.title = @"タイトル";
     Annotation.subtitle = @"サブタイトル";
