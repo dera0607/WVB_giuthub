@@ -11,6 +11,8 @@
 
 @interface SecondViewController : UIViewController<MKMapViewDelegate>{
     UIImageView *myImageView;
+    NSNumber *n_selectedArea_Section;
+    NSNumber *n_setSelectedPlace_Row;
     CLLocationCoordinate2D *points;
 }
 

@@ -215,7 +215,7 @@
                         NSLog(@"appDelegate使って画像いれました");
                         [[_Annotation[i] objectAtIndex:j] setSelectedArea_Section:[[NSNumber alloc]initWithInteger:i]];
                         NSLog(@"tempのselectedArea_Sectionにi入れました");
-                         [[_Annotation[i] objectAtIndex:j] setSelectedPlace_Row:[[NSNumber alloc]initWithInteger:i]];
+                         [[_Annotation[i] objectAtIndex:j] setSelectedPlace_Row:[[NSNumber alloc]initWithInteger:j]];
 
                         [self.MapView addAnnotation:[_Annotation[i] objectAtIndex:j]];
                         NSLog(@"for文一周しました");
@@ -294,13 +294,19 @@
         PinAnnotationView .animatesDrop = YES;  // アニメーションをする
         NSLog(@"アニメーションしましたー");
         //        PinAnnotationView .pinColor = MKPinAnnotationColorPurple;  // ピンの色を紫にする
-        //        PinAnnotationView.image= [UIImage imageNamed:@"アジア.jpg"];  // アノテーションの画像を指定する？
         PinAnnotationView .canShowCallout = YES;  // ピンタップ時にコールアウトを表示する
         PinAnnotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         //左に画像を表示
         myImageView = [[UIImageView alloc] initWithImage:[OwnAnnotation placeImage]];
         myImageView.frame = CGRectMake (0,0,31,31);
         PinAnnotationView.leftCalloutAccessoryView = myImageView;
+        n_selectedArea_Section = [NSNumber alloc];
+        n_setSelectedPlace_Row = [NSNumber alloc];
+        n_selectedArea_Section = [OwnAnnotation selectedArea_Section];
+        n_setSelectedPlace_Row = [OwnAnnotation selectedPlace_Row];
+        NSLog(@"n_selectedArea_Section=%@, [OwnAnnotation selectedArea_Section]=%@", n_selectedArea_Section,[OwnAnnotation selectedArea_Section]);
+        NSLog(@"n_setSelectedPlace_Row=%@, [OwnAnnotation selectedPlace_Row]=%@", n_setSelectedPlace_Row,[OwnAnnotation selectedPlace_Row]);
+        
         NSLog(@"PinView全部終わるー");
         
     }
@@ -322,10 +328,24 @@
     //DetailViewControllerクラス（StoryBoardの右で設定）のSecondVewControllerを作成し、IDがsecondVewController（StoryBoardの右で設定）と一致するものと結びつける。セグウェイで繋がっていないので、DetailViewControllerのID一致必要。
     
     
-    AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
-    appDelegete.Pass_NameData = view.annotation.title;
-    appDelegete.Pass_NameImage = myImageView.image;
-    appDelegete.Pass_Area = view.annotation.title;
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    appDelegate.Pass_NameData = view.annotation.title;
+    appDelegate.Pass_NameImage = myImageView.image;
+    appDelegate.Pass_Area = view.annotation.subtitle;
+//    appDelegate.SelectedSection = n_selectedArea_Section;
+//    appDelegate.SelectedSection = [[int alloc] NSNumberiwthint:n_selectedArea_Section];
+    appDelegate.SelectedSection = [n_selectedArea_Section intValue];
+    appDelegate.SelectedRow = [n_setSelectedPlace_Row intValue];
+//    appDelegate.SelectedRow = n_setSelectedPlace_Row;
+    
+    NSLog(@"appDelegateにデータ移しました！");
+    NSLog(@"appDelegete.Pass_NameData = %@",appDelegate.Pass_NameData);
+    NSLog(@"appDelegete.Pass_NameImage = %@",appDelegate.Pass_NameImage);
+    NSLog(@"appDelegete.Pass_Area = %@",appDelegate.Pass_Area);
+    NSLog(@"appDelegete.SelectedSection = %d",appDelegate.SelectedSection);
+    NSLog(@"appDelegete.SelectedRow = %d",appDelegate.SelectedRow);
+
+    [self.navigationController pushViewController:DetailView animated:YES];
     
     
     //    AppDelegate *appDelegete = [[UIApplication sharedApplication] delegate];
@@ -340,11 +360,43 @@
     //    appDelegete.SelectedRow = indexPath.row;
     
     
+  
     
-    NSLog(@"appDelegete.SelectedSection = %d",appDelegete.SelectedSection);
-    NSLog(@"appDelegete.SelectedRow = %d",appDelegete.SelectedRow);
+//    //tableViewの遷移のとき
+//    DetailViewController *DetailView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewID"];
+//    //DetailViewControllerクラス（StoryBoardの右で設定）のSecondVewControllerを作成し、IDがsecondVewController（StoryBoardの右で設定）と一致するものと結びつける。セグウェイで繋がっていないので、DetailViewControllerのID一致必要。
+//    
+//    
+//    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//    appDelegate.Pass_NameData = [appDelegate.NameData[indexPath.section] objectAtIndex:indexPath.row];
+//    appDelegate.Pass_NameImage = [appDelegate.ImageData[indexPath.section] objectAtIndex:indexPath.row];
+//    appDelegate.Pass_Area = appDelegate.AreaName[indexPath.section];
+//    
+//    NSLog(@"indexPath.section = %d",indexPath.section);
+//    NSLog(@"indexPath.row = %d",indexPath.row);
+//    
+//    //DetailViewControllerの本のデータ取得用
+//    appDelegate.SelectedSection = indexPath.section;
+//    appDelegate.SelectedRow = indexPath.row;
+//    
+//    
+//    
+//    NSLog(@"appDelegete.SelectedSection = %d",appDelegate.SelectedSection);
+//    NSLog(@"appDelegete.SelectedRow = %d",appDelegate.SelectedRow);
+//    
+//    //tabBarを隠す
+//    self.hidesBottomBarWhenPushed = YES;
+//    
+//    [self.navigationController pushViewController:DetailView animated:YES];
+//    
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];//選択解除
+
     
-    [self performSegueWithIdentifier:@"DetailViewID" sender:self];
+    
+    
+
+    
+//    [self performSegueWithIdentifier:@"DetailViewID" sender:self];
 }
 
 // class MapViewController？？ビューを外す？フォーカスを外す？
