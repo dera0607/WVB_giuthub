@@ -172,6 +172,7 @@
     co_Tibet.latitude = 91.140855;  // 経度
     co_Tibet.longitude = 29.645554;  // 緯度
     An_Asia1_Tibet.coordinate = co_Tibet;
+    NSLog(@"co_Tibet.latitude=%f",co_Tibet.latitude);
     
     OwnAnnotation *An_Asia1_Ladakh = [[OwnAnnotation alloc] init];
     CLLocationCoordinate2D co_Ladakh;
@@ -198,6 +199,9 @@
     An_Asia1_Phnompenh.coordinate = co_Phnompenh;
     
     _Annotation_Asia1 = [@[An_Asia1_Tibet, An_Asia1_Ladakh, An_Asia1_Varanasi,An_Asia1_Jodhpur,An_Asia1_Phnompenh]mutableCopy];
+    
+    OwnAnnotation *temp1 = _Annotation_Asia1[1];
+    NSLog(@"temp1=%f",temp1.coordinate.latitude);
 
     
     //NorthAmerica2
@@ -305,6 +309,9 @@
  
     
     _Annotation = [@[_Annotation_Asia1, _Annotation_NorthAmerica2,_Annotation_SouthAmerica3, _Annotation_Eourope4, _Annotation_Africa5, _Annotation_Oceania6]mutableCopy];
+
+    temp1 = [_Annotation[2] objectAtIndex:1];
+    NSLog(@"temp1=%f",temp1.coordinate.latitude);
     
 //    //AroundTheWorld7
 //    OwnAnnotation *An_AroundTheWorld7_AroundtheWorld = [[OwnAnnotation alloc] init];
@@ -321,11 +328,31 @@
         if(_Annotation[i] !=nil){
                for (int j=1; j< 10; j++){
                     if([_Annotation[i] objectAtIndex:j] !=nil){
+                        NSLog(@"for文の中はいりました");
                         _Annotation[i][j].title = [appDelegete.NameData[i] objectAtIndex:j];
-                        [_Annotation[i] objectAtIndex:j].subtitle = [appDelegete.subNameData[i] objectAtIndex:j];
-                        [_Annotation[i] objectAtIndex:j].placeImage = [appDelegete.ImageData[i] objectAtIndex:j];
-                        [_Annotation[i] objectAtIndex:j].selectedArea_Section =[[NSNumber alloc]initWithInteger:i];
-                        [_Annotation[i] objectAtIndex:j].selectedPlace_Row = [[NSNumber alloc] initWithInteger:j];
+                        
+//                        NSLog(@"appDelegate使ってタイトルいれました");
+//                        tempAnnotation[i][j].subtitle = [appDelegete.subNameData[i] objectAtIndex:j];
+//                        NSLog(@"appDelegate使ってサブタイトルいれました");
+//                        tempAnnotation[i][j].placeImage = [appDelegete.ImageData[i] objectAtIndex:j];
+//                        NSLog(@"appDelegate使って画像いれました");
+//                        tempAnnotation[i][j].selectedArea_Section =[[NSNumber alloc]initWithInteger:i];
+//                        NSLog(@"tempのselectedArea_Sectionにi入れました");
+//                        tempAnnotation[i][j].selectedPlace_Row = [[NSNumber alloc] initWithInteger:j];
+//                        NSLog(@"tempのselectedArea_Rowにj入れました");
+//                        
+//                        _Annotation[i][j] = tempAnnotation[i][j];
+//                        NSLog(@"tempのselectedArea_Rowにj入れました");
+////                       [_Annotation[i] objectAtIndex:j] = tempAnnotation;
+                        [self.MapView addAnnotation:_Annotation[i][j]];
+                        NSLog(@"for文一周しました");
+                        
+//                        [_Annotation[i] objectAtIndex:j].subtitle = [[NSString alloc]initWithstring: [appDelegete.subNameData[i] objectAtIndex:j]];
+//                        [_Annotation[i] objectAtIndex:j].placeImage = [appDelegete.ImageData[i] objectAtIndex:j];
+//                        [_Annotation[i] objectAtIndex:j].selectedArea_Section =[[NSNumber alloc]initWithInteger:i];
+//                        [_Annotation[i] objectAtIndex:j].selectedPlace_Row = [[NSNumber alloc] initWithInteger:j];
+                        
+                        
                         }
                         else{
                             break;
@@ -337,22 +364,24 @@
         }
     }
     
+    NSLog(@"データ入れ込みfor文終了！");
     
     
-    //例
-    OwnAnnotation *Annotation = [[OwnAnnotation alloc] init];
-    CLLocationCoordinate2D coordinate;
-    coordinate.latitude = 35.68664111;  // 経度
-    coordinate.longitude = 139.6948839;  // 緯度
-    Annotation.coordinate = coordinate;
-    Annotation.title = @"タイトル";
-    Annotation.subtitle = @"サブタイトル";
-    Annotation.placeImage = [UIImage imageNamed:@"アジア.jpg"];
-    Annotation.selectedArea_Section =[[NSNumber alloc]initWithInteger:1];
-    Annotation.selectedPlace_Row = [[NSNumber alloc] initWithInteger:2];
-
-    [self.MapView addAnnotation:Annotation];
     
+//    //例
+//    OwnAnnotation *Annotation = [[OwnAnnotation alloc] init];
+//    CLLocationCoordinate2D coordinate;
+//    coordinate.latitude = 35.68664111;  // 経度
+//    coordinate.longitude = 139.6948839;  // 緯度
+//    Annotation.coordinate = coordinate;
+//    Annotation.title = @"タイトル";
+//    Annotation.subtitle = @"サブタイトル";
+//    Annotation.placeImage = [UIImage imageNamed:@"アジア.jpg"];
+//    Annotation.selectedArea_Section =[[NSNumber alloc]initWithInteger:1];
+//    Annotation.selectedPlace_Row = [[NSNumber alloc] initWithInteger:2];
+//
+//    [self.MapView addAnnotation:Annotation];
+//    
 }
 
 //-(MKAnnotationView*)mapView:(MKMapView*)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
