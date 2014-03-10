@@ -199,24 +199,18 @@
         if(_Annotation[i] !=nil){
                for (int j=0; j< [_Annotation[i] count]; j++){
                     if([_Annotation[i] objectAtIndex:j] !=nil){
-                         NSLog(@"for文の中はいりました");
+                         NSLog(@"i= %d j=%dのfor文の中はいりました", i,j);
 //                         [_Annotation[i][j] title] = [appDelegete.NameData[i] objectAtIndex:j];
                         [[_Annotation[i] objectAtIndex:j] setTitle:[appDelegete.NameData[i] objectAtIndex:j]];
-                        NSLog(@"appDelegate使ってタイトルいれました");
+                        NSLog(@"appDelegate使ってタイトル%@を入れました", [[_Annotation[i] objectAtIndex:j] title]);
                         [[_Annotation[i] objectAtIndex:j] setSubtitle:[appDelegete.subNameData[i] objectAtIndex:j]];
-                        NSLog(@"appDelegate使ってサブタイトルいれました");
+                        NSLog(@"appDelegate使ってサブタイトル%@いれました",[[_Annotation[i] objectAtIndex:j] subtitle]);
                         [[_Annotation[i] objectAtIndex:j] setPlaceImage:[appDelegete.ImageData[i] objectAtIndex:j]];
-                        
-//                        UIImageView *annotationImageView = [[UIImageView alloc] initWithImage:[_Annotation[i] objectAtIndex:j]];
-//                        annotationImageView.frame = CGRectMake (0,0,31,31);
-//                        [calloutMapAnnotationView.contentView addSubview:annotationImageView];
-                        
-                        
                         NSLog(@"appDelegate使って画像いれました");
                         [[_Annotation[i] objectAtIndex:j] setSelectedArea_Section:[[NSNumber alloc]initWithInteger:i]];
-                        NSLog(@"tempのselectedArea_Sectionにi入れました");
+                        NSLog(@"アノテーションにSelectedArea_Section i=%dの%@入れました",i,[[_Annotation[i] objectAtIndex:j] selectedArea_Section]);
                          [[_Annotation[i] objectAtIndex:j] setSelectedPlace_Row:[[NSNumber alloc]initWithInteger:j]];
-
+                        NSLog(@"アノテーションにSelectedPlace_Row j=%dの%@入れました",j,[[_Annotation[i] objectAtIndex:j] selectedPlace_Row]);
                         [self.MapView addAnnotation:[_Annotation[i] objectAtIndex:j]];
                         NSLog(@"for文一周しました");
                         }
@@ -232,14 +226,14 @@
 
 
     NSLog(@"データ入れ込みfor文終了！");
-    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] title]);
-    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] subtitle]);
-    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] placeImage]);
-    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] selectedArea_Section]);
-    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] selectedPlace_Row]);
-    CLLocationCoordinate2D co_temp;
-    co_temp = [[_Annotation[0] objectAtIndex:0] coordinate];
-    NSLog(@"latitude=%f, longtitude = %f",co_temp.latitude, co_temp.longitude);
+//    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] title]);
+//    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] subtitle]);
+//    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] placeImage]);
+//    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] selectedArea_Section]);
+//    NSLog(@"%@",[[_Annotation[0] objectAtIndex:0] selectedPlace_Row]);
+//    CLLocationCoordinate2D co_temp;
+//    co_temp = [[_Annotation[0] objectAtIndex:0] coordinate];
+//    NSLog(@"latitude=%f, longtitude = %f",co_temp.latitude, co_temp.longitude);
     
     
 //    OwnAnnotation *temp_Annotation = [[OwnAnnotation alloc] init];
@@ -304,7 +298,7 @@
         n_setSelectedPlace_Row = [NSNumber alloc];
         n_selectedArea_Section = [OwnAnnotation selectedArea_Section];
         n_setSelectedPlace_Row = [OwnAnnotation selectedPlace_Row];
-        NSLog(@"n_selectedArea_Section=%@, [OwnAnnotation selectedArea_Section]=%@", n_selectedArea_Section,[OwnAnnotation selectedArea_Section]);
+        NSLog(@"タイトル：%@\n サブタイトル%@\n n_selectedArea_Section=%@, [OwnAnnotation selectedArea_Section]=%@", [OwnAnnotation title], [OwnAnnotation subtitle],n_selectedArea_Section,[OwnAnnotation selectedArea_Section]);
         NSLog(@"n_setSelectedPlace_Row=%@, [OwnAnnotation selectedPlace_Row]=%@", n_setSelectedPlace_Row,[OwnAnnotation selectedPlace_Row]);
         
         NSLog(@"PinView全部終わるー");
@@ -322,28 +316,51 @@
     NSLog(@"title: %@", view.annotation.title);
     NSLog(@"subtitle: %@", view.annotation.subtitle);
     NSLog(@"coord: %f, %f", view.annotation.coordinate.latitude, view.annotation.coordinate.longitude);
+
     
+    for (NSMutableArray *AreaAnnotation in _Annotation) {
+        for (OwnAnnotation *PlaceAnnotation in AreaAnnotation){
+            NSLog(@"%@", [PlaceAnnotation description]);
+            if([PlaceAnnotation.title isEqualToString:view.annotation.title]){
+                NSLog(@"%@", [PlaceAnnotation description]);
+                AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+                appDelegate.SelectedSection = [_Annotation indexOfObject:AreaAnnotation];
+                appDelegate.SelectedRow = [AreaAnnotation indexOfObject:PlaceAnnotation];
+                appDelegate.Pass_NameData = PlaceAnnotation.title;
+                appDelegate.Pass_NameImage = PlaceAnnotation.placeImage;
+                appDelegate.Pass_Area = PlaceAnnotation.subtitle;
+            }
+
+            
+        }
+    }
+    
+        
+     
     
     DetailViewController *DetailView = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewID"];
     //DetailViewControllerクラス（StoryBoardの右で設定）のSecondVewControllerを作成し、IDがsecondVewController（StoryBoardの右で設定）と一致するものと結びつける。セグウェイで繋がっていないので、DetailViewControllerのID一致必要。
     
-    
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    appDelegate.Pass_NameData = view.annotation.title;
-    appDelegate.Pass_NameImage = myImageView.image;
-    appDelegate.Pass_Area = view.annotation.subtitle;
-//    appDelegate.SelectedSection = n_selectedArea_Section;
-//    appDelegate.SelectedSection = [[int alloc] NSNumberiwthint:n_selectedArea_Section];
-    appDelegate.SelectedSection = [n_selectedArea_Section intValue];
-    appDelegate.SelectedRow = [n_setSelectedPlace_Row intValue];
-//    appDelegate.SelectedRow = n_setSelectedPlace_Row;
-    
-    NSLog(@"appDelegateにデータ移しました！");
-    NSLog(@"appDelegete.Pass_NameData = %@",appDelegate.Pass_NameData);
-    NSLog(@"appDelegete.Pass_NameImage = %@",appDelegate.Pass_NameImage);
-    NSLog(@"appDelegete.Pass_Area = %@",appDelegate.Pass_Area);
-    NSLog(@"appDelegete.SelectedSection = %d",appDelegate.SelectedSection);
-    NSLog(@"appDelegete.SelectedRow = %d",appDelegate.SelectedRow);
+//    
+//    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//    appDelegate.Pass_NameData = view.annotation.title;
+//    appDelegate.Pass_NameImage = myImageView.image;
+//    appDelegate.Pass_Area = view.annotation.subtitle;
+////    appDelegate.SelectedSection = n_selectedArea_Section;
+////    appDelegate.SelectedSection = [[int alloc] NSNumberiwthint:n_selectedArea_Section];
+////    appDelegate.SelectedSection = [[int alloc] initWithNSnumber:[n_selectedArea_Section intValue]];
+////    appDelegate.SelectedSection = [int alloc];
+//    appDelegate.SelectedSection =[n_selectedArea_Section intValue];
+////    appDelegate.SelectedRow = [int alloc]
+//    appDelegate.SelectedRow = [n_setSelectedPlace_Row intValue];
+////    appDelegate.SelectedRow = n_setSelectedPlace_Row;
+//    
+//    NSLog(@"appDelegateにデータ移しました！");
+//    NSLog(@"appDelegete.Pass_NameData = %@",appDelegate.Pass_NameData);
+//    NSLog(@"appDelegete.Pass_NameImage = %@",appDelegate.Pass_NameImage);
+//    NSLog(@"appDelegete.Pass_Area = %@",appDelegate.Pass_Area);
+//    NSLog(@"appDelegete.SelectedSection = %d",appDelegate.SelectedSection);
+//    NSLog(@"appDelegete.SelectedRow = %d",appDelegate.SelectedRow);
 
     [self.navigationController pushViewController:DetailView animated:YES];
     
